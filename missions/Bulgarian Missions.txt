@@ -1,0 +1,892 @@
+bul_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = BUL
+	}
+	has_country_shield = yes
+	
+	bul_conquer_wallachia = {
+		icon = mission_impaled_soldies
+		position = 4
+		required_missions = { bul_last_piece_of_unity }
+		provinces_to_highlight = {
+			area = wallachia_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			wallachia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			wallachia_area = {
+				add_province_modifier = {
+					name = "odessus_rich_farmlands_modifier"
+					duration = 1825
+				}
+			}
+			moldavia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = {  is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_treasury = 100
+			add_prestige = 15
+		}
+	}
+	
+	bul_conquer_moldavia = {
+		icon = mission_cossack_cavalry
+		required_missions = { bul_conquer_wallachia }
+		provinces_to_highlight = {
+			area = moldavia_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			moldavia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			moldavia_area = {
+				add_province_modifier = {
+					name = "odessus_rich_farmlands_modifier"
+					duration = 1825
+				}
+			}
+			add_treasury = 100
+			add_prestige = 10
+		}
+	}
+	
+	bul_develop_our_lands = {
+		icon = mission_african_gold
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					area = bulgaria_area
+					NOT = {
+						num_of_buildings_in_province = 1
+					}
+				}
+				AND = {
+					owned_by = ROOT
+					NOT = {
+						num_of_times_improved = 1
+					}
+				}
+			}
+		}
+		trigger = {
+			all_owned_province = {
+				num_of_times_improved = 1
+			}
+			bulgaria_area = {
+				type = all
+				num_of_buildings_in_province = 1
+			}
+		}
+		effect = {
+			bulgaria_area = {
+				add_prosperity = 25
+			}
+			silistria_area = {
+				add_prosperity = 25
+			}
+			every_owned_province = {
+				add_province_modifier = {
+					name = "odessus_flourishing_ambitions_modifier"
+					duration = 1825
+				}
+			}
+		}
+	}
+	
+	bul_flourishing_capital = {
+		icon = develop_our_capital
+		required_missions = { bul_develop_our_lands }
+		provinces_to_highlight = {
+			province_id = 4704 #Tirnovo
+			num_free_building_slots = 1
+			NOT = {
+				num_of_times_improved = 5
+			}
+		}
+		trigger = {
+			4704 = { #Tirnovo
+				num_of_times_improved = 5
+				NOT = {
+					num_free_building_slots = 1
+				}
+			}
+			silistria_area = {
+				is_prosperous = yes
+			}
+		}
+		effect = {
+			4704 = { #Tirnovo
+				add_province_modifier = {
+					name = "odessus_flourishing_capital_modifier"
+					duration = 1825
+				}
+				center_of_trade = 1
+			}
+		}
+	}
+}
+
+bul_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = BUL
+	}
+	has_country_shield = yes
+	
+	bul_macedonian_claims = {
+		icon = alpine_fortifications
+		position = 2
+		required_missions = { bul_resurgence }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4780
+				province_id = 3001
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			4780 = {
+				owned_by = ROOT
+			}
+			3001 = {
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			4780 = {
+				add_devastation = -5
+				add_unrest = -2
+			}
+			3001 = {
+				add_devastation = -5
+				add_unrest = -2
+			}
+			add_legitimacy = 5
+			add_prestige = 10
+		}
+	}
+	
+	bul_conquer_macedonia = {
+		icon = defeat_the_english
+		position = 4
+		required_missions = { bul_last_piece_of_unity }
+		provinces_to_highlight = {
+			area = macedonia_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			macedonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			macedonia_area = {
+				add_unrest = -5
+			}
+			add_prestige = 10
+		}
+	}
+	
+	bul_tsaravets = {
+		icon = mission_conquer_50_development
+		position = 7
+		provinces_to_highlight = {
+			province_id = 4704
+			NOT = {
+				fort_level = 2
+			}
+		}
+		trigger = {
+			4704 = {
+				fort_level = 2
+			}
+			treasury = 200
+			mil_power = 50
+		}
+		effect = {
+			add_treasury = -200
+			add_mil_power = -50
+			4704 = {
+				add_province_modifier = {
+					name = "odessus_tsarevets_modifier"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+bul_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = BUL
+	}
+	has_country_shield = yes
+	
+	bul_resurgence = {
+		icon = mission_assemble_an_army
+		required_missions = { }
+		trigger = {
+			army_size_percentage = 1
+			employed_advisor = {
+				category = MIL
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "odessus_ready_for_war_modifier"
+				duration = 3650
+			}
+		}
+	}
+	
+	bul_last_piece_of_unity = {
+		icon = mission_noble_council
+		position = 3
+		required_missions = { bul_unite_silistria bul_macedonian_claims }
+		provinces_to_highlight = {
+			province_id = 1764
+		}
+		trigger = {
+			1764 = {
+				owned_by = ROOT
+			}
+			legitimacy = 90
+		}
+		effect = {
+			1764 = {
+				add_devastation = -5
+			}
+			add_prestige = 10
+			macedonia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = {  is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			wallachia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = {  is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			4705 = { #Gumulcine
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = root }
+						NOT = { is_core = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+			4779 = { #Gallipoli
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = root }
+						NOT = { is_core = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+			149 = { #Edirne
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = root }
+						NOT = { is_core = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+			141 = { #Smederevo
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = root }
+						NOT = { is_core = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+			4176 = { #Branicevo
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = root }
+						NOT = { is_core = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+			4757 = { #Kolubara
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = root }
+						NOT = { is_core = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+			138 = { #Zeta
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = root }
+						NOT = { is_core = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+			1766 = { #Kosovo
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = root }
+						NOT = { is_core = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+			1827 = { #Raska
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = root }
+						NOT = { is_core = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+			3000 = { #Nis
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = root }
+						NOT = { is_core = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+		}
+	}
+	
+	bul_dominate_thrace = {
+		icon = mission_pf_soldier
+		required_missions = { bul_last_piece_of_unity }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4705 #Gumulcine
+				province_id = 4779 #Gallipoli
+				province_id = 149 #Edirne
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			4705 = { #Gumulcine
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4779 = { #Gallipoli
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			149 = { #Edirne
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			4705 = { #Gumulcine
+				add_unrest = -2
+				add_devastation = -5
+			}
+			4779 = { #Gallipoli
+				add_unrest = -2
+				add_devastation = -5
+			}
+			149 = { #Edirne
+				add_unrest = -2
+				add_devastation = -5
+			}
+			add_prestige = 5
+			custom_tooltip = odessus_bul_unlock_walls_theo_decision_tooltip
+			151 = { #Constantinople
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = root }
+						NOT = { is_core = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+		}
+	}
+	
+	bul_city_of_worlds_desire = {
+		icon = mission_city_of_the_world's_desire
+		required_missions = { bul_dominate_thrace }
+		provinces_to_highlight = {
+			province_id = 151
+		}
+		trigger = {
+			151 = {
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			151 = {
+				add_devastation = -10
+			}
+			add_prestige = 25
+			add_treasury = 150
+			add_country_modifier = {
+				name = "odessus_city_of_worlds_desire_modifier"
+				duration = 9125
+			}
+			set_government_rank = 3
+			#if = {
+			#	limit = {
+			#		has_dlc = "Domination"
+			#	}
+			#	add_government_reform = bulgarian_tsardom_reform
+			#}
+			add_government_reform = bulgarian_tsardom_reform
+			country_event = { id = odessus_bulgaria.1 }
+			145 = { #Morea
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = root }
+						NOT = { is_core = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+			146 = { #Athens
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = root }
+						NOT = { is_core = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+			1773 = { #Achaea
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = root }
+						NOT = { is_core = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+			4701 = { #Corinth
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = root }
+						NOT = { is_core = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+			144 = { #Epirus
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = root }
+						NOT = { is_core = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+			147 = { #Thessaly
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = root }
+						NOT = { is_core = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+			4698 = { #Cephalonia
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = root }
+						NOT = { is_core = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+			4699 = { #Arta
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = root }
+						NOT = { is_core = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+		}
+	}
+	
+	bul_end_of_hellenic = {
+		icon = mission_devastate_christianity
+		required_missions = { bul_city_of_worlds_desire }
+		provinces_to_highlight = {
+			OR = {
+				area = morea_area
+				area = northern_greece_area
+			}
+			NOT = {
+				province_id = 142 #Corfu
+				province_id = 163 #Crete
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			145 = { #Morea
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			146 = { #Athens
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1773 = { #Achaea
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4701 = { #Corinth
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			144 = { #Epirus
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			147 = { #Thessaly
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4698 = { #Cephalonia
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4699 = { #Arta
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "odessus_purge_of_hellas_modifier"
+				duration = 5475
+			}
+			add_prestige = 10
+		}
+	}
+	
+	bul_rila_monasteries = {
+		icon = fund_the_monasteries
+		position = 7
+		provinces_to_highlight = {
+			province_id = 4703
+		}
+		trigger = {
+			owns_core_province = 4703
+			4703 = {
+				religion = orthodox
+			}
+			religion = orthodox
+			treasury = 500
+			adm_power = 25
+		}
+		effect = {
+			add_treasury = -500
+			add_adm_power = -25
+			4703 = {
+				add_great_project_tier = {
+					type = rila_monasteries
+					tier = 1
+				}
+			}
+			add_prestige = 10
+			add_country_modifier = {
+				name = "odessus_saint_ivan_of_rila_modifier"
+				duration = 3650
+			}
+		}
+	}
+}
+
+bul_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = BUL
+	}
+	has_country_shield = yes
+	
+	bul_unite_silistria = {
+		icon = mission_se_along_the_river
+		position = 2
+		required_missions = { bul_resurgence }
+		provinces_to_highlight = {
+			province_id = 4706 #Tolcu
+		}
+		trigger = {
+			4706 = { #Tolcu
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			4706 = { #Tolcu
+				add_devastation = -5
+				add_province_modifier = {
+					name = "odessus_danube_delta_modifier"
+					duration = 3650
+				}
+			}
+			add_prestige = 5
+		}
+	}
+	
+	bul_take_serbia_despotate = {
+		icon = fortress_of_belgrade
+		position = 4
+		required_missions = { bul_last_piece_of_unity }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4176 #Branicevo
+				province_id = 4757 #Kolubara
+				province_id = 138 #Zeta
+				province_id = 1766 #Kosovo
+				province_id = 1827 #Raska
+				province_id = 3000 #Nis
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			4176 = { #Branicevo
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4757 = { #Kolubara
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			138 = { #Zeta
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1766 = { #Kosovo
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1827 = { #Raska
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3000 = { #Nis
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			4176 = { #Branicevo
+				add_unrest = -5
+			}
+			4757 = { #Kolubara
+				add_unrest = -5
+			}
+			138 = { #Zeta
+				add_unrest = -5
+			}
+			1766 = { #Kosovo
+				add_unrest = -5
+			}
+			1827 = { #Raska
+				add_unrest = -5
+			}
+			3000 = { #Nis
+				add_unrest = -5
+			}
+			add_prestige = 10
+			add_treasury = 50
+			142 = { #Corfu
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = root }
+						NOT = { is_core = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+			4174 = { #Durazzo
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = root }
+						NOT = { is_core = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+			4754 = { #Kotor
+				if = {
+					limit = {
+						NOT = { is_permanent_claim = root }
+						NOT = { is_core = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+			
+			
+			if = {
+				limit = { exists = ALB }
+				add_casus_belli = {
+					target = ALB
+					type = cb_vassalize_mission
+					months = 120
+				}
+			}
+			else = {
+				143 = { #Vlore
+					if = {
+						limit = {
+							NOT = { is_permanent_claim = root }
+							NOT = { is_core = root }
+						}
+						add_permanent_claim = root
+					}
+				}
+				4175 = { #Lezhe
+					if = {
+						limit = {
+							NOT = { is_permanent_claim = root }
+							NOT = { is_core = root }
+						}
+						add_permanent_claim = root
+					}
+				}
+				4750 = { #Kruje
+					if = {
+						limit = {
+							NOT = { is_permanent_claim = root }
+							NOT = { is_core = root }
+						}
+						add_permanent_claim = root
+					}
+				}
+			}
+		}
+	}
+	
+	bul_purge_traders = {
+		icon = invest_in_the_rich_trades
+		required_missions = { bul_take_serbia_despotate }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 142 #Corfu
+				province_id = 4174 #Durazzo
+				province_id = 4754 #Kotor
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			142 = { #Corfu
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4174 = { #Durazzo
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4754 = { #Kotor
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "odessus_balkan_trade_modifier"
+				duration = 1825
+			}
+			add_treasury = 100
+		}
+	}
+}
+
+bul_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = BUL
+	}
+	has_country_shield = yes
+	
+	bul_conquer_albania = {
+		icon = alpine_defenses
+		position = 5
+		required_missions = { bul_take_serbia_despotate }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 143 #Vlore
+				province_id = 4175 #Lezhe
+				province_id = 4750 #Kruje
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			143 = { #Vlore
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4175 = { #Lezhe
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4750 = { #Kruje
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			143 = { #Vlore
+				add_devastation = -5
+			}
+			4175 = { #Lezhe
+				add_devastation = -5
+			}
+			4750 = { #Kruje
+				add_devastation = -5
+			}
+			add_country_modifier = {
+				name = "odessus_skanderbegs_legacy_modifier"
+				duration = 3650
+			}
+			if = {
+				limit = {
+					ALB = {
+						is_subject_of = ROOT
+					}
+				}
+				ALB = {
+					add_liberty_desire = -20
+				}
+			}
+		}
+	}
+}

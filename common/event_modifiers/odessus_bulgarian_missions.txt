@@ -1,0 +1,55 @@
+odessus_ready_for_war_modifier = {
+	land_morale = 0.10
+	land_maintenance_modifier = -0.10
+}
+
+odessus_danube_delta_modifier = {
+	province_trade_power_value = 10
+}
+
+odessus_rich_farmlands_modifier = {
+	trade_goods_size = 5
+}
+
+odessus_walls_of_theodosius_modifier = {
+	siege_ability = 0.10
+}
+
+odessus_city_of_worlds_desire_modifier = {
+	global_trade_power = 0.15
+}
+
+odessus_western_influx_modifier = {
+	global_tax_modifier = 0.10
+}
+
+odessus_purge_of_hellas_modifier = {
+	culture_conversion_cost = -0.15
+	culture_conversion_time = -0.15
+}
+
+odessus_balkan_trade_modifier = {
+	global_trade_power = 0.1
+}
+
+odessus_skanderbegs_legacy_modifier = {
+	discipline = 0.025
+	recover_army_morale_speed = 0.25
+}
+
+odessus_flourishing_ambitions_modifier = {
+	local_development_cost = -0.1
+}
+
+odessus_flourishing_capital_modifier = {
+	province_trade_power_modifier = 0.15
+	local_development_cost = -0.15
+}
+
+odessus_tsarevets_modifier = {
+	local_defensiveness = 0.25
+}
+
+odessus_saint_ivan_of_rila_modifier = {
+	global_unrest = -2
+}

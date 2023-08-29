@@ -1,0 +1,112 @@
+country_event = {
+	id = odessus_bulgaria.1
+	title = odessus_bulgaria.1.t
+	desc = odessus_bulgaria.1.d
+	picture = BYZANTINE_EAGLE
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = odessus_bulgaria.1.a
+		set_capital = 151
+		151 = {
+			change_province_name = "Tsarigrad"
+			rename_capital = "Tsarigrad"
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 3
+			add_center_of_trade_level = 1
+		}
+		add_country_modifier = {
+			name = "odessus_western_influx_modifier"
+			duration = 9125
+		}
+	}
+	
+	option = {
+		name = odessus_bulgaria.1.b
+		capital_scope = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}
+
+country_event = {
+	id = odessus_bulgaria.2
+	title = odessus_bulgaria.2.t
+	desc = odessus_bulgaria.2.d
+	picture = BYZANTINE_EAGLE
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	trigger = {
+		tag = BUL
+	}
+	
+	option = {
+		name = odessus_bulgaria.2.a
+		add_country_modifier = {
+			name = "odessus_kralj_restored_modifier"
+			duration = 9125
+		}
+	}
+}
+
+#country_event = {
+#	id = odessus_bulgaria.3
+#	title = odessus_bulgaria.3.t
+#	desc = odessus_bulgaria.3.d
+#	picture = BYZANTINE_EAGLE
+#	
+#	fire_only_once = yes
+#	
+#	mean_time_to_happen = {
+#		years = 5
+#	}
+#	
+#	trigger = {
+#		has_heir = no
+#		tag = BUL
+#	}
+#	
+#	option = {
+#		name = odessus_bulgaria.3.a
+#		define_heir = {
+#			name = "Michael"
+#			dynasty = ROOT
+#			male = yes
+#			age = 13
+#			claim = 100
+#		}
+#		change_heir_adm = 2
+#	}
+#	
+#	option = {
+#		name = odessus_bulgaria.3.b
+#		define_heir = {
+#			name = "Stephen"
+#			dynasty = ROOT
+#			male = yes
+#			age = 13
+#			claim = 100
+#		}
+#		change_heir_dip = 2
+#	}
+#	
+#	option = {
+#		name = odessus_bulgaria.3.c
+#		define_heir = {
+#			name = "Alexander"
+#			dynasty = ROOT
+#			male = yes
+#			claim = 100
+#		}
+#		change_heir_mil = 2
+#	}
+#}

@@ -1,0 +1,71 @@
+bulgarian_kraljdom_reform = {
+	icon = "king"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			primary_culture = bulgarian
+			primary_culture = bulgarian_new
+		}
+	}
+	trigger = {
+		religion = orthodox
+		if = {
+			limit = { has_updated_culture = { culture = slavic } }
+			primary_culture = bulgarian_new
+		}
+		else = {
+			primary_culture = bulgarian
+		}
+	}
+	nation_designer_trigger = {
+		religion = orthodox
+		primary_culture = bulgarian
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 30
+	modifiers = {
+		governing_capacity = 50
+		harsh_treatment_cost = -0.1
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+bulgarian_tsardom_reform = {
+	icon = "king"
+	allow_normal_conversion = yes
+	potential = {
+		#has_dlc = "Domination"
+		OR = {
+			has_reform = bulgarian_tsardom_reform
+			have_had_reform = bulgarian_tsardom_reform
+		}
+	}
+	trigger = {
+		religion = orthodox
+		if = {
+			limit = { has_updated_culture = { culture = slavic } }
+			primary_culture = bulgarian_new
+		}
+		else = {
+			primary_culture = bulgarian
+		}
+	}
+	nation_designer_trigger = {
+		has_dlc = "Domination"
+		religion = orthodox
+		primary_culture = bulgarian
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 30
+	modifiers = {
+		governing_capacity = 150 
+		can_claim_states = yes 
+		harsh_treatment_cost = -0.25
+	}
+	fixed_rank = 3
+	ai = {
+		factor = 100
+	}
+}

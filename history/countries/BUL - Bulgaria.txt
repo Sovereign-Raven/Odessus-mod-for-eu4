@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = bulgarian_kraljdom_reform
+technology_group = eastern
+primary_culture = bulgarian
+religion = orthodox
+capital = 4704 #Tarnovo
+
+1444.11.11 = {
+	monarch = {
+		name = "Fruzhin I"
+		dynasty = "Sratsimir"
+		culture = bulgarian
+		birth_date = 1384.10.31
+		adm = 3
+		dip = 4
+		mil = 5
+	}
+	heir = {
+		name = "Shishman"
+		dynasty = "Sratsimir"
+		birth_date = 1420.12.27
+		death_date = 1501.6.17
+		claim = 100
+		adm = 4
+		dip = 4
+		mil = 5
+		leader = { name = "Shishman Sratsimir"	type = general	fire = 2	shock = 4	manuever = 3	siege = 2 }
+	}
+}

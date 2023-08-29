@@ -1,0 +1,4 @@
+odessus_kralj_restored_modifier = {
+	prestige = 0.5
+	legitimacy = 1
+}

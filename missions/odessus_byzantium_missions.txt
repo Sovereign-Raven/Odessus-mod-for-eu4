@@ -1,0 +1,154 @@
+odessus_byz_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	odessus_byz_city_of_worlds_desire_mission = {
+		icon = mission_hagia_sophia
+		position = 7
+		provinces_to_highlight = {
+			province_id = 151 #Constantinople
+		}
+		trigger = {
+			151 = { #Constantinople
+				num_of_times_improved = 5
+				NOT = {
+					num_free_building_slots = 1
+				}
+			}
+			employed_advisor = {
+				category = ADM
+			}
+		}
+		effect = {
+			151 = { #Constantinople
+				add_province_modifier = {
+					name = "odessus_byz_constantinople_modifier"
+					duration = -1
+				}
+				add_center_of_trade_level = 1
+			}
+		}
+	}
+	
+	odessus_byz_relations_with_brothers = {
+		icon = mission_alliances
+		position = 8
+		trigger = {
+			if = {
+				limit = { exists = FEO }
+				FEO = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+				dip_power = 25
+				1322 = { #Gulf of Odessa
+					light_ships_in_province = ROOT
+				}
+			}
+			else = {
+				1322 { #Gulf of Odessa
+					trade_share = {
+						country = ROOT
+						share = 10
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = { exists = FEO }
+				add_dip_power = -25
+			}
+			1322 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 30
+					key = byz_feo_relations_trade_modifier
+				}
+			}
+			add_country_modifier = {
+				name = "odessus_byz_feo_relations_modifier"
+				duration = 5475
+			}
+		}
+	}
+}
+
+odessus_byz_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = BYZ
+	}
+	has_country_shield = yes
+	
+	odessus_byz_eastern_renaissance = {
+		icon = mission_early_modern_university
+		position = 7
+		trigger = {
+			employed_advisor = {
+				category = DIP
+			}
+			employed_advisor = {
+				type = philosopher
+			}
+			any_country = {
+				capital_scope = {
+					area = tuscany_area
+				}
+				has_opinion = {
+					who = ROOT
+					value = 50
+				}
+			}
+			adm_power = 50
+			treasury = 75
+		}
+		effect = {
+			add_adm_power = -50
+			add_treasury = -75
+			151 = { #Constantinople
+				add_institution_embracement = {
+					which = renaissance
+					value = 50
+				}
+			}
+			148 = { #Thessaloniki/Macedonia
+				add_institution_embracement = {
+					which = renaissance
+					value = 25
+				}
+			}
+		}
+	}
+	
+	odessus_byz_build_navy = {
+		icon = mission_establish_high_seas_navy
+		position = 8
+		trigger = {
+			OR = {
+				num_of_heavy_ship = 3
+				num_of_galley = 10
+			}
+			navy_size_percentage = 1
+			sailors_percentage = 0.25
+		}
+		effect = {
+			add_country_modifier = {
+				name = "odessus_byz_secured_coastline_modifier"
+				duration = -1
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+odessus_byz_feo_relations_modifier = {
+	trade_efficiency = 0.15
+}
+
+odessus_byz_constantinople_modifier = {
+	advisor_pool = 1
+	global_trade_power = 0.15
+	local_development_cost = -0.1
+}
+
+odessus_byz_secured_coastline_modifier = {
+	naval_morale = 0.15
+	hostile_disembark_speed = 0.5
+}
