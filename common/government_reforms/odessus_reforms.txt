@@ -69,3 +69,22 @@ bulgarian_tsardom_reform = {
 		factor = 100
 	}
 }
+
+byzantine_empire_reform = {
+	icon = "king"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	potential = {
+		OR = {
+			tag = BYZ
+			was_tag = BYZ
+		}
+	}
+	modifiers = {
+		governing_capacity = 100
+		all_estate_influence_modifier = 0.05
+		core_creation = -0.25
+		tolerance_own = 3
+	}
+}

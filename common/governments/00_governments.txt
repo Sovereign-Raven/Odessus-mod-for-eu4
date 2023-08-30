@@ -4,6 +4,7 @@ monarchy = {
 		feudalism_vs_autocracy = {
 			reforms = {
 				bulgarian_kraljdom_reform
+				byzantine_empire_reform
 				feudalism_reform
 				autocracy_reform
 				elective_monarchy_reform
