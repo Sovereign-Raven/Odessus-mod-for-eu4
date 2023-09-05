@@ -82,9 +82,8 @@ byzantine_empire_reform = {
 		}
 	}
 	modifiers = {
-		governing_capacity = 100
-		all_estate_influence_modifier = 0.05
-		core_creation = -0.25
-		tolerance_own = 3
+		prestige = 1
+                max_absolutism = -25
+
 	}
 }
