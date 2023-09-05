@@ -1,0 +1,22 @@
+country_event = {
+    id = flavour_tur.1
+    title = flavour_tur.1.t
+    desc = flavour_tur.1.desc
+    picture = CONQUEST_eventPicture
+    fire_only_once = yes
+    trigger = {
+        tag = TUR
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    option = {
+     flavour_tur.1.a
+      add_prestige = -15
+      add_hiden_effect = {
+        set_country_flag = tur_had_varna_event 
+      }
+    }
+}
