@@ -93,3 +93,8 @@
  odessus_byz_feo_relations_modifier: "Relations with our Brethren"
  odessus_byz_constantinople_modifier: "City of World's Desire"
  odessus_byz_secured_coastline_modifier: "Secured Coastline"
+ 
+ odessus_ottomans.1.t: "The Defeat over the Varna Crusade"
+ odessus_ottomans.1.d: "Peace has again fallen over the Balkans with the victory of the Christians at the Battle of Varna. The House of Osmanoglu failed to set permanently in Europe, and thus we were skirmished back to our Anatolian lands, meanwhile every nuance of a nation got restored to its former glory, on behalf of our losses. Inshallah, they will all pay for it. If Allah gave us this challenge, we must overcome it and pay the evil back with a greater force, and finally obtain the dearest of all: Constantinople."
+ odessus_ottomans.1.a: "The die is cast..."
+ no_rise_o_t_otto_tt: "§RThe Rise of The Ottomans is not present... yet. Be careful, as a weakened Sultanate is more like to decade earlier than anticipated.§!"

@@ -1,0 +1,23 @@
+country_event = {
+    id = odessus_ottomans.1
+    title = odessus_ottomans.1.t
+    desc = odessus_ottomans.1.d
+    picture = CONQUEST_eventPicture
+    fire_only_once = yes
+    trigger = {
+        tag = TUR
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    option = {
+		odessus_ottomans.1.a
+		add_prestige = -15
+		add_hidden_effect = {
+			set_country_flag = tur_had_varna_event 
+		}
+		custom_tooltip = no_rise_o_t_otto_tt
+    }
+}
