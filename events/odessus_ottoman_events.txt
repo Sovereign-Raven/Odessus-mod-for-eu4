@@ -18,5 +18,6 @@ country_event = {
 		add_hidden_effect = {
 			set_country_flag = tur_had_varna_event 
 		}
+		custom_tooltip = no_rise_o_t_otto_tt
     }
 }
