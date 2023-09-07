@@ -1,3 +1,5 @@
+namespace = odessus_ottomans
+
 country_event = {
 	id = odessus_ottomans.1
 	title = odessus_ottomans.1.t
