@@ -33,6 +33,16 @@ war_goal = {
 	add_attacker = FER
 	add_attacker = HER
 	add_attacker = RAG
+	add_attacker = SLZ
+	add_attacker = MBZ
+	add_attacker = UBV
+	add_attacker = PSS
+	add_attacker = LBV
+	add_attacker = HRZ
+	add_attacker = FLA
+	add_attacker = BRB
+	add_attacker = NEV
+	add_attacker = HOL
 	add_defender = TUR
 }
 
@@ -75,5 +85,15 @@ war_goal = {
 	rem_attacker = BUL
 	rem_attacker = ALB
 	rem_attacker = BYZ
+	rem_defender = SLZ
+	rem_defender = MBZ
+	rem_defender = UBV
+	rem_defender = PSS
+	rem_defender = LBV
+	rem_defender = HRZ
+	rem_defender = FLA
+	rem_defender = BRB
+	rem_defender = NEV
+	rem_defender = HOL
 	rem_defender = TUR
 }
