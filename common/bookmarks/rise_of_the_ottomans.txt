@@ -1,6 +1,6 @@
 bookmark =
 {
-	name = "THE_LAST_CRUSADE"
+	name = "The Last Crusade"
 	desc = "RISE_OF_THE_OTTOMANS_DESC"
 	date = 1445.05.29
 	
