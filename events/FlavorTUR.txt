@@ -2788,19 +2788,157 @@ country_event = {
 country_event = {
 	id = flavor_tur.204
 	title = flavor_tur.204.t
-	desc = flavor_tur.204.desc
+	#desc = flavor_tur.204.desc
+	desc = {
+		trigger = { tag = POL }
+		desc = "flavor_tur.204.descPOL"
+	}
+	desc = {
+		trigger = { tag = HUN }
+		desc = "flavor_tur.204.descHUN"
+	}
 	picture = ARTILLERY_eventPicture
 	fire_only_once = yes
 	trigger = {
-		tag = TUR
+		OR = {
+			AND = {
+				tag = POL
+				overlord_of = HUN
+			}
+			AND = {
+				tag = HUN
+				is_subject = no
+			}
+		}
 		NOT = { is_year = 1455 }
-		NOT = { owns = 151 }
 		years_of_income = 0.3
 	}
 	
 	mean_time_to_happen = {
 		months = 1
 	}
+	
+	option = {	# Blasting the walls of Babylon itself you say?
+		name = flavor_tur.204.a
+		trigger = {
+			tag = POL
+		}
+		add_years_of_income = -0.3
+		define_advisor = {
+			name = "Urban"
+			culture = hungarian
+			religion = catholic
+			type = army_reformer
+			skill = 2
+			cost_multiplier = 0.75
+		}
+		hidden_effect = {
+			set_global_flag = odessus_urban_found_employment_flag
+			every_country = {
+				limit = {
+					has_country_flag = odessus_rejected_urban_flag
+				}
+				clr_country_flag = odessus_rejected_urban_flag
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {	# Blasting the walls of Babylon itself you say?
+		name = flavor_tur.204.a
+		trigger = {
+			tag = HUN
+		}
+		add_years_of_income = -0.3
+		define_advisor = {
+			name = "Órban"
+			culture = hungarian
+			religion = catholic
+			type = army_reformer
+			skill = 2
+			cost_multiplier = 0.5
+		}
+		hidden_effect = {
+			set_global_flag = odessus_urban_found_employment_flag
+			every_country = {
+				limit = {
+					has_country_flag = odessus_rejected_urban_flag
+				}
+				clr_country_flag = odessus_rejected_urban_flag
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {	# Hush, we don't need your services
+		name = flavor_tur.204.b
+		trigger = {
+			tag = POL
+		}
+		add_mil_power = 10
+		ai_chance = {
+			factor = 0
+		}
+		hidden_effect = {
+			set_country_flag = odessus_rejected_urban_flag
+			HUN = {
+				limit = {
+					is_subject = no
+					years_of_income = 0.3
+				}
+				country_event = {
+					id = flavor_tur.2041
+					days = 30
+				}
+			}
+		}
+	}
+	
+	option = {	# Hush, we don't need your services
+		name = flavor_tur.204.b
+		trigger = {
+			NOT = { tag = POL }
+		}
+		add_mil_power = 10
+		ai_chance = {
+			factor = 0
+		}
+		hidden_effect = {
+			set_country_flag = odessus_rejected_urban_flag
+			random_country = {
+				limit = {
+					is_subject = no
+					NOT = { has_country_flag = odessus_rejected_urban_flag }
+					years_of_income = 0.3
+					capital_scope = {
+						OR = {
+							region = carpathia_region
+							region = italy_region
+							region = balkan_region
+						}
+					}
+				}
+				country_event = {
+					id = flavor_tur.2041
+					days = 30
+				}
+			}
+		}
+	}
+}
+
+# Urban for others
+country_event = {
+	id = flavor_tur.2041
+	title = flavor_tur.204.t
+	desc = flavor_tur.204.descRAND
+	picture = ARTILLERY_eventPicture
+	
+	is_triggered_only = yes
 	
 	option = {	# Blasting the walls of Babylon itself you say?
 		name = flavor_tur.204.a
@@ -2811,7 +2949,16 @@ country_event = {
 			religion = catholic
 			type = army_reformer
 			skill = 2
-			cost_multiplier = 0.25
+			cost_multiplier = 0.75
+		}
+		hidden_effect = {
+			set_global_flag = odessus_urban_found_employment_flag
+			every_country = {
+				limit = {
+					has_country_flag = odessus_rejected_urban_flag
+				}
+				clr_country_flag = odessus_rejected_urban_flag
+			}
 		}
 		ai_chance = {
 			factor = 1
@@ -2823,6 +2970,72 @@ country_event = {
 		add_mil_power = 10
 		ai_chance = {
 			factor = 0
+		}
+		hidden_effect = {
+			set_country_flag = odessus_rejected_urban_flag
+			random_country = {
+				limit = {
+					is_subject = no
+					NOT = { has_country_flag = odessus_rejected_urban_flag }
+					years_of_income = 0.3
+					capital_scope = {
+						OR = {
+							region = carpathia_region
+							region = italy_region
+							region = balkan_region
+						}
+					}
+				}
+				country_event = {
+					id = flavor_tur.2041
+					days = 30
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavor_tur.2042
+	title = flavor_tur.204.t
+	desc = flavor_tur.204.descRAND
+	picture = ARTILLERY_eventPicture
+	
+	fire_only_once = yes
+	
+	hidden = yes
+	
+	trigger = {
+		NOT = { has_global_flag = odessus_urban_found_employment_flag }
+		is_year = 1455
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = flavor_tur.2042.a
+		POL = {
+			set_country_flag = odessus_rejected_urban_flag
+		}
+		random_country = {
+			limit = {
+				is_subject = no
+				NOT = { has_country_flag = odessus_rejected_urban_flag }
+				years_of_income = 0.3
+				capital_scope = {
+					OR = {
+						region = carpathia_region
+						region = italy_region
+						region = balkan_region
+					}
+				}
+			}
+			country_event = {
+				id = flavor_tur.2041
+				days = 30
+			}
 		}
 	}
 }
