@@ -933,7 +933,19 @@ country_event = {
 		NOT = {
 			has_global_flag = wih_kosem_tur_flag
 		}
-		owns = 161
+		OR = {
+            AND = {
+                owner = { tag = TUR }
+                province_id = 161
+            }
+            AND = {
+                province_id = 161
+                owner = {
+                    overlord = { tag = TUR }
+                    NOT = { is_tributary = yes }
+                }
+            }
+        }
 	}
 	
 	mean_time_to_happen = {
