@@ -2853,7 +2853,7 @@ country_event = {
 		}
 		add_years_of_income = -0.3
 		define_advisor = {
-			name = "Órban"
+			name = "ï¿½rban"
 			culture = hungarian
 			religion = catholic
 			type = army_reformer
@@ -2874,7 +2874,7 @@ country_event = {
 		}
 	}
 	
-	option = {	# Hush, we don't need your services
+	option = {	# Hush, we don't need your services.
 		name = flavor_tur.204.b
 		trigger = {
 			tag = POL
@@ -2886,13 +2886,15 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = odessus_rejected_urban_flag
 			HUN = {
-				limit = {
-					is_subject = no
-					years_of_income = 0.3
-				}
-				country_event = {
-					id = flavor_tur.2041
-					days = 30
+				if = {
+					limit = {
+						is_subject = no
+						years_of_income = 0.3
+					}
+					country_event = {
+						id = flavor_tur.2041
+						days = 30
+					}
 				}
 			}
 		}
