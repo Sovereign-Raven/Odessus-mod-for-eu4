@@ -17,8 +17,8 @@ bookmark =
 	country = SWE
 	country = MOS
 	country = BUR
-	country = TUR
 	country = BYZ
+	country = TUR
 	
 	easy_country = CAS
 	easy_country = POL
