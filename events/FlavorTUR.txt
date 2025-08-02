@@ -827,6 +827,7 @@ country_event = {
 		tag = TUR
 		is_year = 1519
 		NOT = { is_year = 1560 }
+		owns = 149
 		owns = 151
 	}
 	
@@ -915,7 +916,7 @@ country_event = {
 	}
 }
 
-# K�sem Sultana
+# K sem Sultana
 country_event = {
 	id = flavor_tur.3377
 	title = "flavor_tur.EVTNAME3377"
@@ -934,13 +935,14 @@ country_event = {
 			has_global_flag = wih_kosem_tur_flag
 		}
 		country_or_non_sovereign_subject_holds = 161
+		country_or_non_sovereign_subject_holds = 164
 	}
 	
 	mean_time_to_happen = {
 		months = 100
 	}
 	
-	option = {		# Wed K�sem
+	option = {		# Wed K sem
 		name = "flavor_tur.EVTOPTA3377"
 		ai_chance = { factor = 90 }
 		add_ruler_modifier = {
@@ -953,7 +955,7 @@ country_event = {
 				has_government_attribute = queen
 			}
 			define_consort = {
-				name = "K�sem Sultan"
+				name = "K sem Sultan"
 				culture = greek
 				adm = 5
 				dip = 4
@@ -982,7 +984,7 @@ country_event = {
 	}
 }
 
-# The Murder of K�sem Sultana
+# The Murder of K sem Sultana
 country_event = {
 	id = flavor_tur.3384
 	title = "flavor_tur.EVTNAME3384"
@@ -1003,13 +1005,13 @@ country_event = {
 		months = 300
 	}
 	
-	option = {		# K�sem is murdered
+	option = {		# K sem is murdered
 		name = "flavor_tur.EVTOPTA3384"
 		remove_country_modifier = kosem_sultana
 	}
 }
 
-# The Age of the K�pr�l�s
+# The Age of the K pr l s
 country_event = {
 	id = flavor_tur.3385
 	title = "flavor_tur.EVTNAME3385"
@@ -1022,13 +1024,14 @@ country_event = {
 		tag = TUR
 		is_year = 1600
 		NOT = { is_year = 1650 }
+		country_or_non_sovereign_subject_holds = 4750
 	}
 	
 	mean_time_to_happen = {
 		months = 100
 	}
 	
-	option = {		# Support the K�pr�l� Family
+	option = {		# Support the K pr l  Family
 		name = "flavor_tur.EVTOPTA3385"
 		ai_chance = { factor = 90 }
 		if = {
@@ -1385,9 +1388,9 @@ country_event = {
 	trigger ={
 		tag = TUR
 		is_year = 1700
-		NOT = { exists = TRI }
+		NOT = { exists = TRP }
 		any_owned_province = {
-			is_core = TRI
+			is_core = TRP
 			culture = tunisian
 			can_spawn_rebels = nationalist_rebels
 		}
@@ -1402,7 +1405,7 @@ country_event = {
 			random_owned_province = {
 				limit = {
 					culture = tunisian
-					is_core = TRI
+					is_core = TRP
 					can_spawn_rebels = nationalist_rebels
 				}
 				set_province_flag = tripolitanian_uprising_3
@@ -1410,7 +1413,7 @@ country_event = {
 			random_owned_province = {
 				limit = {
 					culture = tunisian
-					is_core = TRI
+					is_core = TRP
 					can_spawn_rebels = nationalist_rebels
 					NOT = { has_province_flag = tripolitanian_uprising_3 }
 				}
@@ -1428,7 +1431,7 @@ country_event = {
 			spawn_rebels = {
 				type = nationalist_rebels
 				size = 3
-				friend = TRI
+				friend = TRP
 			}
 			clr_province_flag = tripolitanian_uprising_3
 		}
@@ -1439,7 +1442,7 @@ country_event = {
 			spawn_rebels = {
 				type = nationalist_rebels
 				size = 2
-				friend = TRI
+				friend = TRP
 			}
 			clr_province_flag = tripolitanian_uprising_2
 		}
@@ -2853,7 +2856,7 @@ country_event = {
 		}
 		add_years_of_income = -0.3
 		define_advisor = {
-			name = "�rban"
+			name = " rban"
 			culture = hungarian
 			religion = catholic
 			type = army_reformer
@@ -3375,6 +3378,7 @@ country_event = {
 				add_core = event_target:first_potential_eyalet
 			}
 		}
+		custom_tooltip = eyalet_cores_only_on_owned_provinces_tt
 		release = event_target:first_potential_eyalet
 		create_subject = { 
 			subject_type = eyalet
@@ -3433,6 +3437,7 @@ country_event = {
 				add_core = event_target:second_potential_eyalet
 			}
 		}
+		custom_tooltip = eyalet_cores_only_on_owned_provinces_tt
 		release = event_target:second_potential_eyalet
 		create_subject = { 
 			subject_type = eyalet
@@ -3479,6 +3484,7 @@ country_event = {
 				add_core = event_target:third_potential_eyalet
 			}
 		}
+		custom_tooltip = eyalet_cores_only_on_owned_provinces_tt
 		release = event_target:third_potential_eyalet
 		create_subject = { 
 			subject_type = eyalet
@@ -3647,6 +3653,23 @@ country_event = {
 		HAB = {
 			remove_historical_rival = ROOT
 			hidden_effect = { grant_independence = yes }
+			eyalet_effect = {
+				tag = EY3
+			}
+		}
+		create_subject = {
+			who = HAB
+			subject_type = eyalet
+		}
+		HAB = {
+			if = {
+				limit = { NOT = { government = monarchy } }
+				change_government = monarchy
+			}
+			if = {
+				limit = { NOT = { has_reform = eyalet_government } }
+				add_government_reform = eyalet_government
+			}
 			if = {
 				limit = {
 					is_lesser_in_union = no
@@ -3674,14 +3697,6 @@ country_event = {
 					}
 				}
 			}
-			add_government_reform = eyalet_government
-			eyalet_effect = {
-				tag = EY3
-			}
-		}
-		create_subject = {
-			who = HAB
-			subject_type = eyalet
 		}
 		ai_chance = {
 			factor = 1
@@ -3791,6 +3806,7 @@ country_event = {
 			limit = { owned_by = ROOT }
 			add_core = event_target:first_potential_eyalet
 		}
+		custom_tooltip = eyalet_cores_only_on_owned_provinces_tt
 		release = event_target:first_potential_eyalet
 		create_subject = { 
 			subject_type = eyalet
@@ -3851,6 +3867,7 @@ country_event = {
 			limit = { owned_by = ROOT }
 			add_core = event_target:second_potential_eyalet
 		}
+		custom_tooltip = eyalet_cores_only_on_owned_provinces_tt
 		release = event_target:second_potential_eyalet
 		create_subject = { 
 			subject_type = eyalet
@@ -3911,6 +3928,7 @@ country_event = {
 			limit = { owned_by = ROOT }
 			add_core = event_target:third_potential_eyalet
 		}
+		custom_tooltip = eyalet_cores_only_on_owned_provinces_tt
 		release = event_target:third_potential_eyalet
 		create_subject = { 
 			subject_type = eyalet
@@ -3971,6 +3989,7 @@ country_event = {
 			limit = { owned_by = ROOT }
 			add_core = event_target:fourth_potential_eyalet
 		}
+		custom_tooltip = eyalet_cores_only_on_owned_provinces_tt
 		release = event_target:fourth_potential_eyalet
 		create_subject = { 
 			subject_type = eyalet
@@ -4031,6 +4050,7 @@ country_event = {
 			limit = { owned_by = ROOT }
 			add_core = event_target:fifth_potential_eyalet
 		}
+		custom_tooltip = eyalet_cores_only_on_owned_provinces_tt
 		release = event_target:fifth_potential_eyalet
 		create_subject = { 
 			subject_type = eyalet
@@ -4155,6 +4175,7 @@ country_event = {
 			limit = { owned_by = ROOT }
 			add_core = event_target:first_potential_eyalet
 		}
+		custom_tooltip = eyalet_cores_only_on_owned_provinces_tt
 		release = event_target:first_potential_eyalet
 		create_subject = { 
 			subject_type = eyalet
@@ -4236,6 +4257,7 @@ country_event = {
 			limit = { owned_by = ROOT }
 			add_core = event_target:first_potential_eyalet
 		}
+		custom_tooltip = eyalet_cores_only_on_owned_provinces_tt
 		release = event_target:first_potential_eyalet
 		create_subject = { 
 			subject_type = eyalet
@@ -4288,7 +4310,7 @@ country_event = {
 	picture = DEVLET_I_RUM_eventPicture
 	is_triggered_only = yes 
 	
-	#We shall be officially recognized as the Devlet-i R�m!
+	#We shall be officially recognized as the Devlet-i R m!
 	option = { 
 		name = flavor_tur.216.a 
 		
@@ -4504,6 +4526,7 @@ country_event = {
 			limit = { owned_by = ROOT }
 			add_core = event_target:first_potential_eyalet
 		}
+		custom_tooltip = eyalet_cores_only_on_owned_provinces_tt
 		release = event_target:first_potential_eyalet
 		create_subject = { 
 			subject_type = eyalet
@@ -4557,6 +4580,7 @@ country_event = {
 			limit = { owned_by = ROOT }
 			add_core = event_target:second_potential_eyalet
 		}
+		custom_tooltip = eyalet_cores_only_on_owned_provinces_tt
 		release = event_target:second_potential_eyalet
 		create_subject = { 
 			subject_type = eyalet
@@ -4684,6 +4708,7 @@ country_event = {
 			limit = { owned_by = ROOT }
 			add_core = event_target:first_potential_eyalet
 		}
+		custom_tooltip = eyalet_cores_only_on_owned_provinces_tt
 		release = event_target:first_potential_eyalet
 		create_subject = { 
 			subject_type = eyalet
@@ -4911,6 +4936,7 @@ country_event = {
 			limit = { owned_by = ROOT }
 			add_core = event_target:first_potential_eyalet
 		}
+		custom_tooltip = eyalet_cores_only_on_owned_provinces_tt
 		release = event_target:first_potential_eyalet
 		create_subject = { 
 			subject_type = eyalet
@@ -4969,6 +4995,7 @@ country_event = {
 			limit = { owned_by = ROOT }
 			add_core = event_target:second_potential_eyalet
 		}
+		custom_tooltip = eyalet_cores_only_on_owned_provinces_tt
 		release = event_target:second_potential_eyalet
 		create_subject = { 
 			subject_type = eyalet
@@ -5100,6 +5127,7 @@ country_event = {
 			limit = { owned_by = ROOT }
 			add_core = event_target:first_potential_eyalet
 		}
+		custom_tooltip = eyalet_cores_only_on_owned_provinces_tt
 		release = event_target:first_potential_eyalet
 		create_subject = { 
 			subject_type = eyalet
@@ -5334,6 +5362,7 @@ country_event = {
 			limit = { owned_by = ROOT }
 			add_core = event_target:first_potential_eyalet
 		}
+		custom_tooltip = eyalet_cores_only_on_owned_provinces_tt
 		release = event_target:first_potential_eyalet
 		create_subject = { 
 			subject_type = eyalet
@@ -5533,6 +5562,7 @@ country_event = {
 			limit = { owned_by = ROOT }
 			add_core = event_target:first_potential_eyalet
 		}
+		custom_tooltip = eyalet_cores_only_on_owned_provinces_tt
 		release = event_target:first_potential_eyalet
 		create_subject = { 
 			subject_type = eyalet
@@ -5870,6 +5900,7 @@ country_event = {
 			limit = { owned_by = ROOT }
 			add_core = event_target:first_potential_eyalet
 		}
+		custom_tooltip = eyalet_cores_only_on_owned_provinces_tt
 		release = event_target:first_potential_eyalet
 		create_subject = { 
 			subject_type = eyalet
@@ -5967,6 +5998,7 @@ country_event = {
 			limit = { owned_by = ROOT }
 			add_core = event_target:first_potential_eyalet
 		}
+		custom_tooltip = eyalet_cores_only_on_owned_provinces_tt
 		release = event_target:first_potential_eyalet
 		create_subject = { 
 			subject_type = eyalet
@@ -6178,7 +6210,7 @@ country_event = {
 		name = flavor_tur.239.a
 		
 		define_heir = {
-			name = "S�leyman Kanuni" 
+			name = "S leyman Kanuni" 
 			adm = 6 
 			dip = 5
 			mil = 6
@@ -6219,22 +6251,6 @@ country_event = {
 	fire_only_once = yes
 	major = yes
 	is_triggered_only = yes
-	trigger = {
-		has_dlc = "Domination"
-		tag = TUR
-		exists = MAM
-		FROM = {
-			is_capital = yes
-			owner = {
-				tag = MAM
-			}
-		}
-		is_in_war = {
-			casus_belli = cb_ottoman_invasion
-			attacker_leader = TUR
-			defender_leader = MAM
-		}
-	}
 
 	option = {
 		name = flavor_tur.240.a
@@ -6248,7 +6264,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 0
+			factor = 1
 		}
 	}
 
@@ -6267,7 +6283,7 @@ country_event = {
 			duration = 7300
 		}
 		ai_chance = {
-			factor = 1
+			factor = 0
 		}
 	}
 }
@@ -6303,9 +6319,21 @@ country_event = {
 		has_dlc = "Domination"
 		tag = TUR
 		has_country_flag = tur_decided_to_go_eyalet
-		had_country_flag = {
-			flag = tur_decided_to_go_eyalet
-			days = 1095
+		or = {
+			and = {
+				ai = yes
+				had_country_flag = {
+					flag = tur_decided_to_go_eyalet
+					days = 365
+				}
+			}
+			and = {
+				ai = no
+				had_country_flag = {
+					flag = tur_decided_to_go_eyalet
+					days = 1095
+				}
+			}
 		}
 		is_in_war = {
 			casus_belli = cb_ottoman_invasion
@@ -6320,6 +6348,10 @@ country_event = {
 				controlled_by = ROOT
 			}
 		}
+		NOT = { exists = EGY }
+	}
+	mean_time_to_happen = {
+		days = 1
 	}
 
 	option = {
@@ -6401,7 +6433,6 @@ country_event = {
 	picture = EYALET_REBELLION_eventPicture
 	fire_only_once = yes
 	trigger = {
-		has_country_flag = has_eyalet_country_name
 		has_country_modifier = tur_mamlukian_administration
 		NOT = { is_subject_of_type = eyalet }
 		NOT = { is_subject_of_type = core_eyalet }
@@ -6414,6 +6445,7 @@ country_event = {
 		restore_country_name = yes
 		restore_country_color = yes
 		clr_country_flag = has_eyalet_country_name
+		clr_country_flag = is_EY7_flag
 		remove_country_modifier = tur_mamlukian_administration
 		add_prestige = 20
 		add_stability_or_adm_power = yes
@@ -6607,9 +6639,12 @@ country_event = {
 						who = ROOT 
 						value = 150 
 					}
-					trust = { 
-						who = ROOT 
-						value = 80 
+					if = {
+						limit = { has_dlc = "Leviathan" }
+						trust = { 
+							who = ROOT 
+							value = 80 
+						}
 					}
 				}
 			}
@@ -6890,7 +6925,7 @@ country_event = {
 	option = { 
 		name = flavor_tur.254.a 
 		change_ruler_stat = {
-			stat = adm
+			type = adm
 			amount = 2
 		}
 		add_ruler_modifier = { 
@@ -7821,7 +7856,7 @@ country_event = {
 			}
 		}
 		change_ruler_stat = {
-			stat = adm
+			type = adm
 			amount = 1
 		}
 		ai_chance = {
@@ -7841,7 +7876,7 @@ country_event = {
 			}
 		}
 		change_ruler_stat = {
-			stat = dip
+			type = dip
 			amount = 1
 		}
 		ai_chance = {
@@ -8002,9 +8037,12 @@ country_event = {
 					who = ROOT 
 					value = 150 
 				}
-				trust = { 
-					who = ROOT 
-					value = 60 
+				if = {
+					limit = { has_dlc = "Leviathan" }
+					trust = {
+						who = ROOT 
+						value = 60 
+					}
 				}
 			}
 		}
@@ -8210,167 +8248,6 @@ country_event = {
 		add_claim = 122
 		add_mil_power = 50
 		add_prestige = 10
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
-# Franco-Ottoman Alliance - France
-country_event = {
-	id = flavor_tur.278
-	title = flavor_tur.278.t
-	desc = flavor_tur.278.desc
-	picture = TRANSYLVANIAN_OTTOMAN_eventPicture
-	fire_only_once = yes
-	trigger = {
-		tag = FRA
-		normal_or_historical_nations = yes
-		exists = HAB
-		exists = TUR
-		HAB = {
-			total_own_and_non_tributary_subject_development = 750
-		}
-		is_rival = HAB
-		NOT = { is_rival = TUR }
-		TUR = {
-			is_rival = HAB
-			NOT = { is_rival = FRA }
-			NOT = { war_with = FRA }
-		}
-	}
-	mean_time_to_happen = {
-		months = 100
-	}
-	#Reach out to the Ottomans
-	option = {
-		name = flavor_tur.278.a
-		add_dip_power = -25
-		TUR = {
-			country_event = {
-				id = flavor_tur.279
-			}
-		}
-		custom_tooltip = flavor_tur.278.a.tt
-		hidden_effect = {
-			every_known_country = {
-				limit = {
-					NOT = { is_subject_of = ROOT }
-					religion_group = christian
-					capital_scope = {
-						same_continent = ROOT
-					}
-				}
-				add_opinion = {
-					who = ROOT
-					modifier = tur_allied_with_the_ottomans
-				}
-			}
-		}
-		ai_chance = {
-			factor = 1
-		}
-	}
-	#Nah
-	option = {
-		name = flavor_tur.278.b
-		add_dip_power = 50
-		custom_tooltip = flavor_tur.278.b.tt
-		hidden_effect = {
-			every_known_country = {
-				limit = {
-					NOT = { is_subject_of = ROOT }
-					religion_group = christian
-					capital_scope = {
-						same_continent = ROOT
-					}
-				}
-				add_opinion = {
-					who = ROOT
-					modifier = tur_refused_to_ally_ottomans
-				}
-			}
-		}
-		ai_chance = {
-			factor = 0
-		}
-	}
-}
-
-# Franco-Ottoman Alliance - Ottomans
-country_event = {
-	id = flavor_tur.279
-	title = flavor_tur.279.t
-	desc = flavor_tur.279.desc
-	picture = TRANSYLVANIAN_OTTOMAN_eventPicture
-	is_triggered_only = yes
-	major = yes
-	major_trigger = {
-		NOT = { tag = FROM }
-		capital_scope = {
-			continent = europe
-		}
-	}
-	#Accept the Alliance
-	option = {
-		name = flavor_tur.279.a
-		create_alliance = FROM
-		add_historical_friend = FROM
-		FROM = { add_historical_friend = ROOT }
-		FROM = {
-			country_event = {
-				id = flavor_tur.280
-			}
-		}
-		ai_chance = {
-			factor = 1
-		}
-	}
-	#Refuse the Alliance
-	option = {
-		name = flavor_tur.279.b
-		add_prestige_or_monarch_power = {
-			amount = 20
-		}
-		FROM = {
-			country_event = {
-				id = flavor_tur.281
-			}
-		}
-		ai_chance = {
-			factor = 0
-		}
-	}
-}
-
-# Franco-Ottoman Alliance - Ottomans accepts
-country_event = {
-	id = flavor_tur.280
-	title = flavor_tur.280.t
-	desc = flavor_tur.280.desc
-	picture = TRANSYLVANIAN_OTTOMAN_eventPicture
-	is_triggered_only = yes
-	#Neat
-	option = {
-		name = flavor_tur.280.a
-		add_dip_power = -10
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
-# Franco-Ottoman Alliance - Ottomans refuses
-country_event = {
-	id = flavor_tur.281
-	title = flavor_tur.281.t
-	desc = flavor_tur.281.desc
-	picture = TRANSYLVANIAN_OTTOMAN_eventPicture
-	is_triggered_only = yes
-	#A shame
-	option = {
-		name = flavor_tur.281.a
-		add_dip_power = 25
 		ai_chance = {
 			factor = 1
 		}
@@ -9223,6 +9100,78 @@ country_event = {
 		name = flavor_tur.1000.a
 		clr_country_flag = has_eyalet_country_name
 		clr_country_flag = has_eyalet_color
+		if = { 
+			limit = { has_country_flag = is_EY0_flag }
+			clr_country_flag = is_EY0_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_EY1_flag }
+			clr_country_flag = is_EY1_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_EY2_flag }
+			clr_country_flag = is_EY2_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_EY3_flag }
+			clr_country_flag = is_EY3_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_EY4_flag }
+			clr_country_flag = is_EY4_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_EY5_flag }
+			clr_country_flag = is_EY5_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_EY6_flag }
+			clr_country_flag = is_EY6_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_EY7_flag }
+			clr_country_flag = is_EY7_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_EY8_flag }
+			clr_country_flag = is_EY8_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_EY9_flag }
+			clr_country_flag = is_EY9_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_E10_flag }
+			clr_country_flag = is_E10_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_E11_flag }
+			clr_country_flag = is_E11_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_E12_flag }
+			clr_country_flag = is_E12_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_E13_flag }
+			clr_country_flag = is_E13_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_E14_flag }
+			clr_country_flag = is_E14_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_E15_flag }
+			clr_country_flag = is_E15_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_E16_flag }
+			clr_country_flag = is_E16_flag
+		}
+		if = { 
+			limit = { has_country_flag = is_E17_flag }
+			clr_country_flag = is_E17_flag
+		}
 		restore_country_name = yes
 		restore_country_color = yes
 		add_prestige = 20
