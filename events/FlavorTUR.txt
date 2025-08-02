@@ -916,7 +916,7 @@ country_event = {
 	}
 }
 
-# K sem Sultana
+# Kösem Sultana
 country_event = {
 	id = flavor_tur.3377
 	title = "flavor_tur.EVTNAME3377"
@@ -942,7 +942,7 @@ country_event = {
 		months = 100
 	}
 	
-	option = {		# Wed K sem
+	option = {		# Wed Kösem
 		name = "flavor_tur.EVTOPTA3377"
 		ai_chance = { factor = 90 }
 		add_ruler_modifier = {
@@ -955,7 +955,7 @@ country_event = {
 				has_government_attribute = queen
 			}
 			define_consort = {
-				name = "K sem Sultan"
+				name = "Kösem Sultan"
 				culture = greek
 				adm = 5
 				dip = 4
@@ -984,7 +984,7 @@ country_event = {
 	}
 }
 
-# The Murder of K sem Sultana
+# The Murder of Kösem Sultana
 country_event = {
 	id = flavor_tur.3384
 	title = "flavor_tur.EVTNAME3384"
@@ -1005,13 +1005,13 @@ country_event = {
 		months = 300
 	}
 	
-	option = {		# K sem is murdered
+	option = {		# Kösem is murdered
 		name = "flavor_tur.EVTOPTA3384"
 		remove_country_modifier = kosem_sultana
 	}
 }
 
-# The Age of the K pr l s
+# The Age of the Köprülüs
 country_event = {
 	id = flavor_tur.3385
 	title = "flavor_tur.EVTNAME3385"
@@ -1031,7 +1031,7 @@ country_event = {
 		months = 100
 	}
 	
-	option = {		# Support the K pr l  Family
+	option = {		# Support the Köprülü Family
 		name = "flavor_tur.EVTOPTA3385"
 		ai_chance = { factor = 90 }
 		if = {
@@ -4310,7 +4310,7 @@ country_event = {
 	picture = DEVLET_I_RUM_eventPicture
 	is_triggered_only = yes 
 	
-	#We shall be officially recognized as the Devlet-i R m!
+	#We shall be officially recognized as the Devlet-i Rûm!
 	option = { 
 		name = flavor_tur.216.a 
 		
@@ -6210,7 +6210,7 @@ country_event = {
 		name = flavor_tur.239.a
 		
 		define_heir = {
-			name = "S leyman Kanuni" 
+			name = "Süleyman Kanuni" 
 			adm = 6 
 			dip = 5
 			mil = 6
