@@ -1,4 +1,3 @@
-
 monarchy = {
 	reform_levels = {
 		feudalism_vs_autocracy = {
@@ -99,6 +98,7 @@ monarchy = {
 				barbary_sultanate_reform
 				roman_empire_reform
 				persian_government_reform
+				zoroastrian_persian_government_reform
 				portuguese_monarchy_reform
 				holy_imperial_monarchy_reform
 				burgundian_state_reform
@@ -110,6 +110,26 @@ monarchy = {
 				courts_of_navarra
 				league_of_lezhe_reform
 				tibetan_dual_government_reform
+				#1.36
+				#Turkomen
+				turkoman_ottoman_institutions
+				pronoiar_monarchy_reform #custom nation
+				#Egypt 
+				egyptian_government_reform
+				#1.37
+				ayyubid_dynasty
+				arabic_plutocracy_reform
+				apostolic_kingdom
+				imperial_hungarian_government
+				andean_empire_reform
+				aztec_empire_reform
+				maya_confederation_reform
+				divine_kingship_reform
+				nahuatl_monarchy_reform
+				empire_of_trebizond
+				austrian_absolute_monarchy
+				merchant_aristocracy_reform
+				gothic_monarchy_reform
 			}
 		}
 		hereditary_vs_nobility = {
@@ -142,6 +162,30 @@ monarchy = {
 				house_of_lords_reform
 				ministerialis_promotion_reform
 				separation_of_boyars_from_court_reform
+				#1.36
+				nakharar_title
+				reform_the_pronoiars_reform
+				diwan_al_khass_reform
+				legacy_of_timur_reform
+				
+				#1.37 German Reforms
+				german_cultural_disunity_reform
+				german_franconian_reform
+				german_westphalian_reform
+				german_rhenish_reform
+				german_lower_saxon_reform
+				german_prussian_reform
+				german_austrian_reform
+				german_saxon_reform
+				german_bavarian_reform
+				german_swiss_reform
+				german_swabian_reform
+				german_other_reform
+				#1.37 Hungary
+				extend_the_unio_trium_nationum_reform
+				#1.37 Trebizond
+				crusader_nobility_reform
+				TIM_plunder_economy
 			}
 		}
 		bureaucracy = {
@@ -167,6 +211,15 @@ monarchy = {
 				ottoman_provincial_government_system_reform
 				namestnik_reform
 				consulate_of_the_sea
+				#1.36
+				restore_the_master_of_offices_reform
+				court_of_art_and_culture_reform
+				integrated_ottoman_officials
+				#1.37
+				seven_provinces_reform
+				#1.37 Hungary
+				continue_the_renaissance_reform
+				timurid_diwan_reform
 			}
 		}
 		state_and_religion = {
@@ -174,6 +227,7 @@ monarchy = {
 				papal_embassy_reform
 				lands_for_the_monasteries_reform
 				focus_of_the_patriarchy_reform
+				#the_avestan_dogma_reform
 				zoroastrian_focus_reform
 				power_to_the_synagogoues_reform
 				head_of_the_reformed_church_reform
@@ -205,6 +259,9 @@ monarchy = {
 				head_of_the_patriarchy_reform
 				anglican_state_church_reform
 				english_conciliarism_reform
+				#1.36
+				legacy_of_the_safavid_reform
+				state_madrasas_reform
 			}
 		}
 		military_doctrines = {
@@ -265,6 +322,19 @@ monarchy = {
 				merchant_arsenal_reform
 				tercios_reform
 				expanded_black_army_reform
+				theme_system_reform
+				#1.36
+				sparapet_office
+				legacy_of_the_seljuk_reform
+				modernized_furusiyya_reform
+				cawa_auxiliary_forces
+				#1.37
+				ayyubid_high_command
+				#1.37 Hungary
+				cuman_lancers_reform
+				#1.37 Bohemia
+				vozove_hradby_reform
+				russian_mercenary_guard_reform 
 			}
 		}
 		deliberative_assembly = {
@@ -290,6 +360,7 @@ monarchy = {
 				catalan_cortes_reform
 				great_council_of_mechelen_reform
 				parliament_vs_monarchy_reform
+				restoration_of_the_senate_reform
 			}
 		}
 		growth_of_administration = {
@@ -312,6 +383,10 @@ monarchy = {
 				direct_royal_administration_reform
 				administration_of_the_parliament_reform
 				strengthened_parliament_reform
+				#1.36
+				legacy_of_eranshahr_reform
+				superiority_of_the_state_reform
+				divided_aristocracy_reform
 			}
 		}
 		economical_matters = {
@@ -333,6 +408,14 @@ monarchy = {
 				thalassocracy_reform
 				royal_charters_reform
 				commercial_trade_empire_reform
+				laesio_enormis_reform
+				#1.36
+				karimi_stations_reform
+				#1.37
+				merchant_representation_reform
+				modern_economics_reform
+				chinampa_farms_reform
+				bergordnung_reforms_reform
 			}
 		}
 		legitimation_of_power = {
@@ -492,10 +575,9 @@ monarchy = {
 		swiss_mercenary_reform
 	}
 
-	#Effects conflict with each other
 	exclusive_reforms = {
-		mughal_government
-		decentralize_reform
+		states_general_reform
+		land_christian_sun_reform
 	}
 
 	color = { 179 25 25 }
@@ -534,6 +616,7 @@ republic = {
 		protectorate_parliament_legacy
 		prussian_republic
 		united_cantons_legacy
+		turkoman_ottoman_institutions
 	}
 	reform_levels = {
 		oligarchy_merchant_class_noble_elite = {
@@ -578,7 +661,10 @@ republic = {
 				parliamentary_republic_reform
 				absolute_shogunate_reform
 				japanese_divine_empire
-				land_christian_sun_reform
+				#Mamluks
+				egyptian_government_reform
+				city_alliance_reform
+				turkoman_ottoman_institutions
 			}
 		}
 		republican_virtues = {
@@ -600,6 +686,25 @@ republic = {
 				namestnik_reform
 				oprichnina_reform
 				consulate_of_the_sea
+				#1.36
+				diwan_al_khass_reform
+				integrated_ottoman_officials
+				
+				#1.37 German Reforms
+				german_cultural_disunity_reform
+				german_franconian_reform
+				german_westphalian_reform
+				german_rhenish_reform
+				german_lower_saxon_reform
+				german_prussian_reform
+				german_austrian_reform
+				german_saxon_reform
+				german_bavarian_reform
+				german_swiss_reform
+				german_swabian_reform
+				german_other_reform
+				#1.37
+				support_state_reform
 			}
 		}
 		frequent_elections_vs_consolidation_of_power = {
@@ -617,6 +722,7 @@ republic = {
 				legislative_assembly_reform
 				national_constituent_reform
 				national_assembly_reform
+				ven_promissione_ducale_reform
 			}
 		}
 		republic_and_religion = {
@@ -624,6 +730,7 @@ republic = {
 				papal_embassy_reform
 				lands_for_the_monasteries_reform
 				focus_of_the_patriarchy_reform
+				#the_avestan_dogma_reform
 				zoroastrian_focus_reform
 				power_to_the_synagogoues_reform
 				head_of_the_reformed_church_reform
@@ -657,6 +764,9 @@ republic = {
 				head_of_the_patriarchy_reform
 				anglican_state_church_reform
 				english_conciliarism_reform
+				#1.36
+				legacy_of_the_safavid_reform
+				state_madrasas_reform
 			}
 		}
 		military_doctrines = {
@@ -717,6 +827,18 @@ republic = {
 				merchant_arsenal_reform
 				tercios_reform
 				expanded_black_army_reform
+				#1.36
+				sparapet_office
+				legacy_of_the_seljuk_reform
+				modernized_furusiyya_reform
+				cawa_auxiliary_forces
+				#1.37
+				ayyubid_high_command
+				#1.37 Hungary
+				cuman_lancers_reform
+				#1.37 Bohemia
+				vozove_hradby_reform
+				russian_mercenary_guard_reform 
 			}
 		}
 		parliamentary_vs_presidential = {
@@ -738,6 +860,8 @@ republic = {
 				#1.35
 				governing_senate_reform
 				enforced_autocracy_reform
+				#1.37
+				seven_provinces_reform
 			}
 		}
 		federalism_vs_unitarism_vs_confederacy = {
@@ -747,6 +871,9 @@ republic = {
 				union_of_states_reform
 				cultural_administration_reform
 				penal_colonies_reform
+				#1.36
+				superiority_of_the_state_reform
+				divided_aristocracy_reform
 			}
 		}
 		economical_matters_republic = {
@@ -771,6 +898,12 @@ republic = {
 				thalassocracy_reform
 				royal_charters_reform
 				commercial_trade_empire_reform
+				#1.36
+				karimi_stations_reform
+				#1.37
+				merchant_representation_reform
+				modern_economics_reform
+				chinampa_farms_reform
 			}
 		}
 		consolidation_of_power_category = {
@@ -784,6 +917,8 @@ republic = {
 				power_to_the_captains_reform
 				absolute_president_reform
 				revolutionary_council_reform
+				#1.37
+				orangist_stadholders_reform
 			}
 		}
 		guiding_principle_of_administration = {
@@ -926,6 +1061,9 @@ tribal = {
 				matrilineal_system
 				feudal_tribe
 				great_man
+				#1.36
+				#Turkomen
+				turkoman_ottoman_institutions
 			}
 		}
 		tribal_cultural_values = {
@@ -942,17 +1080,12 @@ tribal = {
 		}
 		tribal_military_doctrines = {
 			reforms = {
-				organized_military_staff_reform
-				military_engineering_reform
-				defensive_stance_reform
 				sygnakhs_system_reform
 				sustained_discipline_reform
 				cavalry_warfare_reform
 				mercenary_leadership_reform
 				#Visible but locked
-				amphibious_specialization_reform
 				royal_marines_reform
-				maritime_military_reform
 				professional_navy_reform
 				doppelsoldner_reform
 				#Invisible until unlocked
@@ -998,6 +1131,18 @@ tribal = {
 				merchant_arsenal_reform
 				tercios_reform
 				expanded_black_army_reform
+				#1.36
+				sparapet_office
+				legacy_of_the_seljuk_reform
+				modernized_furusiyya_reform
+				cawa_auxiliary_forces
+				#1.37
+				ayyubid_high_command
+				#1.37 Hungary
+				cuman_lancers_reform
+				#1.37 Bohemia
+				vozove_hradby_reform
+				russian_mercenary_guard_reform 
 			}
 		}
 		tribal_modernization = {
@@ -1090,6 +1235,7 @@ theocracy = {
 			reforms = {
 				leading_clergy_reform
 				monastic_order_reform
+				feudal_theocracy
 				crusading_kingdom_reform
 				papacy_reform
 				holy_state_reform
@@ -1114,7 +1260,10 @@ theocracy = {
 				absolute_shogunate_reform
 				japanese_divine_empire
 				sisterhood_of_jeanne_darc_reform
-				land_christian_sun_reform
+				#Egypt
+				egyptian_government_reform
+				blood_theocracy_reform
+				turkoman_ottoman_institutions
 			}
 		}
 		internal_vs_external_mission = {
@@ -1127,6 +1276,19 @@ theocracy = {
 				commercial_mission_reform
 				mission_to_protect_reform
 				consulate_of_the_sea
+				#1.37 German Reforms
+				german_cultural_disunity_reform
+				german_franconian_reform
+				german_westphalian_reform
+				german_rhenish_reform
+				german_lower_saxon_reform
+				german_prussian_reform
+				german_austrian_reform
+				german_saxon_reform
+				german_bavarian_reform
+				german_swiss_reform
+				german_swabian_reform
+				german_other_reform
 			}
 		}
 		education_of_the_state = {
@@ -1136,6 +1298,10 @@ theocracy = {
 				education_of_the_advisors_reform
 				education_of_the_missionaries_reform
 				education_of_the_people_reform
+				#1.36
+				diwan_al_khass_reform
+				state_madrasas_reform
+				integrated_ottoman_officials
 			}
 		}
 		religoius_doctrine = {
@@ -1144,6 +1310,7 @@ theocracy = {
 				papal_embassy_reform
 				lands_for_the_monasteries_reform
 				focus_of_the_patriarchy_reform
+				#the_avestan_dogma_reform
 				zoroastrian_focus_reform
 				power_to_the_synagogoues_reform
 				head_of_the_reformed_church_reform
@@ -1168,6 +1335,8 @@ theocracy = {
 				strengthened_the_patriarchy_reform
 				head_of_the_patriarchy_reform
 				anglican_state_church_reform
+				#1.36
+				legacy_of_the_safavid_reform
 			}
 		}
 		military_doctrines = {
@@ -1228,6 +1397,18 @@ theocracy = {
 				merchant_arsenal_reform
 				tercios_reform
 				expanded_black_army_reform
+				#1.36
+				sparapet_office
+				legacy_of_the_seljuk_reform
+				modernized_furusiyya_reform
+				cawa_auxiliary_forces
+				#1.37
+				ayyubid_high_command
+				#1.37 Hungary
+				cuman_lancers_reform
+				#1.37 Bohemia
+				vozove_hradby_reform
+				russian_mercenary_guard_reform 
 			}
 		}
 		secularization = {
@@ -1254,6 +1435,9 @@ theocracy = {
 				pious_merchants_reform
 				monastic_breweries_reform
 				warrior_monks_reform
+				#1.36
+				superiority_of_the_state_reform
+				divided_aristocracy_reform
 			}
 		}
 		economical_matters = {
@@ -1274,6 +1458,12 @@ theocracy = {
 				thalassocracy_reform
 				royal_charters_reform
 				commercial_trade_empire_reform
+				#1.36
+				karimi_stations_reform
+				#1.37
+				merchant_representation_reform
+				modern_economics_reform
+				chinampa_farms_reform
 			}
 		}
 		divine_cause = {
@@ -1283,6 +1473,8 @@ theocracy = {
 				expel_heathens_reform
 				guru_advisors_reform
 				pursuit_of_knowledge_reform
+				#1.37
+				seven_provinces_reform
 			}
 		}
 		separation_of_power_theocracy = {

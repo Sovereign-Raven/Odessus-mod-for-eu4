@@ -1,6 +1,6 @@
 bookmark =
 {
-	name = "THE_LAST_CRUSADE"
+	name = "The Last Crusade"
 	desc = "RISE_OF_THE_OTTOMANS_DESC"
 	date = 1445.05.29
 	
@@ -17,8 +17,8 @@ bookmark =
 	country = SWE
 	country = MOS
 	country = BUR
-	country = TUR
 	country = BYZ
+	country = TUR
 	
 	easy_country = CAS
 	easy_country = POL
