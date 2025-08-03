@@ -532,6 +532,11 @@ MEE_BYZ_conquest_3 = {
 			give_claims = { area = rascia_area }
 			give_claims = { area = serbia_area }
 			give_claims = { area = aegean_archipelago_area }
+			give_claims = { area = hudavendigar_area }
+			give_claims = { area = aydin_area }
+			give_claims = { area = bulgaria_area }
+			give_claims = { area = silistria_area }
+			give_claims = { area = macedonia_area }
 			give_claims = { id = 163 } #Crete
 			give_claims = { id = 321 } #Cyprus
 			

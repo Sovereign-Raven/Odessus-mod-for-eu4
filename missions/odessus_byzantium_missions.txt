@@ -54,7 +54,7 @@ odessus_byz_1 = {
 				}
 			}
 			else = {
-				1322 { #Gulf of Odessa
+				1322 = { #Gulf of Odessa
 					trade_share = {
 						country = ROOT
 						share = 10
