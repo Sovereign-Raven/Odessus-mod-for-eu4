@@ -31,9 +31,10 @@ MEE_BYZ_conquest_1 = {
 		position = 1
 		provinces_to_highlight = {
 			OR = {
-				owned_by = EPI
-				province_id = 4699
-			}
+					owned_by = EPI
+					province_id = 144 #Epirus
+					province_id = 4699 #Arta
+				}
 		}
 		trigger = {
 			OR = {
