@@ -934,7 +934,7 @@ country_event = {
 		NOT = {
 			has_global_flag = wih_kosem_tur_flag
 		}
-		country_or_non_sovereign_subject_holds = 161
+		owns_or_non_sovereign_subject_of = 161
 		owns_or_non_sovereign_subject_of = 164
 	}
 	
@@ -1024,7 +1024,7 @@ country_event = {
 		tag = TUR
 		is_year = 1600
 		NOT = { is_year = 1650 }
-		country_or_non_sovereign_subject_holds = 4750
+		owns_or_non_sovereign_subject_of = 4750
 	}
 	
 	mean_time_to_happen = {
