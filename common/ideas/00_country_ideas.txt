@@ -6265,8 +6265,7 @@ ALB_ideas = {
 		stability_cost_modifier = -0.1
 	}
 	albanian_tolerance = {
-		tolerance_heretic = 1
-		tolerance_heathen = 1		
+		tolerance_heretic = 2
 	}
 	break_the_princes = {
 		global_manpower_modifier = 0.15
