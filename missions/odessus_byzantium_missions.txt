@@ -5,6 +5,7 @@ odessus_byz_1 = {
 	potential = {
 		NOT = { map_setup = map_setup_random }
 		tag = BYZ
+		NOT = { has_dlc = "King of Kings" }
 	}
 	has_country_shield = yes
 	
@@ -54,7 +55,7 @@ odessus_byz_1 = {
 				}
 			}
 			else = {
-				1322 { #Gulf of Odessa
+				1322 = { #Gulf of Odessa
 					trade_share = {
 						country = ROOT
 						share = 10
@@ -90,6 +91,7 @@ odessus_byz_5 = {
 	potential = {
 		NOT = { map_setup = map_setup_random }
 		tag = BYZ
+		NOT = { has_dlc = "King of Kings" }
 	}
 	has_country_shield = yes
 	

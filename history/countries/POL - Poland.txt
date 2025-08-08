@@ -35,7 +35,7 @@ add_truce_with = HUN
 	}
 }
 
-1439.10.27 = { leader = {	name = "J nos Hunyadi"         	type = general	fire = 4	shock = 4	manuever = 4	siege = 1	death_date = 1456.8.11 } }
+1439.10.27 = { leader = {	name = "János Hunyadi"         	type = general	fire = 4	shock = 4	manuever = 4	siege = 1	death_date = 1456.8.11 } }
 
 1444.10.1 = {
 	set_estate_privilege = estate_nobles_golden_liberty
