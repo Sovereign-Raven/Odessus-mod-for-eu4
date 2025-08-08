@@ -16,3 +16,17 @@
  plc_the_obrona_potoczna_desc: "What we term a 'continuous defense' is really a standing army that is paid for by the monarch from their own pocket. They are stationed traditionally in troubled areas or places where the border with a neighbor is not clearly defined so that Commonwealth interests are not intruded upon. Over time, this military sector of ours is going to yield for us highly trained soldiers and skilled generals who know just how to deal with enemies of all types, whether they're of Polish, Hungarian, Croatian, or foreign descent."
 
  plc_tempered_by_neighbors_desc: "All around us there is conflict. Swedish people? Baltic conflicts. Lithuanians? Succession disputes. Teutons? Old grudges and lusts for land. Russians? Ambition for land on both sides. Time and time again we have been tested in combat since our borders in the east and west are hard to define beyond a hand-drawn map, but these times of war did not break down the Polish and Hungarian people, it only made them stronger."
+
+ HRZ_ottoman_accommodation: "Accommodation with Others"
+ HRZ_ottoman_accommodation_desc: "Even among our neighbors, we often get belittled and our very existence, threatened. In order to deflect these dangerous foes, we must stand tall and find allies with who we can build a strong bond with."
+
+ flavor_pol.26.t: "The Polish-Lithuanian Pact of Cooperation"
+ flavor_pol.26.d: "It is said that close cooperation and diplomacy can make or break the fate of nations. Recent attempts to reconcile our differences with our Polish brethren in the East, have led to the culmination of the Polish-Lithuanian pact of Cooperation of the year [GetYear]. It is up to us how and in which manner to proceed and react to such a profound extension of friendship and cohabitation."
+ flavor_pol.26.a: "The crown of Poland will lead the way for a union of our states."
+ flavor_pol.26.b: "Together, our two domains will prosper as equals."
+ flavor_pol.26.c: "I wouldn't wipe my boots with the Polish banner!"
+
+ patronage_desc: "Our maritime affairs and land trading is dependent on the Republic of Venice. Either we join their trading company or not, we have great mutual influence on each other's economy, and in order for our relatively small nation to survive among the giants of the world, seeking protection of either burghers or monarchs is a sure safeguard for us to keep on existing."
+
+ bastion_of_orthodoxy_desc: "Orthodox Christianity has returned to the peninsula through the efforts of Christian crusaders. This absence of religious threats has brought peace to people's lives, allowing them to once again practice their rituals undisturbed."
+ balkan_hajduks_desc: "Unlike their northern counterparts in Hungary, Hajduks in Serbia and neighboring Balkan lands have earned a more infamous reputation. These men lived the hard life of brigands, always in danger, always on the move: preying on poorly defended roads, ambushing foreign tax collectors and merchants. However, during wars these experienced, tough men often filled the ranks of Serbian armies, providing excellent - if a bit undisciplined - infantry."
