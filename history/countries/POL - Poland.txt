@@ -6,6 +6,7 @@ technology_group = eastern
 historical_friend = LIT
 historical_friend = HUN
 historical_rival = TEU
+historical_rival = TUR
 capital = 262 # Krakow
 add_accepted_culture = ruthenian
 add_truce_with = HUN
