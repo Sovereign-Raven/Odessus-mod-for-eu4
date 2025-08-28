@@ -505,12 +505,13 @@ tur_conquest_of_europe = {
 			else = {
 				add_mil_power = 100
 			}
+		}
 
 		ai_weight = {
 			factor = 250
 		}
 	}
-	
+
 	tur_address_firman = {
 		
 		icon = mission_the_firman
@@ -614,91 +615,6 @@ tur_conquest_of_europe = {
 				else = {
 					tur_address_firman_effect_b = yes
 				}
-			}
-		}
-
-		ai_weight = {
-			factor = 250
-		}
-	}
-	
-	tur_al_andalus_eyalet = {
-		icon = mission_eyalet_andalusia
-		required_missions = { 
-			tur_address_firman
-			tur_the_algerian_corsairs
-		}
-		position = 10
-		provinces_to_highlight = {
-			region = iberia_region
-			NOT = { owned_by = ROOT }
-		}
-		trigger = {
-			OR = {
-				custom_trigger_tooltip = {
-					tooltip = tur_al_andalus_eyalet_ct
-					OR = {
-						any_subject_country = {
-							religion = ROOT
-							owns = 225
-							owns = 223
-							owns = 226
-							owns = 224
-							num_of_owned_provinces_with = {
-								region = iberia_region
-								value = 10
-							}
-							capital_scope = {
-								region = iberia_region
-							}
-						}
-						any_ally = {
-							religion = ROOT
-							owns = 225
-							owns = 223
-							owns = 226
-							owns = 224
-							num_of_owned_provinces_with = {
-								region = iberia_region
-								value = 10
-							}
-							capital_scope = {
-								region = iberia_region
-							}
-						}
-					}
-				}
-				AND = {
-					owns = 225
-					owns = 223
-					owns = 226
-					owns = 224
-					num_of_owned_provinces_with = {
-						region = iberia_region
-						value = 10
-					}
-				}
-			}
-		}
-		effect = {
-			simple_dynamic_effect = {
-				first_custom_tooltip = tur_al_andalus_eyalet_at
-				first_limit = "tur_al_andalus_eyalet_limit_a = yes"
-				first_effect = "tur_al_andalus_eyalet_effect_a = yes"
-				second_limit = "
-				owns = 225
-				owns = 223
-				owns = 226
-				owns = 224
-				num_of_owned_provinces_with = {
-					region = iberia_region
-					value = 10
-				}"
-				second_effect = "
-				add_country_modifier = {
-					name = tur_conquest_of_iberia
-					duration = -1
-				}"
 			}
 		}
 
@@ -1328,34 +1244,6 @@ tur_african_conquest = {
 				}
 				add_permanent_claim = ROOT
 			}
-			upper_andalucia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			lower_andalucia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			alentejo_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			toledo_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 
 		ai_weight = {
@@ -1429,6 +1317,128 @@ tur_african_conquest = {
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
+			}
+		}
+
+		ai_weight = {
+			factor = 250
+		}
+	}
+	
+	tur_trade_with_india = {
+		icon = mission_steer_trade_to_bengal
+		required_missions = { tur_establish_the_eyalet_of_adal }
+		position = 11
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 4346
+					NOT = {
+						trade_share = {
+							country = ROOT
+							share = 50
+						}
+					}
+				}
+				AND = {
+					province_id = 1334
+					NOT = {
+						trade_share = {
+							country = ROOT
+							share = 50
+						}
+					}
+				}
+				AND = {
+					province_id = 1335
+					NOT = {
+						trade_share = {
+							country = ROOT
+							share = 50
+						}
+					}
+				}
+				AND = {
+					province_id = 504
+					NOT = {
+						trade_share = {
+							country = ROOT
+							share = 20
+						}
+					}
+				}
+				AND = {
+					province_id = 1340
+					NOT = {
+						trade_share = {
+							country = ROOT
+							share = 20
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			OR = {
+				4346 = {
+					trade_share = {
+						country = ROOT
+						share = 50
+					}
+				}
+				1334 = {
+					trade_share = {
+						country = ROOT
+						share = 50
+					}
+				}
+				1335 = {
+					trade_share = {
+						country = ROOT
+						share = 50
+					}
+				}
+			}
+			OR = {
+				504 = {
+					trade_share = {
+						country = ROOT
+						share = 50
+					}
+				}
+				1340 = {
+					trade_share = {
+						country = ROOT
+						share = 50
+					}
+				}
+			}
+			OR = {
+				any_ally = { 
+					capital_scope = { superregion = india_superregion }
+					has_opinion = { 
+						who = ROOT 
+						value = 150 
+					}
+					if = {
+						limit = { has_dlc = "Leviathan" }
+						trust = { 
+							who = ROOT 
+							value = 80 
+						}
+					}
+				}
+				num_of_owned_provinces_with = {
+					province_has_center_of_trade_of_level = 1
+					superregion = india_superregion
+					value = 3
+				}
+			}
+		}
+		effect = {
+			country_event_with_insight = {
+				id = flavor_tur.248
+				insight_tooltip = tur_trade_with_india_at
 			}
 		}
 
@@ -2273,6 +2283,13 @@ tur_egyptian_conquest = {
 			else = {
 				add_army_tradition = 20
 			}
+			horn_of_africa_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			add_country_modifier = {
 				name = tur_control_over_the_red_sea
 				duration = 9125
@@ -2283,16 +2300,121 @@ tur_egyptian_conquest = {
 			factor = 250
 		}
 	}
+	
+	tur_trade_with_indonesia = {
+		icon = mission_dominate_persian_gulf
+		required_missions = { tur_establish_the_eyalet_of_adal }
+		position = 11
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1343
+				province_id = 1357
+				province_id = 1397
+			}
+			NOT = {
+				trade_share = {
+					country = ROOT
+					share = 35
+				}
+			}
+		}
+		trigger = {
+			1343 = {
+				trade_share = {
+					country = ROOT
+					share = 35
+				}
+			}
+			1361 = {
+				trade_share = {
+					country = ROOT
+					share = 35
+				}
+			}
+			1357 = {
+				trade_share = {
+					country = ROOT
+					share = 35
+				}
+			}
+			1397 = {
+				trade_share = {
+					country = ROOT
+					share = 35
+				}
+			}
+			OR = {
+				1343 = { has_trader = ROOT }
+				1361 = { has_trader = ROOT }
+				1357 = { has_trader = ROOT }
+				1397 = { has_trader = ROOT }
+			}
+		}
+		effect = {
+			define_advisor = {
+				type = trader
+				skill = 3
+				cost_multiplier = 0.25
+			}
+			add_mercantilism = 5
+			add_country_modifier = {
+				name = tur_indonesian_trade
+				duration = 7300
+			}
+		}
 
+		ai_weight = {
+			factor = 250
+		}
+	}
+	
+	tur_most_humble_ottoman_ceo = {
+		icon = mission_turkish_merchants
+		required_missions = {
+			tur_trade_with_india
+			tur_trade_with_indonesia
+		}
+		position = 12
+		provinces_to_highlight = {
+		}
+		trigger = {
+			home_trade_node = {
+				highest_value_trade_node = yes
+				trade_share = {
+					country = ROOT
+					share = 90
+				}
+			}
+			monthly_income = 500
+			is_bankrupt = no
+			NOT = { corruption = 2 }
+			NOT = { inflation = 1 }
+			NOT = { num_of_loans = 6 }
+		}
+		effect = {
+			capital_scope = {
+				add_province_modifier = {
+					name = tur_center_of_ottoman_commerce
+					duration = -1
+				}
+			}
+		}
+
+		ai_weight = {
+			factor = 250
+		}
+	}
+	
 	tur_pax_ottomana = {
 		icon = mission_pax_ottomana
 		required_missions = {
 			tur_embrace_the_military_doctrines
 			tur_collect_the_siyasah
+			tur_most_humble_ottoman_ceo
 			tur_issue_the_kannuname
 			tur_second_islamic_golden_age
 		}
-		position = 13
+		position = 12
 		provinces_to_highlight = {
 		}
 		trigger = {
@@ -4145,77 +4267,6 @@ tur_persian_conquest = {
 					duration = -1
 				}
 			}
-		}
-	}
-	
-	tur_imperial_fabrics = {
-		
-		icon = mission_finest_carpets
-		required_missions = { tur_the_silk_road }
-		position = 10
-		provinces_to_highlight = {
-		}
-		trigger = {
-			trading_bonus = {
-				trade_goods = cotton
-				value = yes
-			}
-			trading_bonus = {
-				trade_goods = cloth
-				value = yes
-			}
-			trading_bonus = {
-				trade_goods = silk
-				value = yes
-			}
-			trading_bonus = {
-				trade_goods = wool
-				value = yes
-			}
-			trading_bonus = {
-				trade_goods = dyes
-				value = yes
-			}
-			1320 = { 
-				trade_share = {
-					country = ROOT 
-					share = 80 
-				}
-			}
-			377 = { 
-				trade_share = {
-					country = ROOT 
-					share = 75 
-				}
-			}
-			358 = { 
-				trade_share = {
-					country = ROOT 
-					share = 75 
-				}
-			}
-			4341 = { 
-				trade_share = {
-					country = ROOT 
-					share = 75 
-				}
-			}
-		}
-		effect = {
-			country_event_with_insight = {
-				id = flavor_tur.252
-				insight_tooltip = INSIGHT_JUST_TOOLTIP
-				effect_tooltip = "
-				custom_tooltip = tur_25_goods_fabrics_tt
-				add_country_modifier = { 
-					name = tur_golden_silk_modifier
-					duration = -1 
-				}"
-			}
-		}
-
-		ai_weight = {
-			factor = 250
 		}
 	}
 	
