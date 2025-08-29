@@ -856,12 +856,20 @@ tur_african_conquest = {
 				area = east_adriatic_coast_area
 				area = bosnia_area
 				area = slavonia_area
+				area = bulgaria_area
+				area = silistria_area
+				province_id = 4780
+				province_id = 3001
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
+					area = bulgaria_area
+					area = silistria_area
+					province_id = 4780
+					province_id = 3001
 					area = serbia_area
 					area = rascia_area
 					area = albania_area
@@ -870,7 +878,7 @@ tur_african_conquest = {
 					area = bosnia_area
 					area = slavonia_area
 				}
-				value = 20
+				value = 25
 			}
 		}
 		effect = {
@@ -1596,6 +1604,9 @@ tur_egyptian_conquest = {
 			}
 		}
 		effect = {
+			unlock_estate = {
+				estate = estate_jannissaries
+			}
 			country_event_with_insight = {
 				id = flavor_tur.205
 				insight_tooltip = INSIGHT_JUST_TOOLTIP
@@ -1619,6 +1630,12 @@ tur_egyptian_conquest = {
         power_type = ottoman_decadence
         value = -10
 			}
+		add_permanent_claim_province = { province = 4699}
+		add_permanent_claim_province = { province = 4698}
+		add_permanent_claim_province = { province = 146}
+		add_permanent_claim_province = { province = 4701}
+		add_permanent_claim_province = { province = 1773}
+		add_permanent_claim_province = { province = 145}
 		}
 
 		ai_weight = {
