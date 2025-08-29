@@ -28,6 +28,11 @@ tur_conquest_of_europe = {
 			create_admiral = {
 				tradition = 50
 			}
+			add_government_power = {
+        mechanic_type = ottoman_decadence_mechanic
+        power_type = ottoman_decadence
+        value = -5
+			}
 		}
 
 		ai_weight = {
@@ -733,7 +738,7 @@ tur_african_conquest = {
 				else = {
 					NOT = { nationalism = 1 }
 				}
-				value = 50
+				value = 25
 			}
 		}
 		effect = {
@@ -1539,6 +1544,7 @@ tur_egyptian_conquest = {
 		trigger = {
 			army_size = 30
 			num_of_generals = 2
+			total_development = 250
 			OR = {
 				custom_trigger_tooltip = {
 					tooltip = tur_aftermath_of_varna_ct
@@ -1548,15 +1554,24 @@ tur_egyptian_conquest = {
 			}
 		}
 		effect = {
-			add_permanent_claim_province = { province = 151 }
-			add_permanent_claim_province = { province = 146 }
-			add_permanent_claim_province = { province = 4701 }
-			add_permanent_claim_province = { province = 145 }
-			add_permanent_claim_province = { province = 1773 }
-			add_permanent_claim_province = { province = 4699 }
-			add_permanent_claim_province = { province = 4698 }
-			add_permanent_claim_province = { province = 1764 }
+						thrace_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_permanent_claim_province = { province = 4702 }
+			add_permanent_claim_province = { province = 148 }
+			add_permanent_claim_province = { province = 1853 }
+			add_permanent_claim_province = { province = 144 }
+			add_permanent_claim_province = { province = 147 }
 			add_prestige = 5
+				add_government_power = {
+        mechanic_type = ottoman_decadence_mechanic
+        power_type = ottoman_decadence
+        value = -10
+			}
 		}
 
 		ai_weight = {
@@ -1598,6 +1613,11 @@ tur_egyptian_conquest = {
 						duration = 9125
 					}
 				}"
+			}
+			add_government_power = {
+        mechanic_type = ottoman_decadence_mechanic
+        power_type = ottoman_decadence
+        value = -10
 			}
 		}
 
@@ -2422,7 +2442,7 @@ tur_egyptian_conquest = {
 			is_bankrupt = no
 			stability = 3
 			prestige = 75
-			total_own_and_non_tributary_subject_development = 4000
+			total_own_and_non_tributary_subject_development = 3000
 			if = {
 				limit = {
 					OR = {
@@ -2430,11 +2450,10 @@ tur_egyptian_conquest = {
 						has_dlc = "Emperor"
 					}
 				}
-				NOT = { great_power_rank = 2 }
+				NOT = { great_power_rank = 5 }
 			}
 			if = {
 				limit = { has_dlc = "Emperor" }
-				is_hegemon = yes
 			}
 		}
 		effect = {
@@ -3937,6 +3956,11 @@ tur_persian_conquest = {
 					add_permanent_claim = ROOT
 				}
 			}
+			add_government_power = {
+        mechanic_type = ottoman_decadence_mechanic
+        power_type = ottoman_decadence
+        value = -5
+			}
 		}
 
 		ai_weight = {
@@ -3966,6 +3990,11 @@ tur_persian_conquest = {
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
+			}
+			add_government_power = {
+        mechanic_type = ottoman_decadence_mechanic
+        power_type = ottoman_decadence
+        value = -5
 			}
 		}
 
@@ -4016,6 +4045,11 @@ tur_persian_conquest = {
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
+			}
+			add_government_power = {
+        mechanic_type = ottoman_decadence_mechanic
+        power_type = ottoman_decadence
+        value = -5
 			}
 		}
 
