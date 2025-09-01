@@ -29,9 +29,9 @@ tur_conquest_of_europe = {
 				tradition = 50
 			}
 			add_government_power = {
-        mechanic_type = ottoman_decadence_mechanic
-        power_type = ottoman_decadence
-        value = -5
+				mechanic_type = ottoman_decadence_mechanic
+				power_type = ottoman_decadence
+				value = -5
 			}
 		}
 
@@ -509,6 +509,57 @@ tur_conquest_of_europe = {
 			}
 			else = {
 				add_mil_power = 100
+			}
+		}
+
+		ai_weight = {
+			factor = 250
+		}
+	}
+	
+	#new mission
+	tur_odessus_avenge_varna = {
+		icon = mission_pasha
+		required_missions = { tur_conquer_hungary }
+		#position = 2
+		provinces_to_highlight = {
+			if {
+				limit = {
+					exists = POL
+				}
+				is_capital_of = POL
+			}
+		}
+		trigger = {
+			OR = {
+				NOT = { exists = POL }
+				AND = {
+					war_with = POL
+					POL = {
+						capital_scope = {
+							controlled_by = ROOT
+						}
+					}
+					war_score_against = {
+						who = POL
+						value = 50
+					}
+				}
+			}
+		}
+		effect = {
+			add_government_power = {
+				mechanic_type = ottoman_decadence_mechanic
+				power_type = ottoman_decadence
+				value = -100
+			}
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 10
+			}
+			add_country_modifier = {
+				name = odessus_avenged_humiliation_modifier
+				duration = 9125
 			}
 		}
 
@@ -1575,10 +1626,10 @@ tur_egyptian_conquest = {
 			add_permanent_claim_province = { province = 144 }
 			add_permanent_claim_province = { province = 147 }
 			add_prestige = 5
-				add_government_power = {
-        mechanic_type = ottoman_decadence_mechanic
-        power_type = ottoman_decadence
-        value = -10
+			add_government_power = {
+				mechanic_type = ottoman_decadence_mechanic
+				power_type = ottoman_decadence
+				value = -10
 			}
 		}
 
@@ -1604,7 +1655,7 @@ tur_egyptian_conquest = {
 			}
 		}
 		effect = {
-			enable_estate_effect = { estate = estate_jannissaries }
+			enable_estate_effect = { estate = estate_janissaries }
 
 			add_government_power = {
 				mechanic_type = ottoman_decadence_mechanic
@@ -3984,9 +4035,9 @@ tur_persian_conquest = {
 				}
 			}
 			add_government_power = {
-        mechanic_type = ottoman_decadence_mechanic
-        power_type = ottoman_decadence
-        value = -5
+				mechanic_type = ottoman_decadence_mechanic
+				power_type = ottoman_decadence
+				value = -5
 			}
 		}
 
@@ -4019,9 +4070,9 @@ tur_persian_conquest = {
 				add_permanent_claim = ROOT
 			}
 			add_government_power = {
-        mechanic_type = ottoman_decadence_mechanic
-        power_type = ottoman_decadence
-        value = -5
+				mechanic_type = ottoman_decadence_mechanic
+				power_type = ottoman_decadence
+				value = -5
 			}
 		}
 
@@ -4074,9 +4125,9 @@ tur_persian_conquest = {
 				add_permanent_claim = ROOT
 			}
 			add_government_power = {
-        mechanic_type = ottoman_decadence_mechanic
-        power_type = ottoman_decadence
-        value = -5
+				mechanic_type = ottoman_decadence_mechanic
+				power_type = ottoman_decadence
+				value = -5
 			}
 		}
 

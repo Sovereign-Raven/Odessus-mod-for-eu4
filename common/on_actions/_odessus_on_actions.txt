@@ -13,12 +13,6 @@ on_startup = {
 		remove_country_modifier = twilight_of_the_ottomans
 		remove_country_modifier = decline_of_the_ottomans
 	}
-	if = {
-		limit = {
-			tag = TUR
-		}
-		disable_estate_effect = { estate = estate_jannissaries }
-	}
 }
 
 on_new_age = {
