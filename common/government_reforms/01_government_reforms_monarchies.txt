@@ -1032,7 +1032,7 @@ ottoman_government = {
 		has_harem = yes
 		custom_attributes = {
 			has_harem_events = yes
-			#removed janissaries estate
+			#removed janissaries estate, instead enabled later by mission
 			has_eyalets = yes
 		}
 		government_abilities = {
