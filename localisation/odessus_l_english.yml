@@ -104,3 +104,5 @@
  flavor_tur.204.descRAND: "Urban was an iron founder and engineer from the Hungarian province of Kronstadt. As one of the pioneers of siege engineering and artillery construction, he made a living based on his weapons of war. In [GetYear], Urban tried his luck with the Polish and Hungarian nobilities, but as they could neither afford his salary nor possessed the materials necessary for constructing such cannons, Urban saw himself forced to turn elsewhere, and now he's by our feet. He promised to create a cannon big and potent enough to blast 'the walls of Babylon itself'."
 
  ab_ottoman_siege_ability: "Byzantine Rebirth"
+ odessus_resurgence_of_ottomans_modifier: "Resurgence of Ottomans"
+ odessus_until_end_of_reformation_desc: "until the end of the §YAge of Reformation§!"

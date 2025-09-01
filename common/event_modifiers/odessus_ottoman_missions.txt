@@ -1,0 +1,3 @@
+odessus_resurgence_of_ottomans_modifier = {
+    monthly_ottoman_decadence = -0.5
+}

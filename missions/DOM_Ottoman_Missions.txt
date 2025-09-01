@@ -1604,9 +1604,30 @@ tur_egyptian_conquest = {
 			}
 		}
 		effect = {
-			unlock_estate = {
-				estate = estate_jannissaries
+			enable_estate_effect = { estate = estate_jannissaries }
+
+			add_government_power = {
+				mechanic_type = ottoman_decadence_mechanic
+				power_type = ottoman_decadence
+				value = -10
 			}
+			add_country_modifier = {
+				name = odessus_resurgence_of_ottomans_modifier
+				duration = -1
+				desc = odessus_until_end_of_reformation_desc
+			}
+			
+			custom_tooltip = " "
+
+			add_permanent_claim_province = { province = 4699}
+			add_permanent_claim_province = { province = 4698}
+			add_permanent_claim_province = { province = 146}
+			add_permanent_claim_province = { province = 4701}
+			add_permanent_claim_province = { province = 1773}
+			add_permanent_claim_province = { province = 145}
+			
+			custom_tooltip = " "
+
 			country_event_with_insight = {
 				id = flavor_tur.205
 				insight_tooltip = INSIGHT_JUST_TOOLTIP
@@ -1625,17 +1646,6 @@ tur_egyptian_conquest = {
 					}
 				}"
 			}
-			add_government_power = {
-        mechanic_type = ottoman_decadence_mechanic
-        power_type = ottoman_decadence
-        value = -10
-			}
-		add_permanent_claim_province = { province = 4699}
-		add_permanent_claim_province = { province = 4698}
-		add_permanent_claim_province = { province = 146}
-		add_permanent_claim_province = { province = 4701}
-		add_permanent_claim_province = { province = 1773}
-		add_permanent_claim_province = { province = 145}
 		}
 
 		ai_weight = {
