@@ -517,13 +517,13 @@ tur_conquest_of_europe = {
 		}
 	}
 	
-	#new mission
+	#New Odessus mission
 	tur_odessus_avenge_varna = {
-		icon = mission_pasha
+		icon = mission_the_great_conqueror
 		required_missions = { tur_conquer_hungary }
 		#position = 2
 		provinces_to_highlight = {
-			if {
+			if = {
 				limit = {
 					exists = POL
 				}
