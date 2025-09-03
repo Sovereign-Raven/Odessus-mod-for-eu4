@@ -28,11 +28,6 @@ tur_conquest_of_europe = {
 			create_admiral = {
 				tradition = 50
 			}
-			add_government_power = {
-				mechanic_type = ottoman_decadence_mechanic
-				power_type = ottoman_decadence
-				value = -5
-			}
 		}
 
 		ai_weight = {
@@ -4034,11 +4029,6 @@ tur_persian_conquest = {
 					add_permanent_claim = ROOT
 				}
 			}
-			add_government_power = {
-				mechanic_type = ottoman_decadence_mechanic
-				power_type = ottoman_decadence
-				value = -5
-			}
 		}
 
 		ai_weight = {
@@ -4068,11 +4058,6 @@ tur_persian_conquest = {
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
-			}
-			add_government_power = {
-				mechanic_type = ottoman_decadence_mechanic
-				power_type = ottoman_decadence
-				value = -5
 			}
 		}
 
@@ -4123,11 +4108,6 @@ tur_persian_conquest = {
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
-			}
-			add_government_power = {
-				mechanic_type = ottoman_decadence_mechanic
-				power_type = ottoman_decadence
-				value = -5
 			}
 		}
 
