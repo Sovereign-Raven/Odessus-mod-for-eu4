@@ -527,8 +527,12 @@ tur_conquest_of_europe = {
 		}
 		trigger = {
 			OR = {
-				NOT = { exists = POL }
 				AND = {
+					NOT = { exists = POL }
+					NOT = { exists = PLC }
+				}
+				AND = {
+					NOT = { exists = PLC }
 					war_with = POL
 					POL = {
 						capital_scope = {
@@ -537,6 +541,18 @@ tur_conquest_of_europe = {
 					}
 					war_score_against = {
 						who = POL
+						value = 50
+					}
+				}
+				AND = {
+					war_with = PLC
+					PLC = {
+						capital_scope = {
+							controlled_by = ROOT
+						}
+					}
+					war_score_against = {
+						who = PLC
 						value = 50
 					}
 				}
