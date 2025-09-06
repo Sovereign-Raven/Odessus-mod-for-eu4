@@ -8224,36 +8224,6 @@ country_event = {
 	}
 }
 
-# Mehmed II. Italian Ambitions
-country_event = {
-	id = flavor_tur.277
-	title = flavor_tur.277.t
-	desc = flavor_tur.277.desc
-	picture = CONQUERER_eventPicture
-	fire_only_once = yes
-	trigger = {
-		tag = TUR
-		is_at_war = no
-		owns_core_province = 151
-		NOT = { is_year = 1480 }
-		NOT = { is_permanent_claim = 122 }
-		NOT = { is_core = 122 }
-	}
-	mean_time_to_happen = {
-		months = 60
-	}
-	goto = 122
-	option = {
-		name = flavor_tur.277.a
-		add_claim = 122
-		add_mil_power = 50
-		add_prestige = 10
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
 # The Siyer-i Nebi - written by Big Boss
 country_event = {
 	id = flavor_tur.282

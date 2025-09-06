@@ -1,0 +1,8 @@
+odessus_resurgence_of_ottomans_modifier = {
+    monthly_ottoman_decadence = -0.5
+}
+
+odessus_avenged_humiliation_modifier = {
+    prestige = 1
+    land_morale = 0.10
+}
