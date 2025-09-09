@@ -444,7 +444,7 @@ tur_disaster_pasha_decadence = {
 		NOT = { mission_completed = tur_remove_pashas_from_power }
 	}
 	can_start = {
-		num_of_cities = 20
+		num_of_cities = 30
 		NOT = { stability = 3 }
 		NOT = { average_autonomy_above_min = 20 }
 	}
