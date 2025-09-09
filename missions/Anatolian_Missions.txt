@@ -1,0 +1,36 @@
+anatolian_missions = {
+    generic = yes
+    slot = 1
+
+    potential = {
+        OR = {
+            tag = SRU # Saruhan
+            tag = AYD # Aydin
+            tag = GRM # Germiyan
+            tag = MEN # Mentese
+            tag = KAR # Karaman
+            tag = CND # Candar
+            tag = ERE # Eretna
+            tag = RAM # Ramazan
+            tag = DUL # Dulkadir
+        } # Ottomans aren't included because they have their own mission tree
+    }
+
+    new_turkish_hegemon = {
+        icon = mission_unify_anatolia
+        position = 1 # 1st row, 1st column, so generic missions are not overwritten
+
+        trigger = {
+            army_size_percentage = 1.0 # 100% force limit
+            has_leader = 1 # Has at least one general
+            legitimacy = 100
+        }
+
+        effect = { # Needs a flavor text!
+            every_province = {
+                limit = { culture = turkish } # This is for an easier Form Rum decision later
+                add_permanent_claim = ROOT
+            }
+        }
+    }
+}
