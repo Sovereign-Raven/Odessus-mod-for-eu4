@@ -3538,7 +3538,6 @@ country_event = {
 		OR = {
 			tag = TUR
 			tag = RUM
-			has_mission = tur_conquer_vienna
 		}
 		NOT = { religion_group = christian }	#It wouldn't be so dramatic if the Ottomans were just another Christian kingdom
 		134 = {
@@ -3548,13 +3547,11 @@ country_event = {
 						OR = {
 							tag = TUR
 							tag = RUM
-							has_mission = tur_conquer_vienna
 						}
 						overlord = {
 							OR = {
 								tag = TUR
 								tag = RUM
-								has_mission = tur_conquer_vienna
 							}
 						}
 					}
