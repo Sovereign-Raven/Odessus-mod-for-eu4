@@ -1500,10 +1500,14 @@ poland_sca_slot_3_a = {
 		position = 1 
 		trigger = {
 			OR = {
-				# here should be the future start event that needs to fire for this requirement to be fulfilled the easiest
+					custom_trigger_tooltip = { # i give up lol
+    					tooltip = pol_varna_aftermath_tt
+					}
+				has_country_flag = pol_had_varna_event
 				tag = PLC 
 				current_age = age_of_reformation
 			}
+
 			HUN = { liberty_desire = 0 } #fully loyal Hungary
 			army_size_percentage = 1 # full army size
 			BOH = { 
@@ -1542,8 +1546,7 @@ poland_sca_slot_3_a = {
 		effect = {
 			if = {
 				limit = {
-					NOT = { has_country_flag = pol_denied_pu_flag }
-					NOT = { has_country_flag = pol_chose_pu_flag }
+					NOT = { has_country_flag = pol_had_varna_event }
 				}
 				custom_tooltip = pol_before_event_goes_tt
 			}
