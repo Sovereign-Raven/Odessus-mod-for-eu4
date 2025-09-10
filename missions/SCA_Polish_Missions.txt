@@ -1495,17 +1495,17 @@ poland_sca_slot_3_a = {
 	}
 	has_country_shield = yes
 	
-	pol_varna_aftermath = {
+	pol_varna_aftermath = { # every instance of HUN is replaced by LIT, and the 3 hungarian areas are now replaced with 3 lithuanian areas
 		icon = mission_pol_varna_aftermath 
-		required_missions = { } 
 		position = 1 
 		trigger = {
 			OR = {
+				# here should be the future start event that needs to fire for this requirement to be fulfilled the easiest
 				tag = PLC 
 				current_age = age_of_reformation
 			}
-			num_of_allies = 2 
-			army_size_percentage = 0.9 
+			HUN = { liberty_desire = 0 } #fully loyal Hungary
+			army_size_percentage = 1 # full army size
 			BOH = { 
 				OR = { 
 					alliance_with = ROOT 
