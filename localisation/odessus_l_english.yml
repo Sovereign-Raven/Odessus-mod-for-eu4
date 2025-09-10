@@ -113,9 +113,4 @@
 
  new_turkish_hegemon_title: "New Turkish Hegemon"
  new_turkish_hegemon_desc: "With the Osman house weakened by the Europeans, perhaps the last opportunity for the Anatolian beyliks to unite and form a new Turkish hegemony  has arrived."
- new_turkish_hegemon_tt: "§Y[Root.GetName]§! gains a permanent claim on §YEvery Province with Turkish Culture.§!"
-
- pol_varna_aftermath_desc: "The result of the battle of Varna, held on November 10, 1444, was a great victory for Christianity. With the Ottomans pushed back to Anatolia, it is time to stabilize not only the newly freed Balkans, but also our own realms which are always at risk of being torn apart from the inside."
-
- hun_friendship_yes_tt: "\n£yes£ Reward if §YLithuania§! is a subject or an ally:"
- hun_friendship_no_tt: "\n£no£ Reward if §YLithuania§! is a subject or an ally:"
+ new_turkish_hegemon_tt: "§Y[Root.GetName]§! gains a permanent claim on every province with §YTurkish Culture.§!"
