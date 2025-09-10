@@ -1499,14 +1499,17 @@ poland_sca_slot_3_a = {
 		icon = mission_pol_varna_aftermath 
 		position = 1 
 		trigger = {
-			OR = {
-					custom_trigger_tooltip = { # i give up lol
-    					tooltip = pol_varna_aftermath_tt
-					}
-				has_country_flag = pol_had_varna_event
-				tag = PLC 
-				current_age = age_of_reformation
+			hidden_trigger = {
+				OR = {
+					has_country_flag = pol_had_varna_event
+					tag = PLC 
+					current_age = age_of_reformation
+				}
 			}
+
+		custom_trigger_tooltip = {
+    		tooltip = pol_varna_aftermath_tt
+		}
 
 			HUN = { liberty_desire = 0 } #fully loyal Hungary
 			army_size_percentage = 1 # full army size
