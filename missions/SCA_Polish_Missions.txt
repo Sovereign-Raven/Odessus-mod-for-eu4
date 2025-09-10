@@ -1496,7 +1496,7 @@ poland_sca_slot_3_a = {
 	has_country_shield = yes
 	
 	pol_varna_aftermath = { # every instance of HUN is replaced by LIT, and the 3 hungarian areas are now replaced with 3 lithuanian areas
-		icon = mission_pol_varna_aftermath 
+		icon = mission_crusade_for_varna
 		position = 1 
 		trigger = {
 			hidden_trigger = {
