@@ -1929,16 +1929,16 @@ poland_sca_slot_3_a = {
 	}		
 	
 	pol_protect_hungary = {
-		icon = mission_pol_protect_hungary 
+		icon = mission_conquer_lithuania
 		required_missions = { pol_varna_aftermath }
 		position = 2 
 		provinces_to_highlight = { 
 			OR = {
-				area = slovakia_area
-				area = transdanubia_area
-				area = southern_transylvania_area
-				area = transylvania_area
-				area = alfold_area
+				area = podlasie_area
+				area = samogitia_area
+				area = lithuania_area
+				area = volhynia_area
+				area = pripyat_area
 			}
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -1955,7 +1955,7 @@ poland_sca_slot_3_a = {
 		trigger = { 
 			OR = { 
 				AND = {
-					slovakia_area = {
+					podlasie_area = {
 						OR = {
 							country_or_non_sovereign_subject_holds = ROOT 
 							custom_trigger_tooltip = {
@@ -1970,7 +1970,7 @@ poland_sca_slot_3_a = {
 						}
 						type = all 
 					}
-					transdanubia_area = {
+					samogitia_area = {
 						OR = {
 							country_or_non_sovereign_subject_holds = ROOT 
 							custom_trigger_tooltip = {
@@ -1985,7 +1985,7 @@ poland_sca_slot_3_a = {
 						}
 						type = all 
 					}
-					southern_transylvania_area = {
+					lithuania_area = {
 						OR = {
 							country_or_non_sovereign_subject_holds = ROOT 
 							custom_trigger_tooltip = {
@@ -2000,7 +2000,7 @@ poland_sca_slot_3_a = {
 						}
 						type = all 
 					}
-					transylvania_area = {
+					volhynia_area = {
 						OR = {
 							country_or_non_sovereign_subject_holds = ROOT 
 							custom_trigger_tooltip = {
@@ -2015,7 +2015,7 @@ poland_sca_slot_3_a = {
 						}
 						type = all 
 					}
-					alfold_area = {
+					pripyat_area = {
 						OR = {
 							country_or_non_sovereign_subject_holds = ROOT 
 							custom_trigger_tooltip = {
@@ -2031,8 +2031,8 @@ poland_sca_slot_3_a = {
 						type = all 
 					}
 				}
-				HUN = { is_subject_of = ROOT } 
-				HUN = { 
+				LIT = { is_subject_of = ROOT } 
+				LIT = { 
 					alliance_with = ROOT 
 					has_opinion = {
 						who = ROOT 
@@ -2061,19 +2061,19 @@ poland_sca_slot_3_a = {
 				if = { 
 					limit = { 
 						has_dlc = "Leviathan" 
-						4128 = { 
+						270 = { 
 							NOT = { 
 								has_great_project = {
-									type = bran_castle
+									type = trakai_castle
 									tier = 3 
 								}
 							}
 							country_or_non_sovereign_subject_holds = ROOT 
 						}
 					} 
-					4128 = { 
+					270 = { 
 						add_great_project_tier = {
-							type = bran_castle 
+							type = trakai_castle 
 							tier = 1 
 						}
 					}	
@@ -2082,10 +2082,10 @@ poland_sca_slot_3_a = {
 					limit = { 
 						OR = { 
 							NOT = { has_dlc = "Leviathan" }
-							4128 = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
-							4128 = { 
+							270 = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+							270 = { 
 								has_great_project = {
-									type = bran_castle 
+									type = trakai_castle 
 									tier = 3 
 								}
 							}
@@ -2095,37 +2095,37 @@ poland_sca_slot_3_a = {
 				}
 				if = { 
 					limit = { 
-						HUN = { is_subject_of = ROOT } 
+						LIT = { is_subject_of = ROOT } 
 					}
-					HUN = { add_liberty_desire = -20 } 
+					LIT = { add_liberty_desire = -20 } 
 				}
 				custom_tooltip = pol_every_mil_building_1_base_development_mil_tt
 			}
 			hidden_effect = {
 				if = {
 					limit = {
-						HUN = { alliance_with = ROOT }
+						LIT = { alliance_with = ROOT }
 					}
-					HUN = { 
+					LIT = { 
 						country_event = { id = flavor_pol.26 }
 					}
 				}
 				else_if = {
 					limit = { 
 						has_dlc = "Leviathan" 
-						4128 = { 
+						270 = { 
 							NOT = { 
 								has_great_project = {
-									type = bran_castle
+									type = trakai_castle
 									tier = 3 
 								}
 							}
 							country_or_non_sovereign_subject_holds = ROOT 
 						}
 					} 
-					4128 = { 
+					270 = { 
 						add_great_project_tier = {
-							type = bran_castle
+							type = trakai_castle
 							tier = 1
 						}
 					}	
@@ -2134,10 +2134,10 @@ poland_sca_slot_3_a = {
 					limit = { 
 						OR = { 
 							NOT = { has_dlc = "Leviathan" }
-							4128 = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
-							4128 = { 
+							270 = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+							270 = { 
 								has_great_project = {
-									type = bran_castle 
+									type = trakai_castle
 									tier = 3 
 								}
 							}
@@ -2157,9 +2157,9 @@ poland_sca_slot_3_a = {
 				}
 				if = { 
 					limit = { 
-						HUN = { is_subject_of = ROOT } 
+						LIT = { is_subject_of = ROOT } 
 					}
-					HUN = { add_liberty_desire = -20 } 
+					LIT = { add_liberty_desire = -20 } 
 				}
 			}
 		}
@@ -4576,29 +4576,27 @@ poland_sca_slot_5_branching_lit_east = {
 	}
 	has_country_shield = yes
 	
-	pol_develop_ukraine = {
-		icon = mission_develop_kiev 
+	pol_develop_ukraine = { #now Develop Slovakia
+		icon = mission_landsknecht_soldier
 		required_missions = { pol_varna_aftermath } 
 		provinces_to_highlight = { 
 			OR = { 
 				AND = { 
 					OR = { 
-						area = west_dniepr_area
-						area = east_dniepr_area
-						area = podolia_volhynia_area
+						area = slovakia_area
+
 					}
 					NOT = { 
-						num_of_times_improved = 1
+						num_of_times_improved = 2
 					}
 				}
 				AND = {
 					OR = {
-						province_id = 282
-						province_id = 283
-						province_id = 2406
+						province_id = 1772 # capital of Slovakia
+
 					}
 					NOT = { 
-						num_of_times_improved = 2 
+						num_of_times_improved = 4 
 					}
 				}
 			}
@@ -4606,36 +4604,18 @@ poland_sca_slot_5_branching_lit_east = {
 		position = 2 
 		trigger = { 
 			not_in_mission_preview_mode = { key = POL }
-			west_dniepr_area = {
+			slovakia_area = {
 				type = all 
-				country_or_non_sovereign_subject_holds = ROOT 
-				num_of_times_improved = 1 
-			}
-			east_dniepr_area = {
-				type = all 
-				country_or_non_sovereign_subject_holds = ROOT 
-				num_of_times_improved = 1 
-			}
-			podolia_volhynia_area = {
-				type = all 
-				country_or_non_sovereign_subject_holds = ROOT
-				num_of_times_improved = 1 
-			}
-			282 = { 
 				country_or_non_sovereign_subject_holds = ROOT 
 				num_of_times_improved = 2 
 			}
-			283 = { 
+			1772 = { 
 				country_or_non_sovereign_subject_holds = ROOT 
-				num_of_times_improved = 2 
-			}
-			2406 = { 
-				country_or_non_sovereign_subject_holds = ROOT 
-				num_of_times_improved = 2 
+				num_of_times_improved = 4 
 			}
 			if = {
 				limit = { has_dlc = "Leviathan" }
-				280 = { 
+				1772 = { 
 					OR = {
 						AND = {
 							num_of_times_improved = 5 
@@ -4645,11 +4625,11 @@ poland_sca_slot_5_branching_lit_east = {
 							tooltip = pol_lavra_2_or_3_tt
 							OR = {
 								has_great_project = {
-									type = kiev_pechersk_lavra
+									type = golden_kremnica
 									tier = 2 
 								}
 								has_great_project = {
-									type = kiev_pechersk_lavra
+									type = golden_kremnica
 									tier = 3
 								}
 							}
@@ -4658,7 +4638,7 @@ poland_sca_slot_5_branching_lit_east = {
 				}
 			}
 			else = {
-				280 = {
+				1772 = {
 					num_of_times_improved = 5 
 					has_tax_building_trigger = yes 
 				}
@@ -4667,44 +4647,16 @@ poland_sca_slot_5_branching_lit_east = {
 		effect = { 
 			if = {
 				limit = {
-					west_dniepr_area = {
+					slovakia_area = {
 						type = all 
-						owned_by = LIT 
+						owned_by = HUN 
 					}
-					east_dniepr_area = {
-						type = all
-						owned_by = LIT 
-					}
-					podolia_volhynia_area = {
-						type = all 
-						country_or_non_sovereign_subject_holds = ROOT 
-					}
-					LIT = { is_subject_of = ROOT }
+					HUN = { is_subject_of = ROOT }
 				}
 				country_event = { id = flavor_pol.32 } 
 			}
 			else = {
-				west_dniepr_area = {
-					add_province_modifier = {
-						name = pol_prosperity_in_ukraine_modifier
-						duration = 7300 
-					}
-					if = {
-						limit = { has_dlc = "Mandate of Heaven" } 
-						add_prosperity = 15 
-					}
-				}
-				east_dniepr_area = {
-					add_province_modifier = {
-						name = pol_prosperity_in_ukraine_modifier
-						duration = 7300 
-					}
-					if = {
-						limit = { has_dlc = "Mandate of Heaven" } 
-						add_prosperity = 15 
-					}
-				}
-				podolia_volhynia_area = {
+				slovakia_area = {
 					add_province_modifier = {
 						name = pol_prosperity_in_ukraine_modifier
 						duration = 7300 

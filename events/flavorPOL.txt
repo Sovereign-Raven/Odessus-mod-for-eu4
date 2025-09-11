@@ -2214,11 +2214,11 @@ country_event = { #The Constitution of [GetYear]
 	}
 }		
 
-country_event = { #Polish-Hungarian Ties 
+country_event = { #Polish-Hungarian Ties, now Lithuanian
 	id = flavor_pol.26
 	title = flavor_pol.26.t 
 	desc = flavor_pol.26.d 
-	picture = POLAND_HUNGARY_eventPicture
+	picture = MN-DIPLOMAT_INTERROGATION_eventPicture
 	is_triggered_only = yes 
 	
 	major = yes 
@@ -2277,7 +2277,7 @@ country_event = { #Polish-Hungarian Ties
 		name = flavor_pol.26.b 
 		
 		ai_chance = { factor = 8 } 
-		HUN = {
+		LIT = {
 			add_country_modifier = {
 				name = pol_polish_hungarian_ties_modifier
 				duration = 9125
@@ -2315,7 +2315,7 @@ country_event = { #Polish-Hungarian Ties
 				add_casus_belli = {
 					type = cb_restore_personal_union
 					months = 300
-					target = HUN
+					target = LIT
 				} 
 			} 
 		}
@@ -2325,7 +2325,7 @@ country_event = { #Polish-Hungarian Ties
 				add_casus_belli = {
 					type = cb_restore_personal_union
 					months = 300
-					target = HUN
+					target = LIT
 				} 
 			}
 		}
@@ -2671,7 +2671,7 @@ country_event = { #Baltic Gold & the Gates of Kings
 	}
 }
 
-country_event = { #Negotiations of Lublin 
+country_event = { #Negotiations of Lublin; now Kassa 
 	id = flavor_pol.32
 	title = flavor_pol.32.t 
 	desc = flavor_pol.32.d 
@@ -2681,56 +2681,20 @@ country_event = { #Negotiations of Lublin
 	option = {
 		name = flavor_pol.32.a 
 		
-		west_dniepr_area = {
+		slovakia_area = {
 			limit = { country_or_non_sovereign_subject_holds = ROOT } 
 			cede_province = ROOT 
-			remove_core = LIT
+			remove_core = HUN
 		}
-		east_dniepr_area = {
-			limit = { country_or_non_sovereign_subject_holds = ROOT } 
-			cede_province = ROOT 
-			remove_core = LIT
-		}
-		podolia_volhynia_area = {
-			limit = { country_or_non_sovereign_subject_holds = ROOT }  
-			cede_province = ROOT 
-			remove_core = LIT 
-		}
-		282 = {
-			if = { 
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				cede_province = ROOT 
-				remove_core = LIT
-			}
-		}
-		283 = {
-			if = { 
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				cede_province = ROOT 
-				remove_core = LIT
-			}
-		}
-		2406 = {
-			if = { 
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				cede_province = ROOT 
-				remove_core = LIT
-			}
-		}
-		LIT = {
+
+		HUN = {
 			add_opinion = {
 				who = ROOT 
 				modifier = pol_annexed_ruthenia_opinion_modifier
 			}
 			remove_historical_friend = ROOT 
 		}
-		remove_historical_friend = LIT 
+		remove_historical_friend = HUN 
 		custom_tooltip = pol_form_plc_earlier_tt
 		set_country_flag = pol_tech_8_form_plc_flag
 	}
@@ -2742,7 +2706,7 @@ country_event = { #Negotiations of Lublin
 			name = pol_shared_prosperity_modifier 
 			duration = 5475 
 		}
-		LIT = {
+		HUN = {
 			add_country_modifier = {
 				name = pol_shared_prosperity_modifier 
 				duration = 5475 

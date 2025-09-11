@@ -40,6 +40,30 @@
 
  pol_varna_aftermath_desc: "The result of the battle of Varna, held on November 10, 1444, was a great victory for Christianity. With the Ottomans pushed back to Anatolia, it is time to stabilize not only the newly freed Balkans, but also our own realms which are always at risk of being torn apart from the inside."
  pol_before_event_goes_tt: "Completing the '§YAftermath of Varna§!' event will grant us further rewards"
+ pol_protect_hungary_title: "Protect Lithuania"
+ pol_protect_hungary_desc: "The Grand Duchy of Lithuania is exhausted by the aftermath of the battle of Varna, granting huge opportunities for the Rurikovich to expand westwards. It is now our duty to redouble our efforts to strengthen our relationship and provide additional support in these grim times."
+ plc_lifetime_of_war_desc: "Since the victory of Varna, our country has been building a strong and drilled army that would protect us from all the neighboring threats. If we are to protect our borders, we must utilize the lessons we are taught in the art of warfare. Choose which area of our armed forces shall spearhead our military efforts for eons to come."
+ pol_develop_ukraine_title: "Develop Slovakia"
+ pol_develop_ukraine_desc: "The lands of Slovakia, serving as the defensive line of Upper Hungary, are rich in resources and minerals. However, it has become depopulated through centuries of war and migration, leaving Slovakia as but a shadow of what it could be under sound administration. We must invest our efforts into taming that land once more."
+
+ flavor_pol.26.t: "The Polish-Lithuanian Pact of Cooperation"
+ flavor_pol.26.d: "It is said that close cooperation and diplomacy can make or break the fate of nations. Recent attempts to reconcile our differences with our Polish brethren in the West, have led to the culmination of the Polish-Lithuanian pact of Cooperation of the year [GetYear]. It is up to us how and in which manner to proceed and react to such a profound extension of friendship and cohabitation."
+ flavor_pol.26.a: "The crown of Poland will lead the way for a union of our states."
+ flavor_pol.26.b: "Together, our two domains will prosper as equals."
+ flavor_pol.26.c: "I wouldn't wipe my boots with the Polish banner!"
+
+ flavor_pol.32.t: "Negotiations of Kassa"
+ flavor_pol.32.d: "It is no secret that power and influence have an adverse effect on people. However, power wielded carefully and guided by a steady hand can yield tremendously positive results for our foreign and domestic affairs. The infantile nobles of Hungary have been pestering us with their refusal to participate in the Sejm Diets and congregations, grinding the entire process to a halt. If they do not comprehend the diplomatic tongue, perhaps they would be more atuned to a show of strength at the expense of their own lands?"
+ flavor_pol.32.a: "Force the Hungarians to sign the agreement."
+ flavor_pol.32.b: "We cannot risk our delicate relations..."
+
+ pol_polish_hungarian_ties_modifier: "Polish-Lithuanian Ties"
+ desc_pol_polish_hungarian_ties_modifier: "Our ties with the Grand Duchy of Lithuania are surely strong and both our nations benefit from this arrangement!"
 
  hun_friendship_yes_tt: "\n£yes£ Reward if §YLithuania§! is a subject or an ally:"
  hun_friendship_no_tt: "\n£no£ Reward if §YLithuania§! is a subject or an ally:"
+
+ pol_lavra_2_or_3_tt: "Has upgraded the '§YNyitra The Golden City§!' monument to §Yany§! level"
+ pol_annexed_ruthenia_opinion_modifier: "Annexed Slovakia"
+ pol_prosperity_in_ukraine_modifier: "Prosperity in Slovakia"
+ desc_pol_prosperity_in_ukraine_modifier: "The highlands of Slovakia are now home to growing and prospering communities."
