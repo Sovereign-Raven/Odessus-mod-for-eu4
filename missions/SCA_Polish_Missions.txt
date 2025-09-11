@@ -4243,40 +4243,19 @@ poland_sca_slot_5_branching_lit_hre = {
 		required_missions = { pol_varna_aftermath } 
 		position = 2 
 		trigger = { 
-			custom_trigger_tooltip = {
-				tooltip = selectable_mission_trigger_tt
-				always = no
-			}
-			west_dniepr_area = {
+			not_in_mission_preview_mode = { key = POL }
+			slovakia_area = {
 				type = all 
-				country_or_non_sovereign_subject_holds = ROOT 
-				num_of_times_improved = 1 
-			}
-			east_dniepr_area = {
-				type = all 
-				country_or_non_sovereign_subject_holds = ROOT 
-				num_of_times_improved = 1 
-			}
-			podolia_volhynia_area = {
-				type = all 
-				country_or_non_sovereign_subject_holds = ROOT
-				num_of_times_improved = 1 
-			}
-			282 = { 
 				country_or_non_sovereign_subject_holds = ROOT 
 				num_of_times_improved = 2 
 			}
-			283 = { 
+			1772 = { 
 				country_or_non_sovereign_subject_holds = ROOT 
-				num_of_times_improved = 2 
-			}
-			2406 = { 
-				country_or_non_sovereign_subject_holds = ROOT 
-				num_of_times_improved = 2 
+				num_of_times_improved = 4 
 			}
 			if = {
 				limit = { has_dlc = "Leviathan" }
-				280 = { 
+				1772 = { 
 					OR = {
 						AND = {
 							num_of_times_improved = 5 
@@ -4286,11 +4265,11 @@ poland_sca_slot_5_branching_lit_hre = {
 							tooltip = pol_lavra_2_or_3_tt
 							OR = {
 								has_great_project = {
-									type = kiev_pechersk_lavra
+									type = golden_kremnica
 									tier = 2 
 								}
 								has_great_project = {
-									type = kiev_pechersk_lavra
+									type = golden_kremnica
 									tier = 3
 								}
 							}
@@ -4299,48 +4278,25 @@ poland_sca_slot_5_branching_lit_hre = {
 				}
 			}
 			else = {
-				280 = {
+				1772 = {
 					num_of_times_improved = 5 
 					has_tax_building_trigger = yes 
 				}
-			}
-			emperor = {
-				alliance_with = ROOT 
-				has_opinion = {
-					who = ROOT 
-					value = 160 
-				}
-				OR = {
-					marriage_with = ROOT 
-					trust = {
-						who = ROOT 
-						value = 75 
-					}
-				}
-				owes_favors = { who = ROOT value = 20 } 
 			}
 		}
 		effect = { 
 			if = {
 				limit = {
-					west_dniepr_area = {
+					slovakia_area = {
 						type = all 
-						owned_by = LIT 
+						owned_by = HUN 
 					}
-					east_dniepr_area = {
-						type = all
-						owned_by = LIT 
-					}
-					podolia_volhynia_area = {
-						type = all 
-						country_or_non_sovereign_subject_holds = ROOT 
-					}
-					LIT = { is_subject_of = ROOT }
+					HUN = { is_subject_of = ROOT }
 				}
 				country_event = { id = flavor_pol.32 } 
 			}
 			else = {
-				west_dniepr_area = {
+				slovakia_area = {
 					add_province_modifier = {
 						name = pol_prosperity_in_ukraine_modifier
 						duration = 7300 
@@ -4348,38 +4304,6 @@ poland_sca_slot_5_branching_lit_hre = {
 					if = {
 						limit = { has_dlc = "Mandate of Heaven" } 
 						add_prosperity = 15 
-					}
-				}
-				east_dniepr_area = {
-					add_province_modifier = {
-						name = pol_prosperity_in_ukraine_modifier
-						duration = 7300 
-					}
-					if = {
-						limit = { has_dlc = "Mandate of Heaven" } 
-						add_prosperity = 15 
-					}
-				}
-				podolia_volhynia_area = {
-					add_province_modifier = {
-						name = pol_prosperity_in_ukraine_modifier
-						duration = 7300 
-					}
-					if = {
-						limit = { has_dlc = "Mandate of Heaven" } 
-						add_prosperity = 15 
-					}
-				}
-			}
-			emperor = {
-				country_event = { id = flavor_pol.33 } 
-			}
-			custom_tooltip = pol_claim_lithuanian_lands
-			hidden_effect = { 
-				LIT = { 
-					every_owned_province = { 
-						limit = { owned_by = LIT } 
-						add_permanent_claim = POL 
 					}
 				}
 			}
