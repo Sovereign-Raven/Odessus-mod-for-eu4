@@ -45,6 +45,7 @@
  plc_lifetime_of_war_desc: "Since the victory of Varna, our country has been building a strong and drilled army that would protect us from all the neighboring threats. If we are to protect our borders, we must utilize the lessons we are taught in the art of warfare. Choose which area of our armed forces shall spearhead our military efforts for eons to come."
  pol_develop_ukraine_title: "Develop Slovakia"
  pol_develop_ukraine_desc: "The lands of Slovakia, serving as the defensive line of Upper Hungary, are rich in resources and minerals. However, it has become depopulated through centuries of war and migration, leaving Slovakia as but a shadow of what it could be under sound administration. We must invest our efforts into taming that land once more."
+ plc_seats_of_power_desc: "Although we have a flourishing capital, different residences have deserved to be the seat of our ruler on his travels around the country. Some of the most notable are the castles scattered in the Carpathians, residence of royalty and nobles of Hungary, and Malbork, captured from the Teutonic Order. Further improvements to them would make them charming and safe temporary residences for our court."
 
  flavor_pol.26.t: "The Polish-Lithuanian Pact of Cooperation"
  flavor_pol.26.d: "It is said that close cooperation and diplomacy can make or break the fate of nations. Recent attempts to reconcile our differences with our Polish brethren in the West, have led to the culmination of the Polish-Lithuanian pact of Cooperation of the year [GetYear]. It is up to us how and in which manner to proceed and react to such a profound extension of friendship and cohabitation."
@@ -59,6 +60,17 @@
 
  pol_polish_hungarian_ties_modifier: "Polish-Lithuanian Ties"
  desc_pol_polish_hungarian_ties_modifier: "Our ties with the Grand Duchy of Lithuania are surely strong and both our nations benefit from this arrangement!"
+ pol_moldavia_desc: "A dynastic feud broke out in Moldavia after the death of Voivode Alexander 'the Good' in 1432. This is a strategic polity as we consider it our mark on the South-eastern border. Now is the time to restore order in this Voivodeship, which is so strategic for us."
+ pol_wallachia_desc: "Wallachia is a key strategic territory, since its located right above the Danube River. Therefore, taking control of it would allow us to create a great choke point that could help us secure our lands."
+ pol_tend_east_title: "[Root.GetPreviewColorPOL]Tend to the East[Root.GetPreviewColorPOL_end]"
+ pol_tend_east_desc: "We have shared common political leadership with the Kingdom of Hungary since Queen Elizabeth married King Charles Robert, breeding both realms' king, Louis the Great. There have been tensions between the Polish and Hungarian nobility, but a closer relationship has also been developing between the two countries, ties that we would be wise to continue fostering."
+ pol_imperial_commonwealth_desc: "The Polish-Hungarian Commonwealth has resulted in a great success, elevating us to the status of Empire, as recognized by other European courts."
+ plc_golden_liberty_desc: "A unique political system, the Golden Liberty, was established in the Polish-Hungarian Commonwealth, due to growing political power wielded by the Nobility, effectively becoming a republic under the presidency of the [Root.Monarch.GetTitle]. It will depend on our decision which form it will take from now on."
+
+ polish_elective_monarchy_desc: "Despite the union between us and our Hungarian brethren, the nobles still have most of the power amassed within their ranks. The elective status of our monarchy, however, implies the introduction of foreign rulers which could be both a blessing and a curse."
+
+ flavor_pol.10_d: "Just as the [Root.Monarch.GetName] has resolved to remove power from the Sejm, so has the Sejm made its own demands to the [Root.Monarch.GetName]. Mikolaj Zebrzydowski, Jan Szczesny Herburt, Stanislaw Stadnicki and Aleksander Józef Lisowski have formed a rokosz, or semi-legal rebellion, in Stezyca and Pozsony. The nobles have gathered at the rokosz formed a Konfederacja which outlined demands in 67 articles, demanding the dethronement of [Root.Monarch.GetName] for breaching the Henrykian Articles, and the right for the Sejm to appoint state officials instead of the [Root.Monarch.GetTitle]."
+ flavor_pol.11_d: "Following the establishment of a konfederacja demanding the dethronement of the [Root.Monarch.GetTitle], rebel nobles have risen up in open rebellion against the Crown. A royal army under the command of Hetman Stanislaw Zolkiewski has been sent to pacify the rebels, though there is still a chance to negotiate and concede to some of their demands."
 
  hun_friendship_yes_tt: "\n£yes£ Reward if §YLithuania§! is a subject or an ally:"
  hun_friendship_no_tt: "\n£no£ Reward if §YLithuania§! is a subject or an ally:"
@@ -67,3 +79,5 @@
  pol_annexed_ruthenia_opinion_modifier: "Annexed Slovakia"
  pol_prosperity_in_ukraine_modifier: "Prosperity in Slovakia"
  desc_pol_prosperity_in_ukraine_modifier: "The highlands of Slovakia are now home to growing and prospering communities."
+ pol_efficient_taxation_lit_lands_modifier: "Efficient Taxation of the Hungarian Lands"
+ desc_pol_efficient_taxation_lit_lands_modifier: "Taxation of the eastern lands under the Hungarian crown has yielded great results for our treasuries."

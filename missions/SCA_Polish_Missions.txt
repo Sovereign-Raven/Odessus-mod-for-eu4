@@ -814,8 +814,8 @@ poland_sca_slot_2_a = {
 		}
 	}		
 	
-	pol_balance_princely_lands = {
-		icon = mission_pol_balance_princely_lands 
+	pol_balance_princely_lands = { #replacing Hungary with Lithuania here too
+		icon = mission_monarch_in_throne_room
 		required_missions = { pol_throne_bohemia pol_great_sejm pol_protect_hungary }
 		position = 3
 		provinces_to_highlight = { 
@@ -823,9 +823,9 @@ poland_sca_slot_2_a = {
 				area = silesia_area 
 				area = moravia_area
 				area = bohemia_area
-				area = alfold_area
-				area = slovakia_area
-				area = transdanubia_area
+				area = podlasie_area
+				area = samogitia_area
+				area = lithuania_area
 			}
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -840,7 +840,7 @@ poland_sca_slot_2_a = {
 			}
 		}
 		trigger = { 
-			silesia_area = {
+			silesia_area = { #this syntax appeared twice originally for some reason lol
 				OR = {
 					country_or_non_sovereign_subject_holds = ROOT 
 					custom_trigger_tooltip = {
@@ -885,7 +885,7 @@ poland_sca_slot_2_a = {
 				}
 				type = all 
 			}
-			silesia_area = {
+			podlasie_area = {
 				OR = {
 					country_or_non_sovereign_subject_holds = ROOT 
 					custom_trigger_tooltip = {
@@ -900,7 +900,7 @@ poland_sca_slot_2_a = {
 				}
 				type = all 
 			}
-			alfold_area = {
+			samogitia_area = {
 				OR = {
 					country_or_non_sovereign_subject_holds = ROOT 
 					custom_trigger_tooltip = {
@@ -915,22 +915,7 @@ poland_sca_slot_2_a = {
 				}
 				type = all 
 			}
-			slovakia_area = {
-				OR = {
-					country_or_non_sovereign_subject_holds = ROOT 
-					custom_trigger_tooltip = {
-						tooltip = owned_by_ally_or_ally_subject_tt
-						owner = {
-							OR = {
-								overlord = { alliance_with = ROOT }
-								alliance_with = ROOT
-							}
-						}
-					}
-				}
-				type = all 
-			}
-			transdanubia_area = {
+			lithuania_area = {
 				OR = {
 					country_or_non_sovereign_subject_holds = ROOT 
 					custom_trigger_tooltip = {
@@ -968,7 +953,7 @@ poland_sca_slot_2_a = {
 					add_building = town_hall
 				}
 			}
-			153 = { 
+			272 = { #Vilnius; originally Pest
 				if = {
 					limit = { 
 						owner = { 
@@ -1340,7 +1325,7 @@ poland_sca_slot_2_plc_2 = {
 		provinces_to_highlight = { 
 			OR = {
 				province_id = 1841 
-				province_id = 270 
+				province_id = 4128 #Kiralyfold where the Bran Castle is
 			}
 		}
 		trigger = { 
@@ -1353,10 +1338,10 @@ poland_sca_slot_2_plc_2 = {
 						tier = 3 
 					}
 				}
-				270 = { 
+				4128 = { 
 					country_or_non_sovereign_subject_holds = ROOT 
 					has_great_project = {
-						type = trakai_castle 
+						type = bran_castle
 						tier = 3 
 					}
 				}
@@ -1366,7 +1351,7 @@ poland_sca_slot_2_plc_2 = {
 					country_or_non_sovereign_subject_holds = ROOT 
 					base_manpower = 15 
 				}
-				270 = {
+				4128 = {
 					country_or_non_sovereign_subject_holds = ROOT 
 					base_manpower = 15 
 				}
@@ -1929,7 +1914,7 @@ poland_sca_slot_3_a = {
 	}		
 	
 	pol_protect_hungary = {
-		icon = mission_conquer_lithuania
+		icon = mission_lit_great_power_politics
 		required_missions = { pol_varna_aftermath }
 		position = 2 
 		provinces_to_highlight = { 
@@ -2233,14 +2218,14 @@ poland_sca_slot_3_a = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				trade_goods = grain 
 				has_production_building_trigger = yes 
-				value = 14
+				value = 10
 			}
 			if = { 
 				limit = { has_dlc = "Mandate of Heaven" }
 				OR = {	
 					trading_part = {
 						trade_goods = grain
-						value = 0.15
+						value = 0.1 # at least 10% of world's grain trade
 					}
 					has_age_ability = ab_polish_legitimacy
 				}
@@ -2248,7 +2233,7 @@ poland_sca_slot_3_a = {
 			else = { 
 				trading_part = {
 					trade_goods = grain
-					value = 0.15
+					value = 0.1 # at least 10% of world's grain trade
 				}
 			}
 		}
@@ -4501,7 +4486,7 @@ poland_sca_slot_5_branching_lit_east = {
 	has_country_shield = yes
 	
 	pol_develop_ukraine = { #now Develop Slovakia
-		icon = mission_landsknecht_soldier
+		icon = mission_eastern_european_city
 		required_missions = { pol_varna_aftermath } 
 		provinces_to_highlight = { 
 			OR = { 
@@ -4595,13 +4580,13 @@ poland_sca_slot_5_branching_lit_east = {
 	}
 	
 	pol_tend_east = {
-		icon = mission_pol_tend_east 
+		icon = mission_expand_into_the_forest
 		required_missions = { pol_develop_ukraine } 
 		position = 3
 		provinces_to_highlight = { 
 			OR = {
-				area = smolensk_area 
-				area = lithuania_area 
+				area = southern_transylvania_area #previously Smolensk
+				area = transdanubia_area #previously Lithuania
 			}
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -4610,26 +4595,26 @@ poland_sca_slot_5_branching_lit_east = {
 		}
 		trigger = { 
 			not_in_mission_preview_mode = { key = POL }
-			lithuania_area = {
+			transdanubia_area = {
 				type = all 
 				country_or_non_sovereign_subject_holds = ROOT
 				development = 10 
 			}
-			smolensk_area = {
+			southern_transylvania_area = {
 				type = all 
 				country_or_non_sovereign_subject_holds = ROOT 
 				development = 10
 			}
 			if = {
 				limit = {
-					LIT = { is_subject_of = ROOT }
+					HUN = { is_subject_of = ROOT }
 				}
-				LIT = {
+				HUN = {
 					is_in_deficit = no 
 					NOT = { num_of_loans = 1 }
 				}
 			}
-			272 = { 
+			153 = { #Pest
 				country_or_non_sovereign_subject_holds = ROOT 
 				num_of_buildings_in_province = 4 
 			}
@@ -4667,7 +4652,7 @@ poland_sca_slot_5_branching_lit_east = {
 					loyalty = 10 
 				}
 			}
-			LIT = {
+			HUN = {
 				if = {
 					limit = {
 						exists = yes 
@@ -4810,7 +4795,7 @@ poland_sca_slot_5_branching_hre_west = {
 	}
 	
 	pol_place_sun = {
-		icon = mission_pol_place_sun 
+		icon = mission_rule_of_the_sun
 		required_missions = { pol_delegate_emperor } 
 		position = 3
 		trigger = {
