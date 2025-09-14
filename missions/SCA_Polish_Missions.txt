@@ -1910,6 +1910,11 @@ poland_sca_slot_3_a = {
 					}
 				}
 			}
+			enable_branching_mission_review = { #flavor_pol.1's choices remade here as a reward, CURRENTLY BROKEN
+    			key = POL
+    			ai_event_id = odessus_flavor_pol.2
+			}
+			set_country_flag = pol_did_va_mission
 		}
 	}		
 	
@@ -4482,8 +4487,8 @@ poland_sca_slot_5_branching_lit_east = {
 			tag = POL 
 			tag = PLC 
 		}
-		has_country_flag = pol_chose_pu_flag
-		NOT = { has_country_flag = pol_denied_pu_flag }
+		has_country_flag = pol_chose_hre_branch
+		NOT = { has_country_flag = pol_chose_hungary_branch }
 	}
 	has_country_shield = yes
 	
@@ -4710,8 +4715,8 @@ poland_sca_slot_5_branching_hre_west = {
 			tag = POL 
 			tag = PLC 
 		}
-		has_country_flag = pol_denied_pu_flag 
-		NOT = { has_country_flag = pol_chose_pu_flag }
+		has_country_flag = pol_chose_hre_branch
+		NOT = { has_country_flag = pol_chose_hungary_branch }
 	}
 	has_country_shield = yes
 	
