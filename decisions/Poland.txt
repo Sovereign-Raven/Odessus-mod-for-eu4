@@ -34,8 +34,8 @@ country_decisions = {
 			 	add_base_manpower = 1
 			}
 			change_estate_land_share = {
-				estate = all
-				share = -5
+				estate = estate_nobles
+				share = 5
 			}
 		}
 		ai_will_do = {

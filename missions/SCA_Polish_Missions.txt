@@ -3347,7 +3347,9 @@ poland_sca_slot_4_b = {
 			1940 = { owned_by = ROOT }
 			257 = { 
 				is_capital_of = ROOT 
-				num_of_times_improved = 6
+				OR = {
+					num_of_times_improved = 6
+				}
 			}
 		}
 		effect = {
