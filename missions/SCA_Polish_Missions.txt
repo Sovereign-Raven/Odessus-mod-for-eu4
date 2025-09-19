@@ -1743,178 +1743,8 @@ poland_sca_slot_3_a = {
 				BOH = { add_historical_friend = ROOT }
 				add_historical_friend = BOH 
 			}
+			country_event = { id = odessus_flavor_pol.2 }
 			custom_tooltip = pol_impact_future_missions_tt 
-			hidden_effect = { 
-				swap_non_generic_missions = yes 
-				if = { 
-					limit = { 
-						BOH = {
-							OR = {
-								is_subject_of = ROOT
-								alliance_with = ROOT
-							}
-						}
-					}
-					add_favors = { 
-						who = BOH 
-						amount = 10 
-					}
-					BOH = { add_historical_friend = ROOT }
-					add_historical_friend = BOH 
-				}
-				else_if = {
-					limit = {
-						valid_for_personal_unions_trigger = yes 
-						BOH = { 
-							valid_for_personal_unions_trigger = yes 
-						}
-						has_country_flag = pol_denied_pu_flag
-					}
-					add_casus_belli = {
-						type = cb_restore_personal_union
-						months = 300
-						target = BOH
-					}
-				}
-				else = {
-					moravia_area = { 
-						limit = { 
-							NOT = { is_core = ROOT } 
-							NOT = { is_permanent_claim = ROOT }  
-						}
-						add_permanent_claim = ROOT 
-					}
-					bohemia_area = { 
-						limit = { 
-							NOT = { is_core = ROOT } 
-							NOT = { is_permanent_claim = ROOT } 
-						}
-						add_permanent_claim = ROOT 
-					}
-					silesia_area = { 
-						limit = { 
-							NOT = { is_core = ROOT } 
-							NOT = { is_permanent_claim = ROOT } 
-						}
-						add_permanent_claim = ROOT 
-					}
-				}
-				if = { 
-					limit = { alliance_with = LIT } 
-					add_favors = { 
-						who = LIT 
-						amount = 10 
-					}
-					LIT = { add_historical_friend = ROOT }
-					add_historical_friend = LIT 
-				}
-				else_if = {
-					limit = {
-						valid_for_personal_unions_trigger = yes 
-						LIT = { 
-							valid_for_personal_unions_trigger = yes 
-						}
-						has_country_flag = pol_chose_pu_flag 
-					}
-					add_casus_belli = {
-						type = cb_restore_personal_union
-						months = 300
-						target = LIT
-					} 
-				}
-				else = {
-					samogitia_area = { 
-						limit = { 
-							NOT = { is_core = ROOT } 
-							NOT = { is_permanent_claim = ROOT } 
-						}
-						add_permanent_claim = ROOT 
-					}
-					lithuania_area = { 
-						limit = { 
-							NOT = { is_core = ROOT } 
-							NOT = { is_permanent_claim = ROOT } 
-						}
-						add_permanent_claim = ROOT 
-					}
-					podlasie_area = { 
-						limit = { 
-							NOT = { is_core = ROOT } 
-							NOT = { is_permanent_claim = ROOT } 
-						}
-						add_permanent_claim = ROOT 
-					}					
-				}
-				if = {
-					limit = {
-						has_country_flag = pol_chose_pu_flag 
-						NOT = {
-							OR = {
-								BOH = { is_subject_of = ROOT }
-								alliance_with = BOH
-							}
-						}
-					}
-					moravia_area = { 
-						limit = { 
-							NOT = { is_core = ROOT } 
-							NOT = { is_permanent_claim = ROOT }  
-						}
-						add_permanent_claim = ROOT 
-					}
-					bohemia_area = { 
-						limit = { 
-							NOT = { is_core = ROOT } 
-							NOT = { is_permanent_claim = ROOT } 
-						}
-						add_permanent_claim = ROOT 
-					}
-					silesia_area = { 
-						limit = { 
-							NOT = { is_core = ROOT } 
-							NOT = { is_permanent_claim = ROOT } 
-						}
-						add_permanent_claim = ROOT 
-					}
-				}
-				if = {
-					limit = {
-						has_country_flag = pol_denied_pu_flag 
-						NOT = {
-							OR = {
-								LIT = { is_subject_of = ROOT }
-								alliance_with = LIT
-							}
-						}
-					}
-					samogitia_area = { 
-						limit = { 
-							NOT = { is_core = ROOT } 
-							NOT = { is_permanent_claim = ROOT } 
-						}
-						add_permanent_claim = ROOT 
-					}
-					lithuania_area = { 
-						limit = { 
-							NOT = { is_core = ROOT } 
-							NOT = { is_permanent_claim = ROOT } 
-						}
-						add_permanent_claim = ROOT 
-					}
-					podlasie_area = { 
-						limit = { 
-							NOT = { is_core = ROOT } 
-							NOT = { is_permanent_claim = ROOT } 
-						}
-						add_permanent_claim = ROOT 
-					}
-				}
-			}
-			enable_branching_mission_review = { #flavor_pol.1's choices remade here as a reward, CURRENTLY BROKEN
-    			key = POL
-    			ai_event_id = odessus_flavor_pol.2
-			}
-			set_country_flag = pol_did_va_mission
 		}
 	}		
 	
@@ -4225,8 +4055,8 @@ poland_sca_slot_5_branching_lit_hre = {
 			tag = POL 
 			tag = PLC 
 		}
-		NOT = { has_country_flag = pol_chose_pu_flag }
-		NOT = { has_country_flag = pol_denied_pu_flag }
+        NOT = { has_country_flag = pol_chose_hre_branch }
+        NOT = { has_country_flag = pol_chose_hungary_branch }
 	}
 	has_country_shield = yes
 	
@@ -4487,8 +4317,8 @@ poland_sca_slot_5_branching_lit_east = {
 			tag = POL 
 			tag = PLC 
 		}
-		has_country_flag = pol_chose_hre_branch
-		NOT = { has_country_flag = pol_chose_hungary_branch }
+		has_country_flag = pol_chose_hungary_branch
+		NOT = { has_country_flag = pol_chose_hre_branch }
 	}
 	has_country_shield = yes
 	
