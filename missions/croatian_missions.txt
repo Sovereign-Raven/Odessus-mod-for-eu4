@@ -137,17 +137,17 @@ cro_1 = {
 				region = balkan_region
 				value = 30
 			}
-			NOT = {
+			NOT = { # Croatia has the strongest military in the Balkans
 				any_country = {
 					capital_scope = {
-						region = balkans_region
+						region = balkan_region
 					}
-
-					NOT = {
-						total_development = ROOT
+					army_strength = {
+						who = ROOT
+						value = 1
 					}
 				}
-			}
+			}			
 		}
 		effect = {
 			add_mil_power = 200
