@@ -124,7 +124,7 @@ cro_1 = {
 		}
 	}
 	cro_withstand_ottomans = { #This has to be altered in many ways.
-		icon = mission_non-western_soldiers
+		icon = mission_conquer_50_development
 		required_missions = { cro_expel_italians }
 		provinces_to_highlight = {
 			region = balkan_region
@@ -137,20 +137,16 @@ cro_1 = {
 				region = balkan_region
 				value = 30
 			}
-			if = {
-				limit = {
-					exists = TUR
-				}
-				custom_trigger_tooltip = {
-					tooltip = cro_tur_army
-					army_strength = {
-						who = TUR
-						value = 0.5
+			NOT = {
+				any_country = {
+					capital_scope = {
+						region = balkans_region
+					}
+
+					NOT = {
+						total_development = ROOT
 					}
 				}
-			}
-			else = {
-				army_size = 100
 			}
 		}
 		effect = {
