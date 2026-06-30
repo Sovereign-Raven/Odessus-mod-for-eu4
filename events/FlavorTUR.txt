@@ -2812,6 +2812,10 @@ country_event = {
 				tag = HUN
 				is_subject = no
 			}
+			AND = {
+				tag = BYZ
+				is_subject = no
+			}
 		}
 		NOT = { is_year = 1455 }
 		years_of_income = 0.3
@@ -2862,6 +2866,34 @@ country_event = {
 			type = army_reformer
 			skill = 2
 			cost_multiplier = 0.5
+		}
+		hidden_effect = {
+			set_global_flag = odessus_urban_found_employment_flag
+			every_country = {
+				limit = {
+					has_country_flag = odessus_rejected_urban_flag
+				}
+				clr_country_flag = odessus_rejected_urban_flag
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = flavor_tur.204.a
+		trigger = {
+			tag = BYZ
+		}
+		add_years_of_income = -0.3
+		define_advisor = {
+			name = "Orbán"
+			culture = hungarian
+			religion = catholic
+			type = army_reformer
+			skill = 2
+			cost_multiplier = 0.75
 		}
 		hidden_effect = {
 			set_global_flag = odessus_urban_found_employment_flag
@@ -3000,6 +3032,7 @@ country_event = {
 	}
 }
 
+# It would be nice to know the exact point of this @Raven :)
 country_event = {
 	id = flavor_tur.2042
 	title = flavor_tur.204.t
