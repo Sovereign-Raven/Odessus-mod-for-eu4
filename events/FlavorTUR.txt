@@ -2828,7 +2828,7 @@ country_event = {
 		}
 		add_years_of_income = -0.3
 		define_advisor = {
-			name = "Urban"
+			name = "Orbán"
 			culture = hungarian
 			religion = catholic
 			type = army_reformer
@@ -2856,7 +2856,7 @@ country_event = {
 		}
 		add_years_of_income = -0.3
 		define_advisor = {
-			name = " rban"
+			name = "Orbán"
 			culture = hungarian
 			religion = catholic
 			type = army_reformer
