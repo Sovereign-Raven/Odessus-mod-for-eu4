@@ -38,12 +38,12 @@ odessus_skanderbegs_legacy_modifier = {
 }
 
 odessus_flourishing_ambitions_modifier = {
-	local_development_cost = -0.1
+	local_tax_modifier = 0.15
 }
 
 odessus_flourishing_capital_modifier = {
 	province_trade_power_modifier = 0.15
-	local_development_cost = -0.15
+	local_production_efficiency = 0.25
 }
 
 odessus_tsarevets_modifier = {

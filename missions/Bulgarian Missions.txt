@@ -7,72 +7,10 @@ bul_1 = {
 		tag = BUL
 	}
 	has_country_shield = yes
-	
-	bul_conquer_wallachia = {
-		icon = mission_impaled_soldies
-		position = 4
-		required_missions = { bul_last_piece_of_unity }
-		provinces_to_highlight = {
-			area = wallachia_area
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		trigger = {
-			wallachia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		effect = {
-			wallachia_area = {
-				add_province_modifier = {
-					name = "odessus_rich_farmlands_modifier"
-					duration = 1825
-				}
-			}
-			moldavia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = {  is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			add_treasury = 100
-			add_prestige = 15
-		}
-	}
-	
-	bul_conquer_moldavia = {
-		icon = mission_cossack_cavalry
-		required_missions = { bul_conquer_wallachia }
-		provinces_to_highlight = {
-			area = moldavia_area
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		trigger = {
-			moldavia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		effect = {
-			moldavia_area = {
-				add_province_modifier = {
-					name = "odessus_rich_farmlands_modifier"
-					duration = 1825
-				}
-			}
-			add_treasury = 100
-			add_prestige = 10
-		}
-	}
-	
+
 	bul_develop_our_lands = {
 		icon = mission_african_gold
-		position = 7
+		position = 1
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -145,6 +83,69 @@ bul_1 = {
 			}
 		}
 	}
+	
+	bul_conquer_wallachia = {
+		icon = mission_impaled_soldies
+		position = 4
+		required_missions = { bul_last_piece_of_unity }
+		provinces_to_highlight = {
+			area = wallachia_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			wallachia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			wallachia_area = {
+				add_province_modifier = {
+					name = "odessus_rich_farmlands_modifier"
+					duration = 1825
+				}
+			}
+			moldavia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = {  is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_treasury = 100
+			add_prestige = 15
+		}
+	}
+	
+	bul_conquer_moldavia = {
+		icon = mission_cossack_cavalry
+		required_missions = { bul_conquer_wallachia }
+		provinces_to_highlight = {
+			area = moldavia_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			moldavia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			moldavia_area = {
+				add_province_modifier = {
+					name = "odessus_rich_farmlands_modifier"
+					duration = 1825
+				}
+			}
+			add_treasury = 100
+			add_prestige = 10
+		}
+	}
+
 }
 
 bul_2 = {
@@ -214,33 +215,6 @@ bul_2 = {
 		}
 	}
 	
-	bul_tsaravets = {
-		icon = mission_conquer_50_development
-		position = 7
-		provinces_to_highlight = {
-			province_id = 4704
-			NOT = {
-				fort_level = 2
-			}
-		}
-		trigger = {
-			4704 = {
-				fort_level = 2
-			}
-			treasury = 200
-			mil_power = 50
-		}
-		effect = {
-			add_treasury = -200
-			add_mil_power = -50
-			4704 = {
-				add_province_modifier = {
-					name = "odessus_tsarevets_modifier"
-					duration = -1
-				}
-			}
-		}
-	}
 }
 
 bul_3 = {
@@ -600,37 +574,6 @@ bul_3 = {
 		}
 	}
 	
-	bul_rila_monasteries = {
-		icon = fund_the_monasteries
-		position = 7
-		provinces_to_highlight = {
-			province_id = 4703
-		}
-		trigger = {
-			owns_core_province = 4703
-			4703 = {
-				religion = orthodox
-			}
-			religion = orthodox
-			treasury = 500
-			adm_power = 25
-		}
-		effect = {
-			add_treasury = -500
-			add_adm_power = -25
-			4703 = {
-				add_great_project_tier = {
-					type = rila_monasteries
-					tier = 1
-				}
-			}
-			add_prestige = 10
-			add_country_modifier = {
-				name = "odessus_saint_ivan_of_rila_modifier"
-				duration = 3650
-			}
-		}
-	}
 }
 
 bul_4 = {
@@ -837,7 +780,67 @@ bul_5 = {
 		tag = BUL
 	}
 	has_country_shield = yes
+
+	bul_tsaravets = {
+		icon = mission_conquer_50_development
+		position = 1
+		provinces_to_highlight = {
+			province_id = 4704
+			NOT = {
+				fort_level = 2
+			}
+		}
+		trigger = {
+			4704 = {
+				fort_level = 2
+			}
+			treasury = 200
+			mil_power = 50
+		}
+		effect = {
+			add_treasury = -200
+			add_mil_power = -50
+			4704 = {
+				add_province_modifier = {
+					name = "odessus_tsarevets_modifier"
+					duration = -1
+				}
+			}
+		}
+	}
 	
+	bul_rila_monasteries = {
+		icon = fund_the_monasteries
+		position = 2
+		provinces_to_highlight = {
+			province_id = 4703
+		}
+		trigger = {
+			owns_core_province = 4703
+			4703 = {
+				religion = orthodox
+			}
+			religion = orthodox
+			treasury = 500
+			adm_power = 25
+		}
+		effect = {
+			add_treasury = -500
+			add_adm_power = -25
+			4703 = {
+				add_great_project_tier = {
+					type = rila_monasteries
+					tier = 1
+				}
+			}
+			add_prestige = 10
+			add_country_modifier = {
+				name = "odessus_saint_ivan_of_rila_modifier"
+				duration = 3650
+			}
+		}
+	}
+
 	bul_conquer_albania = {
 		icon = alpine_defenses
 		position = 5
