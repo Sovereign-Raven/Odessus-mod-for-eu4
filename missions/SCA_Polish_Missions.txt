@@ -1492,9 +1492,9 @@ poland_sca_slot_3_a = {
 				}
 			}
 
-		custom_trigger_tooltip = {
-    		tooltip = pol_varna_aftermath_tt
-		}
+			custom_trigger_tooltip = {
+				tooltip = pol_varna_aftermath_tt
+			}
 
 			HUN = { liberty_desire = 0 } #fully loyal Hungary
 			army_size_percentage = 1 # full army size
@@ -4065,7 +4065,10 @@ poland_sca_slot_5_branching_lit_hre = {
 		required_missions = { pol_varna_aftermath } 
 		position = 2 
 		trigger = { 
-			not_in_mission_preview_mode = { key = POL }
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
 			slovakia_area = {
 				type = all 
 				country_or_non_sovereign_subject_holds = ROOT 
