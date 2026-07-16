@@ -4333,19 +4333,20 @@ poland_sca_slot_5_branching_lit_east = {
 				AND = { 
 					OR = { 
 						area = slovakia_area
+						area = transylvania_area
 
 					}
 					NOT = { 
-						num_of_times_improved = 2
+						num_of_times_improved = 1
 					}
 				}
 				AND = {
 					OR = {
-						province_id = 1772 # capital of Slovakia
-
+						province_id = 1772 #Pozsony/Bratislava
+						province_id = 4127 #Turda
 					}
 					NOT = { 
-						num_of_times_improved = 4 
+						num_of_times_improved = 2
 					}
 				}
 			}
@@ -4356,19 +4357,28 @@ poland_sca_slot_5_branching_lit_east = {
 			slovakia_area = {
 				type = all 
 				country_or_non_sovereign_subject_holds = ROOT 
-				num_of_times_improved = 2 
+				num_of_times_improved = 1
+			}
+			transylvania_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+				num_of_times_improved = 1
 			}
 			1772 = { 
 				country_or_non_sovereign_subject_holds = ROOT 
-				num_of_times_improved = 4 
+				num_of_times_improved = 2
+			}
+			4127 = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				num_of_times_improved = 2
 			}
 			if = {
 				limit = { has_dlc = "Leviathan" }
-				1772 = { 
+				154 = { 
 					OR = {
 						AND = {
 							num_of_times_improved = 5 
-							has_tax_building_trigger = yes 
+							has_production_building_trigger = yes 
 						}
 						custom_trigger_tooltip = {
 							tooltip = pol_lavra_2_or_3_tt
@@ -4387,9 +4397,9 @@ poland_sca_slot_5_branching_lit_east = {
 				}
 			}
 			else = {
-				1772 = {
+				154 = {
 					num_of_times_improved = 5 
-					has_tax_building_trigger = yes 
+					has_production_building_trigger = yes 
 				}
 			}
 		}
