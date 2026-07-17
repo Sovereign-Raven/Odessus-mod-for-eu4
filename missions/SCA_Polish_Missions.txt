@@ -4333,7 +4333,6 @@ poland_sca_slot_5_branching_lit_east = {
 				AND = { 
 					OR = { 
 						area = slovakia_area
-						area = transylvania_area
 
 					}
 					NOT = { 
@@ -4343,7 +4342,6 @@ poland_sca_slot_5_branching_lit_east = {
 				AND = {
 					OR = {
 						province_id = 1772 #Pozsony/Bratislava
-						province_id = 4127 #Turda
 					}
 					NOT = { 
 						num_of_times_improved = 2
@@ -4359,16 +4357,7 @@ poland_sca_slot_5_branching_lit_east = {
 				country_or_non_sovereign_subject_holds = ROOT 
 				num_of_times_improved = 1
 			}
-			transylvania_area = {
-				type = all 
-				country_or_non_sovereign_subject_holds = ROOT 
-				num_of_times_improved = 1
-			}
 			1772 = { 
-				country_or_non_sovereign_subject_holds = ROOT 
-				num_of_times_improved = 2
-			}
-			4127 = { 
 				country_or_non_sovereign_subject_holds = ROOT 
 				num_of_times_improved = 2
 			}
@@ -4436,7 +4425,7 @@ poland_sca_slot_5_branching_lit_east = {
 		provinces_to_highlight = { 
 			OR = {
 				area = southern_transylvania_area #previously Smolensk
-				area = transdanubia_area #previously Lithuania
+				area = transylvania_area #previously Lithuania
 			}
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -4445,7 +4434,7 @@ poland_sca_slot_5_branching_lit_east = {
 		}
 		trigger = { 
 			not_in_mission_preview_mode = { key = POL }
-			transdanubia_area = {
+			transylvania_area = {
 				type = all 
 				country_or_non_sovereign_subject_holds = ROOT
 				development = 10 
