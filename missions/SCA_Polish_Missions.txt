@@ -1492,9 +1492,9 @@ poland_sca_slot_3_a = {
 				}
 			}
 
-		custom_trigger_tooltip = {
-    		tooltip = pol_varna_aftermath_tt
-		}
+			custom_trigger_tooltip = {
+				tooltip = pol_varna_aftermath_tt
+			}
 
 			HUN = { liberty_desire = 0 } #fully loyal Hungary
 			army_size_percentage = 1 # full army size
@@ -4065,7 +4065,10 @@ poland_sca_slot_5_branching_lit_hre = {
 		required_missions = { pol_varna_aftermath } 
 		position = 2 
 		trigger = { 
-			not_in_mission_preview_mode = { key = POL }
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
 			slovakia_area = {
 				type = all 
 				country_or_non_sovereign_subject_holds = ROOT 
@@ -4333,16 +4336,15 @@ poland_sca_slot_5_branching_lit_east = {
 
 					}
 					NOT = { 
-						num_of_times_improved = 2
+						num_of_times_improved = 1
 					}
 				}
 				AND = {
 					OR = {
-						province_id = 1772 # capital of Slovakia
-
+						province_id = 1772 #Pozsony/Bratislava
 					}
 					NOT = { 
-						num_of_times_improved = 4 
+						num_of_times_improved = 2
 					}
 				}
 			}
@@ -4353,19 +4355,19 @@ poland_sca_slot_5_branching_lit_east = {
 			slovakia_area = {
 				type = all 
 				country_or_non_sovereign_subject_holds = ROOT 
-				num_of_times_improved = 2 
+				num_of_times_improved = 1
 			}
 			1772 = { 
 				country_or_non_sovereign_subject_holds = ROOT 
-				num_of_times_improved = 4 
+				num_of_times_improved = 2
 			}
 			if = {
 				limit = { has_dlc = "Leviathan" }
-				1772 = { 
+				154 = { 
 					OR = {
 						AND = {
 							num_of_times_improved = 5 
-							has_tax_building_trigger = yes 
+							has_production_building_trigger = yes 
 						}
 						custom_trigger_tooltip = {
 							tooltip = pol_lavra_2_or_3_tt
@@ -4384,9 +4386,9 @@ poland_sca_slot_5_branching_lit_east = {
 				}
 			}
 			else = {
-				1772 = {
+				154 = {
 					num_of_times_improved = 5 
-					has_tax_building_trigger = yes 
+					has_production_building_trigger = yes 
 				}
 			}
 		}
@@ -4423,7 +4425,7 @@ poland_sca_slot_5_branching_lit_east = {
 		provinces_to_highlight = { 
 			OR = {
 				area = southern_transylvania_area #previously Smolensk
-				area = transdanubia_area #previously Lithuania
+				area = transylvania_area #previously Lithuania
 			}
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -4432,7 +4434,7 @@ poland_sca_slot_5_branching_lit_east = {
 		}
 		trigger = { 
 			not_in_mission_preview_mode = { key = POL }
-			transdanubia_area = {
+			transylvania_area = {
 				type = all 
 				country_or_non_sovereign_subject_holds = ROOT
 				development = 10 
