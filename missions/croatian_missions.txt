@@ -151,6 +151,7 @@ cro_1 = {
 		}
 		effect = {
 			add_mil_power = 200
+			add_prestige = 25
 		}
 		ai_weight = {
 			factor = 75	#Default
