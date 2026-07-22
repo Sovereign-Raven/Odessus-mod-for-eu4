@@ -2332,6 +2332,124 @@ country_event = { #Polish-Hungarian Ties, now Lithuanian
 	}
 }
 
+country_event = { #Polish-Russian Ties
+	id = flavor_pol.261
+	title = flavor_pol.261.t 
+	desc = flavor_pol.261.d 
+	picture = MN-DIPLOMAT_INTERROGATION_eventPicture
+	is_triggered_only = yes 
+	
+	major = yes 
+	major_trigger = { 
+		capital_scope = { continent = europe } 
+	}
+	
+	option = { 
+		name = flavor_pol.261.a 
+		
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				POL = { diplomatic_ideas = 2 } 
+				factor = 1.75
+			}
+			modifier = { 
+				POL = { influence_ideas = 2 } 
+				factor = 1.75
+			}
+			modifier = { 
+				trust = { 
+					who = POL 
+					value = 100 
+				}
+				factor = 1.5 
+			}
+			modifier = {
+				PLC = { diplomatic_ideas = 2 } 
+				factor = 1.5
+			}
+			modifier = { 
+				PLC = { influence_ideas = 2 } 
+				factor = 1.5
+			}
+			modifier = { 
+				trust = { 
+					who = PLC 
+					value = 100 
+				}
+				factor = 1.5 
+			}
+		}
+		if = { 
+			limit = {
+				PLC = { exists = yes }
+			}
+			PLC = { create_union = ROOT }
+		}
+		else = {
+			POL = { create_union = ROOT }
+		}
+	}
+	
+	option = { 
+		name = flavor_pol.261.b
+		
+		ai_chance = { factor = 8 } 
+		RUS = {
+			add_country_modifier = {
+				name = pol_polish_russian_ties_modifier
+				duration = 9125
+			}
+		}
+		if = {
+			limit = { exists = POL }
+			POL = { 
+				add_country_modifier = {
+					name = pol_polish_russian_ties_modifier
+					duration = 9125
+				}
+			}
+		}
+		else = {
+			PLC = {
+				add_country_modifier = {
+					name = pol_polish_russian_ties_modifier
+					duration = 9125
+				}
+			}
+		}
+		
+	}
+	
+	option = {
+		name = flavor_pol.261.c 
+		
+		ai_chance = { factor = 0 } 
+		remove_historical_friend = POL 
+		if = {
+			limit = { exists = POL }
+			POL = { 
+				remove_historical_friend = ROOT 
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					months = 300
+					target = RUS
+				} 
+			} 
+		}
+		else = {
+			PLC = { 
+				remove_historical_friend = ROOT 
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					months = 300
+					target = RUS
+				} 
+			}
+		}
+	}
+}
+
 country_event = { #Expanding the Quarter Army 
 	id = flavor_pol.27
 	title = flavor_pol.27.t 

@@ -1,0 +1,5 @@
+pol_polish_russian_ties_modifier = {
+	has_streltsy = yes
+	can_recruit_hussars = yes
+	allowed_streltsy_fraction = 0.1
+}

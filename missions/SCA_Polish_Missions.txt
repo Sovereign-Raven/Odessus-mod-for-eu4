@@ -2626,7 +2626,7 @@ poland_sca_slot_3_plc_1 = {
 				capital_scope = {
 					region = russia_region
 				}
-				total_development = 100
+				total_development = 300
 				OR = {
 					culture_group = east_slavic
 					culture_group = slavic
@@ -2636,7 +2636,7 @@ poland_sca_slot_3_plc_1 = {
 		}
 		trigger = {
 			total_development = 600
-			OR = { 
+			OR = {
 				custom_trigger_tooltip = {
 					tooltip = break_the_rus_mission_tooltip
 					NOT = {
@@ -2644,7 +2644,7 @@ poland_sca_slot_3_plc_1 = {
 							capital_scope = {
 								region = russia_region
 							}
-							total_development = 100
+							total_development = 300
 							OR = {
 								culture_group = east_slavic
 								culture_group = slavic
@@ -2653,13 +2653,40 @@ poland_sca_slot_3_plc_1 = {
 						}
 					}
 				}
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					region = russia_region
-					value = 15 
+				RUS = {
+					alliance_with = ROOT
+					has_opinion = {
+						who = ROOT
+						value = 200
+					}
+					trust = {
+						who = ROOT
+						value = 75
+					}
+				}
+				RUS = {
+					is_rival = ROOT
+					OR = {
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = insulted
+						}
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = scornfully_insulted
+						}
+					}
 				}
 			}
 		}
 		effect = {
+			custom_tooltip = pol_if_completed_via_diplomatic_relations_tt
+			tooltip = {
+				RUS = {
+					country_event = { id = flavor_pol.261 }
+				}
+				custom_tooltip = odessus_remove_all_russian_claims_tt
+			}
 			custom_tooltip = pol_hold_moscow_and_novgorod_and_neva_tt
 			tooltip = { 
 				if = { 
@@ -2744,6 +2771,29 @@ poland_sca_slot_3_plc_1 = {
 							NOT = { is_core = ROOT } 
 						}
 						add_permanent_claim = ROOT 
+					}
+				}
+				else_if = {
+					limit = {
+						RUS = {
+							alliance_with = ROOT
+							has_opinion = {
+								who = ROOT
+								value = 200
+							}
+							trust = {
+								who = ROOT
+								value = 75
+							}
+						}
+					}
+					RUS = { 
+						country_event = { id = flavor_pol.261 }
+					}
+					PLC = {
+						every_owned_province = {
+							remove_claim = RUS
+						}
 					}
 				}
 				else = { 

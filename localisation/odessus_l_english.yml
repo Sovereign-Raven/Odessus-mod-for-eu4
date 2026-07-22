@@ -126,7 +126,17 @@
  odessus_flavor_pol.2.a.tt: "Poland will shift its focus on the §YHoly Roman Empire.§!"
  odessus_flavor_pol.2.b: "Let's help Hungary prosper like our fields of gold!"
  odessus_flavor_pol.2.b.tt: "Poland will shift its focus on the §YSouth.§!"
+ flavor_pol.261.t: "The Polish-Russian Pact of Cooperation"
+ flavor_pol.261.d: "It is said that close cooperation and diplomacy can make or break the fate of nations. Recent attempts to reconcile our differences with our Polish brethren in the East, have led to the culmination of the Polish-Russian pact of Cooperation of the year [GetYear]. It is up to us how and in which manner to proceed and react to such a profound extension of friendship and cohabitation."
+ flavor_pol.261.a: "The crown of Poland will lead the way for a union of our states."
+ flavor_pol.261.b: "Together, our two domains will prosper as equals."
+ flavor_pol.261.c: "I wouldn't wipe my boots with the Polish banner!"
+ pol_polish_russian_ties_modifier: "Polish-Russian Ties"
+ desc_pol_polish_russian_ties_modifier: "Our ties with the Tsardom of Russia are surely strong and both our nations benefit from this arrangement!"
 
  pol_varna_aftermath_tt: "One of the following must be true:\n The §YVarna Aftermath§! event has fired\n Is §YCommonwealth§!\n It is currently the §YAge of Reformation§!."
+ rus_friendship_yes_tt: "\n£yes£ Reward if §YRussia§! is a subject or an ally:"
+ rus_friendship_no_tt: "\n£no£ Reward if §YRussia§! is a subject or an ally:"
+ odessus_remove_all_russian_claims_tt: "Remove all Russian Claims on our lands"
 
 string_start_bulgaria: "After the bloody Crusade of Varna, the Kingdom of Bulgaria has been restored. The Jagiellon King of Poland has appointed Fruzhin Shishman, a descendant of the Stratsimir dynasty, as the new ruler of the Kingdom. With the Ottoman threat temporarily subdued, it is now time to rebuild our nation and reclaim our rightful place in the Balkans."
