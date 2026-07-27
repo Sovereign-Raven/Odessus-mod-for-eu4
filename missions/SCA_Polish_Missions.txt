@@ -2832,17 +2832,17 @@ poland_sca_slot_3_plc_1 = {
 		icon = mission_plc_purple_phoenix
 		required_missions = { plc_break_the_rus plc_cross_wild_field }
 		position = 11
-		provinces_to_highlight = { 
-			area = thrace_area 
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		provinces_to_highlight = {
+			area = thrace_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-		trigger = { 
-			thrace_area = { 
-				type = all 
-				country_or_non_sovereign_subject_holds = ROOT 
+		trigger = {
+			thrace_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
-			OR = { 
-				is_defender_of_faith = yes 
+			OR = {
+				is_defender_of_faith = yes
 				custom_trigger_tooltip = {
 					tooltip = pol_disseminated_tolerance_tt
 					has_country_modifier = pol_guarantee_religious_rights_modifier
@@ -2850,13 +2850,17 @@ poland_sca_slot_3_plc_1 = {
 			}
 			BYZ = { 
 				OR = {
-					exists = no 
-					is_subject_of = ROOT 
-				}		
+					exists = no
+					is_subject_of = ROOT
+					custom_trigger_tooltip = {
+						tooltip = pol_pushed_back_to_asia_tt
+						capital_scope = { NOT = { continent = europe } }
+					}
+				}
 			}
 		}
-		effect = { 
-			country_event = { id = flavor_pol.30 } 
+		effect = {
+			country_event = { id = flavor_pol.30 }
 		}
 	}
 	
