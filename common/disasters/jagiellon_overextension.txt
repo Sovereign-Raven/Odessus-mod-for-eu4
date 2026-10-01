@@ -1,0 +1,115 @@
+#Jagiellon Overextension
+#Starting disaster for Poland for balance purposes.
+
+jagiellon_overextension = {
+	potential = {
+		tag = POL
+		NOT = { has_country_flag = had_jagiellon_overextension } #modifier to prevent the disaster from triggering again after it has ended
+		is_free_or_tributary_trigger = yes
+		government = monarchy
+		normal_or_historical_nations = yes
+		uses_doom = no
+		current_age = age_of_discovery
+	}
+
+	can_start = {
+		current_age = age_of_discovery
+		dynasty = "Jagiellon"
+		is_lesser_in_union = no
+		has_regency = no	
+	}
+	
+	
+	can_stop = {
+		OR = {
+			has_regency = yes
+			is_lesser_in_union = yes
+			NOT = { dynasty = "Jagiellon" }
+		}
+	}
+	
+	
+	
+	
+	progress = {
+		modifier = {
+			factor = 1
+			NOT = { legitimacy = 100 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { stability = 1 }
+		}
+		modifier = {
+			factor = 5
+			NOT = { ADM = 4 }
+		}		
+# +1 for each other Jagiellon realm
+		modifier = {
+			factor = 1
+			exists = LIT
+			LIT = { dynasty = "Jagiellon" }
+		}
+		modifier = {
+			factor = 1
+			exists = HUN
+			HUN = { dynasty = "Jagiellon" }
+		}
+		modifier = {
+			factor = 1
+			exists = BOH
+			BOH = { dynasty = "Jagiellon" }
+		}
+		modifier = {
+			factor = 1
+			exists = CRO
+			BOH = { dynasty = "Jagiellon" }
+		}
+	}
+
+
+
+
+	
+	can_end = {
+		hidden_trigger = { has_country_flag = civil_war_in_castile }
+		stability = 0
+		NOT = { num_of_rebel_controlled_provinces = 1 }
+		NOT = {
+			has_spawned_rebels = pretender_rebels
+		}
+		dynasty = "Jagiellon"
+		#BEHOLD THE PLACEHOLDER FLAGS FOR THE EVENTS THAT WILL BE ADDED LATER
+		#has_country_flag = jagiellon_overextension_event_1
+		#has_country_flag = jagiellon_overextension_event_2
+		#has_country_flag = jagiellon_overextension_event_3
+		#has_country_flag = jagiellon_overextension_event_4
+		#has_country_flag = flavor_mol_1_fired   this one also has to be made to be a flag that is set by the event, not a flavor flag
+	}
+	
+
+
+
+	modifier = {
+		global_unrest = 5
+		legitimacy = -1
+		prestige = -1
+	}	
+	
+	
+	on_start = jagiellon_overextension.1
+	on_end = jagiellon_overextension.100 
+	ended_by_country_breaking_to_rebels = no
+	
+	on_monthly = {
+		events = {
+		}
+		random_events = { 
+			200 = 0					# most months nothing happens
+			150 = jagiellon_overextension.1		# The Jagiellon Schism
+			150 = jagiellon_overextension.2		# The Apostolic Kingdom
+			150 = jagiellon_overextension.3		# The Fate of Galicia-Volhynia
+			150 = jagiellon_overextension.4		# The Fate of Mazovia
+		}
+	}
+}
