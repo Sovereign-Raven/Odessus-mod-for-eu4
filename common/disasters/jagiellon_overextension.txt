@@ -63,7 +63,7 @@ jagiellon_overextension = {
 		modifier = {
 			factor = 1
 			exists = CRO
-			BOH = { dynasty = "Jagiellon" }
+			CRO = { dynasty = "Jagiellon" }
 		}
 	}
 
@@ -72,7 +72,7 @@ jagiellon_overextension = {
 
 	
 	can_end = {
-		hidden_trigger = { has_country_flag = civil_war_in_castile }
+		hidden_trigger = { has_country_flag = had_jagiellon_overextension.100 }
 		stability = 0
 		NOT = { num_of_rebel_controlled_provinces = 1 }
 		NOT = {
@@ -84,7 +84,7 @@ jagiellon_overextension = {
 		#has_country_flag = jagiellon_overextension_event_2
 		#has_country_flag = jagiellon_overextension_event_3
 		#has_country_flag = jagiellon_overextension_event_4
-		#has_country_flag = flavor_mol_1_fired   this one also has to be made to be a flag that is set by the event, not a flavor flag
+		#has_country_flag = flavor_mol.1_fired   this one also has to be made to be a flag that is set by the event, not a flavor flag
 	}
 	
 
@@ -98,18 +98,19 @@ jagiellon_overextension = {
 	
 	
 	on_start = jagiellon_overextension.1
-	on_end = jagiellon_overextension.100 
+	on_end = jagiellon_overextension.100
 	ended_by_country_breaking_to_rebels = no
 	
 	on_monthly = {
 		events = {
 		}
 		random_events = { 
-			200 = 0					# most months nothing happens
-			150 = jagiellon_overextension.1		# The Jagiellon Schism
-			150 = jagiellon_overextension.2		# The Apostolic Kingdom
-			150 = jagiellon_overextension.3		# The Fate of Galicia-Volhynia
-			150 = jagiellon_overextension.4		# The Fate of Mazovia
+			200 = 0								# most months nothing happens
+			150 = jagiellon_overextension.2		# The Jagiellon Schism
+			150 = jagiellon_overextension.3		# The Apostolic Kingdom
+			150 = jagiellon_overextension.4		# The Fate of Galicia-Volhynia
+			150 = jagiellon_overextension.5		# The Fate of Mazovia
+			150 = flavor_mol.1_fired 			# The Fate of Moldavia
 		}
 	}
 }
