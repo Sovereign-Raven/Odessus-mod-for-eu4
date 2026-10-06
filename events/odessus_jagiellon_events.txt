@@ -37,6 +37,9 @@ country_event = {
     option = {
         name = jagiellon_overextension.2.a
         add_historical_rival = LIT
+        LIT = {
+            add_historical_rival = ROOT
+        }
         every_province = {
             limit = {
                 region = ruthenia_region
