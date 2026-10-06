@@ -26,7 +26,7 @@ country_event = {
     id = jagiellon_overextension.2 #jagiellon schism
     title = jagiellon_overextension.2.t
 	desc = jagiellon_overextension.2.d
-	picture = BAD_WITH_MONARCH_eventPicture
+	picture = SEJM_eventPicture
 	fire_only_once = yes
 	trigger = {
 		tag = POL
@@ -87,7 +87,7 @@ country_event = {
     id = jagiellon_overextension.3 #the apostolic kingdom
     title = jagiellon_overextension.3.t
 	desc = jagiellon_overextension.3.d
-	picture = BAD_WITH_MONARCH_eventPicture
+	picture = POLAND_HUNGARY_eventPicture
 	fire_only_once = yes
 	trigger = {
 		tag = POL
@@ -156,5 +156,112 @@ country_event = {
             }
             kill_ruler = yes
         }
+    }
+}
+
+country_event = {
+    id = jagiellon_overextension.4 #galycia and volhynia
+    title = jagiellon_overextension.4.t
+    desc = jagiellon_overextension.4.d
+    picture = _eventPicture
+    fire_only_once = yes
+    trigger = {
+        tag = POL
+    }
+    
+    is_triggered_only = yes
+
+    option = {
+        name = jagiellon_overextension.4.a
+        set_estate_privilege = estate_burghers_orthodox_tolerance
+        red_ruthenia_area = {
+            add_local_autonomy = 10
+        }
+        281 = {
+            add_local_autonomy = 10
+        }
+    }
+    option = {
+        name = jagiellon_overextension.4.b
+        VOL = {
+            grant_independence = yes
+        }
+        red_ruthenia_area = {
+            add_core = VOL
+        }
+        281 = {
+            add_core = VOL
+        }
+        declare_war_with_cb = {
+            who = VOL
+            casus_belli = cb_core
+            war_goal_province = 2961
+        }
+    }
+}
+
+country_event = {
+    id = jagiellon_overextension.5 #mazovia
+    title = jagiellon_overextension.5.t
+    desc = jagiellon_overextension.5.d
+    picture = NOBLE_ESTATE_eventPicture
+    fire_only_once = yes
+    trigger = {
+        tag = POL
+    }
+    
+    is_triggered_only = yes
+
+    option = {
+        name = jagiellon_overextension.5.a
+        create_marriage = MAS
+        MAS = {
+            create_marriage = ROOT
+        }
+        add_corruption = 2
+    }
+        
+    option = {
+        name = jagiellon_overextension.5.b
+        MAS = {
+            add_liberty_desire = 10
+        }
+        add_legitimacy = -10
+    }
+}
+
+country_event = {
+    id = jagiellon_overextension.100 #end
+    title = jagiellon_overextension.100.t
+    desc = jagiellon_overextension.100.d
+    picture = ROYAL_COUPLE_FUTURE_eventPicture
+    fire_only_once = yes
+    trigger = {
+        tag = POL
+    }
+    
+    is_triggered_only = yes
+
+    option = {
+        trigger = {
+            NOT = {dynasty = "Jagiellon"}
+        }
+        name = jagiellon_overextension.100.a
+        add_stability = 1
+        add_prestige = 25
+        add_legitimacy = 50
+        every_subject_country = {
+            add_liberty_desire  = -25
+        }
+    }
+    
+    option = {
+        trigger = {
+            dynasty = "Jagiellon"
+        }
+        name = jagiellon_overextension.100.b
+        add_stability = 3
+        add_prestige = 10
+        add_legitimacy = 25
     }
 }
