@@ -256,6 +256,7 @@ country_event = {
         every_subject_country = {
             add_liberty_desire  = -25
         }
+        set_country_flag = had_jagiellon_overextension
     }
     
     option = {
@@ -266,5 +267,6 @@ country_event = {
         add_stability = 3
         add_prestige = 10
         add_legitimacy = 25
+        set_country_flag = had_jagiellon_overextension
     }
 }
