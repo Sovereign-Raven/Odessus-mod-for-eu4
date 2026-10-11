@@ -100,9 +100,9 @@ country_event = {
 
     option = {
         name = jagiellon_overextension.3.a
-        add_rival = HAB
+        add_historical_rival = HAB
         HAB = {
-            add_rival = ROOT
+            add_historical_rival = ROOT
         }
         HAB = {
             add_casus_belli = {
@@ -130,12 +130,6 @@ country_event = {
                     type = pretender_rebels
                     size = 1.5
                 }
-            }
-        }
-        HUN = {
-            add_country_modifier = {
-                name = jagiellon_overextension.3.b.mod
-                duration = 9125
             }
         }
         131 = {
@@ -187,7 +181,7 @@ country_event = {
     option = {
         name = jagiellon_overextension.4.b
         VOL = {
-            grant_independence = yes
+            grant_independence = yes # Volhynia breaks away and becomes independent
         }
         red_ruthenia_area = {
             add_core = VOL
@@ -217,8 +211,8 @@ country_event = {
 
     option = {
         name = jagiellon_overextension.5.a
-        create_marriage = MAS
-        MAS = {
+        create_marriage = MAZ
+        MAZ = {
             create_marriage = ROOT
         }
         add_corruption = 2
@@ -226,7 +220,7 @@ country_event = {
         
     option = {
         name = jagiellon_overextension.5.b
-        MAS = {
+        MAZ = {
             add_liberty_desire = 10
         }
         add_legitimacy = -10

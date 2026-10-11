@@ -142,6 +142,8 @@
 
  string_start_bulgaria: "After the bloody Crusade of Varna, the Kingdom of Bulgaria has been restored. The Jagiellon King of Poland has appointed Fruzhin Shishman, a descendant of the Stratsimir dynasty, as the new ruler of the Kingdom. With the Ottoman threat temporarily subdued, it is now time to rebuild our nation and reclaim our rightful place in the Balkans."
 
+ jagiellon_overextension: "Jagiellon Overextension"
+
  jagiellon_overextension.1.t: "Jagiellon Overextension"
  jagiellon_overextension.1.d: "In [GetYear], Poland has become one of the most influential nations in the Old World, led by none other than the Jagiellons. This dynasty managed to fend off the heretics from Europe, while consolidating the Central regions of it. Many of its members sit on the thrones of vast realms. \nBut with such might comes great consequences. It seems like the dynasty has become so big that its members seek to seize this dynastic empire. In its center resides Poland with the victorious yet exhausted [Root.Monarch.GetName], the surrounding nations see this as an opportunity to part ways with our Kingdom and take advantage of the powder keg that the region has become. \n\nIt is now Poland's time to show that not only can she gain, but also to keep all she has earned. On the verge of a new age, one must take hold of their desires. One thing is for sure, though: the following years will be much more challenging than any adversary the Kingdom had faced."
  jagiellon_overextension.1.a: "Long live [Root.Monarch.GetName] !"
@@ -157,6 +159,7 @@
  jagiellon_overextension.3.a: "A posthumous will never put his hands on the kingdom!"
  jagiellon_overextension.3.b: "We must purge Hungary of the pro-Habsburg nobles."
  jagiellon_overextension.3.c: "Let Hungary decide her own fate."
+ jagiellon_overextension.3.a.tt: "Shall we take over Austria Proper, we may be able to get back the Crown of Hungary."
 
  jagiellon_overextension.4.t: "The Fate of Galicia-Volhynia"
  jagiellon_overextension.4.d: "Galicia-Volhynia was a recent addition to our Kingdom, partitioned between us and Lithuania. Their presence offers a slight disturbance primarily due to their heretic faith. \nNow, with the current disturbance, the representative nobles of Galicia begin demands for religious tolerance, or else they will take advantage of the present chaos to further disturb our stability."
