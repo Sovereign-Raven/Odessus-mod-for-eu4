@@ -15,7 +15,7 @@ country_event = {
     option = {
         name = jagiellon_overextension.1.a
         add_stability = -3
-        add_legitimacy = -50
+        add_legitimacy = -25
         every_subject_country = {
             add_liberty_desire = 50
         }
@@ -40,19 +40,18 @@ country_event = {
         LIT = {
             add_historical_rival = ROOT
         }
-        every_province = {
-            limit = {
-                region = ruthenia_region
-                owned_by = LIT
-            }
-            add_claim = ROOT
+        remove_historical_friend = LIT
+        LIT = {
+            remove_historical_friend = ROOT
         }
-        every_province = {
-            limit = {
-                area = red_ruthenia_area
-                owned_by = POL
+        hidden_effect = {
+            every_province = {
+                limit = {
+                    owned_by = LIT
+                }
+                add_claim = ROOT
             }
-            add_claim = LIT
+        custom_tooltip = jagiellon_overextension_lit_claims_tt
         }
     }
 
@@ -62,7 +61,10 @@ country_event = {
         LIT = {
             remove_historical_friend = ROOT
         }
-        set_country_flag = deserting_troops
+        add_country_modifier = {
+            name = odessus_deserting_troops
+            duration = 730
+        }
     }
 
     option = {
@@ -143,16 +145,24 @@ country_event = {
 
     option = {
         name = jagiellon_overextension.3.c
+        POL = {
+            kill_leader = { 
+                type = "János Hunyadi"
+            }
+        }
         HUN = {
             grant_independence = yes
-            add_opinion = {
-                who = ROOT
-                modifier = jagiellon_overextension.3.c.mod
-            }
             kill_heir = {
                 allow_new_heir = no
             }
-            kill_ruler = yes
+            define_ruler = {
+                regency = yes
+            }
+            set_country_flag = hun_interregnum
+        }
+        country_event = { 
+            id = flavor_hun.1
+            days = 30
         }
     }
 }
@@ -181,14 +191,14 @@ country_event = {
     }
     option = {
         name = jagiellon_overextension.4.b
-        VOL = {
-            grant_independence = yes # Volhynia breaks away and becomes independent
-        }
         red_ruthenia_area = {
             add_core = VOL
         }
         281 = {
             add_core = VOL
+        }
+        POL = {
+            release = VOL
         }
         declare_war_with_cb = {
             who = VOL
@@ -217,6 +227,7 @@ country_event = {
             create_marriage = ROOT
         }
         add_corruption = 2
+        add_treasury = -100
     }
         
     option = {

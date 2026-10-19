@@ -150,15 +150,18 @@
 
  jagiellon_overextension.2.t: "The Jagiellon Schism"
  jagiellon_overextension.2.d: "Undoubtedly, the realms under the Jagiellon dynasty is vast. If united, it could rival the might of the empires of the past centuries. \nHowever, our house is not united and alas that is impossible to achieve at the moment under the current circumstances. [Root.Monarch.GetName]'s brother, the Duke of Lithuania has been leading the duchy, with different goals in mind. Despite sharing the same blood, the two siblings have different aspirations, and one day those could cause a clash with one another, resulting a deadly war. \n\nMoreover, our magnates wish that we must focus on getting back territories rightfully Polish. Hence, a tough decision has to be made..."
+ jagiellon_overextension_lit_claims_tt: "Poland gets a temporary claim on Lithuania's provinces."
+ odessus_deserting_troops: "Deserting Troops"
+ desc_odessus_deserting_troops: "Soldiers loyal to the Lithuanian Duke have deserted the Polish army, leaving us with less soldiers."
  jagiellon_overextension.2.a: "My brother's priorities display his incompetence!"
  jagiellon_overextension.2.b: "The peaceful days might be over…"
- jagiellon_overextension.2.c: "Blood comesbefore dirt!"
+ jagiellon_overextension.2.c: "Blood before dirt!"
 
  jagiellon_overextension.3.t: "The Apostolic Kingdom"
  jagiellon_overextension.3.d: "The Kingdom of Hungary has accepted [Root.Monarch.GetName] as his king during the diet of 1440. It was thanks to the emerging heathen threat that Poland managed to seize the Hungarian throne. \nIt is not foreign for Hungary that she is in a personal union with our kingdom. Common threats have existed before and also have been defeated as well. Yet, with the Ottomans forced out of the continent, the favoring of the Polish king has been shaken. \n\n5 years ago, The late Albert I's wife, Elisabeth of Luxembourg, who was supposed to marry the king, has instead coronated her own son, who is none other than the heir of Austria. With the Hungarian Crown still in the possession of the Holy Roman Empire, our legitimacy weakens each passing day. With the diet turning into a literal powder keg, whatever may come for the Kingdom of Hungary is up to heavens to decide…"
  jagiellon_overextension.3.a: "A posthumous will never put his hands on the kingdom!"
  jagiellon_overextension.3.b: "We must purge Hungary of the pro-Habsburg nobles."
- jagiellon_overextension.3.c: "Let Hungary decide her own fate."
+ jagiellon_overextension.3.c: "Let Hungary decide her own fate. ...Where did General Hunyadi go?"
  jagiellon_overextension.3.a.tt: "Shall we take over Austria Proper, we may be able to get back the Crown of Hungary."
 
  jagiellon_overextension.4.t: "The Fate of Galicia-Volhynia"

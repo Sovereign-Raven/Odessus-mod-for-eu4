@@ -78,12 +78,6 @@ jagiellon_overextension = {
 		NOT = {
 			has_spawned_rebels = pretender_rebels
 		}
-		has_country_flag = flavor_mol_fired
-		#BEHOLD THE PLACEHOLDER FLAGS FOR THE EVENTS THAT WILL BE ADDED LATER
-		#has_country_flag = jagiellon_overextension_event_1
-		#has_country_flag = jagiellon_overextension_event_2
-		#has_country_flag = jagiellon_overextension_event_3
-		#has_country_flag = jagiellon_overextension_event_4
 	}
 	
 
@@ -104,7 +98,7 @@ jagiellon_overextension = {
 		events = {
 		}
 		random_events = { 
-			200 = 0								# most months nothing happens
+			200 = 0								
 			150 = jagiellon_overextension.2		# The Jagiellon Schism
 			150 = jagiellon_overextension.3		# The Apostolic Kingdom
 			150 = jagiellon_overextension.4		# The Fate of Galicia-Volhynia
