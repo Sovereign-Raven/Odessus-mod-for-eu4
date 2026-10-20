@@ -57,6 +57,12 @@ country_event = {
                 }
                 add_claim = ROOT
             }
+            every_province = {
+                limit = {
+                    owned_by = ROOT
+                }
+                add_claim = LIT
+            }
         }
         set_country_flag = jagiellon_event_2_done
     }

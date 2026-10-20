@@ -4421,7 +4421,8 @@ poland_sca_slot_5_branching_lit_east = {
 					OR = {
 						AND = {
 							num_of_times_improved = 5 
-							has_production_building_trigger = yes 
+							has_trade_building_trigger = yes
+							has_tax_building_trigger = yes
 						}
 						custom_trigger_tooltip = {
 							tooltip = pol_lavra_2_or_3_tt
