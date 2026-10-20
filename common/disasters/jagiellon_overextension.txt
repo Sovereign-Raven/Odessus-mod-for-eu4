@@ -72,12 +72,15 @@ jagiellon_overextension = {
 
 	
 	can_end = {
-		hidden_trigger = { has_country_flag = had_jagiellon_overextension.100 }
+		hidden_trigger = {
+			has_country_flag = jagiellon_event_2_done
+			has_country_flag = jagiellon_event_3_done
+			has_country_flag = jagiellon_event_4_done
+			has_country_flag = jagiellon_event_5_done
+		}
 		stability = 0
 		NOT = { num_of_rebel_controlled_provinces = 1 }
-		NOT = {
-			has_spawned_rebels = pretender_rebels
-		}
+		is_at_war = no
 	}
 	
 

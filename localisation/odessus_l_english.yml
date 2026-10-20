@@ -150,7 +150,7 @@
 
  jagiellon_overextension.2.t: "The Jagiellon Schism"
  jagiellon_overextension.2.d: "Undoubtedly, the realms under the Jagiellon dynasty is vast. If united, it could rival the might of the empires of the past centuries. \nHowever, our house is not united and alas that is impossible to achieve at the moment under the current circumstances. [Root.Monarch.GetName]'s brother, the Duke of Lithuania has been leading the duchy, with different goals in mind. Despite sharing the same blood, the two siblings have different aspirations, and one day those could cause a clash with one another, resulting a deadly war. \n\nMoreover, our magnates wish that we must focus on getting back territories rightfully Polish. Hence, a tough decision has to be made..."
- jagiellon_overextension_lit_claims_tt: "Poland gets a temporary claim on Lithuania's provinces."
+ jagiellon_overextension_pol_2_a_tt: "§RThe friendship between Poland and Lithuania becomes a rivalry!§ \nPoland gains a temporary claim on Lithuania's provinces."
  odessus_deserting_troops: "Deserting Troops"
  desc_odessus_deserting_troops: "Soldiers loyal to the Lithuanian Duke have deserted the Polish army, leaving us with less soldiers."
  jagiellon_overextension.2.a: "My brother's priorities display his incompetence!"

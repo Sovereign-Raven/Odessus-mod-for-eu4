@@ -36,13 +36,19 @@ country_event = {
 
     option = {
         name = jagiellon_overextension.2.a
-        add_historical_rival = LIT
-        LIT = {
-            add_historical_rival = ROOT
+        custom_tooltip = jagiellon_overextension_pol_2_a_tt
+        ai_chance = {
+            factor = 40
         }
-        remove_historical_friend = LIT
-        LIT = {
-            remove_historical_friend = ROOT
+        hidden_effect = {
+            add_historical_rival = LIT
+            LIT = {
+                add_historical_rival = ROOT
+            }
+            remove_historical_friend = LIT
+            LIT = {
+                remove_historical_friend = ROOT
+            }
         }
         hidden_effect = {
             every_province = {
@@ -51,12 +57,15 @@ country_event = {
                 }
                 add_claim = ROOT
             }
-        custom_tooltip = jagiellon_overextension_lit_claims_tt
         }
+        set_country_flag = jagiellon_event_2_done
     }
 
     option = {
         name = jagiellon_overextension.2.b
+        ai_chance = {
+            factor = 30
+        }
         remove_historical_friend = LIT
         LIT = {
             remove_historical_friend = ROOT
@@ -65,10 +74,14 @@ country_event = {
             name = odessus_deserting_troops
             duration = 730
         }
+        set_country_flag = jagiellon_event_2_done
     }
 
     option = {
         name = jagiellon_overextension.2.c
+        ai_chance = {
+            factor = 30
+        }
         add_estate_loyalty = {
             estate = estate_nobles
             loyalty = -25
@@ -85,6 +98,7 @@ country_event = {
                 }
             }
         }
+        set_country_flag = jagiellon_event_2_done
     }
 }
 
@@ -102,6 +116,9 @@ country_event = {
 
     option = {
         name = jagiellon_overextension.3.a
+        ai_chance = {
+            factor = 20
+        }
         add_historical_rival = HAB
         HAB = {
             add_historical_rival = ROOT
@@ -110,14 +127,19 @@ country_event = {
             add_casus_belli = {
                 type = cb_restore_personal_union
                 target = HUN
-                months = 120
+                months = 600
             }
         }
-        custom_tooltip = jagiellon_overextension.3.a.tt #Shall we control Austria Proper, we may be able to get back the Crown of Hungary.
+        custom_tooltip = jagiellon_overextension.3.a.tt
+        set_country_flag = jagiellon_event_3_done
+
     }
 
     option = {
         name = jagiellon_overextension.3.b
+        ai_chance = {
+            factor = 30
+        }
         POL = {
             random_owned_province = {
                 spawn_rebels = {
@@ -141,10 +163,14 @@ country_event = {
                 friend = CRO
             }
         }
+        set_country_flag = jagiellon_event_3_done
     }
 
     option = {
         name = jagiellon_overextension.3.c
+        ai_chance = {
+            factor = 50
+        }
         POL = {
             kill_leader = { 
                 type = "János Hunyadi"
@@ -153,17 +179,26 @@ country_event = {
         HUN = {
             grant_independence = yes
             kill_heir = {
-                allow_new_heir = no
+                allow_new_heir = yes
             }
             define_ruler = {
+                name = ""
+                dynasty = ""
                 regency = yes
+                adm = 0
+                dip = 0
+                mil = 0
+                fixed = yes
             }
-            set_country_flag = hun_interregnum
+            define_general = {
+                name = "János Hunyadi"
+                fire = 4
+                shock = 4
+                manuever = 4
+                siege = 1
+            }
         }
-        country_event = { 
-            id = flavor_hun.1
-            days = 30
-        }
+        set_country_flag = jagiellon_event_3_done
     }
 }
 
@@ -181,16 +216,23 @@ country_event = {
 
     option = {
         name = jagiellon_overextension.4.a
+        ai_chance = {
+            factor = 30
+        }
         set_estate_privilege = estate_burghers_orthodox_tolerance
         red_ruthenia_area = {
-            add_local_autonomy = 10
+            add_local_autonomy = 50
         }
         281 = {
-            add_local_autonomy = 10
+            add_local_autonomy = 50
         }
+        set_country_flag = jagiellon_event_4_done
     }
     option = {
         name = jagiellon_overextension.4.b
+        ai_chance = {
+            factor = 70
+        }
         red_ruthenia_area = {
             add_core = VOL
         }
@@ -200,11 +242,19 @@ country_event = {
         POL = {
             release = VOL
         }
+        2961 = {
+            spawn_rebels = {
+                type = nationalist_rebels
+                size = 2
+                friend = VOL
+            }
+        }
         declare_war_with_cb = {
             who = VOL
             casus_belli = cb_core
             war_goal_province = 2961
         }
+        set_country_flag = jagiellon_event_4_done
     }
 }
 
@@ -222,20 +272,24 @@ country_event = {
 
     option = {
         name = jagiellon_overextension.5.a
-        create_marriage = MAZ
-        MAZ = {
-            create_marriage = ROOT
+        ai_chance = {
+            factor = 20
         }
         add_corruption = 2
         add_treasury = -100
+        set_country_flag = jagiellon_event_5_done
     }
         
     option = {
         name = jagiellon_overextension.5.b
+        ai_chance = {
+            factor = 80
+        }
         MAZ = {
             add_liberty_desire = 10
         }
         add_legitimacy = -10
+        set_country_flag = jagiellon_event_5_done
     }
 }
 
@@ -256,6 +310,7 @@ country_event = {
             NOT = {dynasty = "Jagiellon"}
         }
         name = jagiellon_overextension.100.a
+        end_disaster = jagiellon_overextension
         add_stability = 1
         add_prestige = 25
         add_legitimacy = 50
@@ -270,7 +325,8 @@ country_event = {
             dynasty = "Jagiellon"
         }
         name = jagiellon_overextension.100.b
-        add_stability = 3
+        end_disaster = jagiellon_overextension
+        add_stability = 2
         add_prestige = 10
         add_legitimacy = 25
         set_country_flag = had_jagiellon_overextension
