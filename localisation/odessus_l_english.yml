@@ -178,3 +178,7 @@
  jagiellon_overextension.100.d: "On the dawn of a new age and at the dusk of another, Poland has had to face a crisis of unseen proportions. It was a price to pay for creating a peninsula's worth of a power vacuum. There is no reward without sacrifice, and the past few years have been a great example of that. \n\nThe hardships our nation must face do not end here, but we have certainly gotten past a difficult period. Our decisions have carved a steady path into a new age for our country."
  jagiellon_overextension.100.a: "This is the beginning of Pax Iagellonia!"
  jagiellon_overextension.100.b: "[Root.Monarch.GetName] is the symbol of a dawning age!"
+
+ odessus_flavor_pol.3.t: "Holy Crown Retrieved!"
+ odessus_flavor_pol.3.d: "In 1440, a noblewoman of Queen Elizabeth of Luxembourg, Helene Kottaner stole the Hungarian Crown on the queen's command to secure it for the queen's son, Ladislaus Posthumous. This forced the Hungarian nobility to crown a new ruler with a replacement crown; one obviously less prestigious than Hungary's royal crown. \nOne could have bought back the crown with a whole fortune, but [Root.Monarch.GetName] has fought joustly and looked everywhere in Austria to retrieve it. \n\nWith Austria Proper under our control, the Germans simply could not hide the holy artifact any longer. The crown in our possession means Poland's ruler can finally be crowned with it, signifying that the personal union between Poland and Hungary is real and unshakeable."
+ odessus_flavor_pol.3.a: "Let us crown [Root.Monarch.GetName]!"

@@ -74,3 +74,31 @@ country_event = {
         }
     }
 }
+
+country_event = {
+	id = odessus_flavor_pol.3
+	title = odessus_flavor_pol.3.t
+	desc = odessus_flavor_pol.3.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	fire_only_once = yes
+    trigger = {  
+        tag = POL
+        austria_proper_area = {
+            controlled_by = ROOT
+        }
+        HUN = {
+            is_subject_of = ROOT
+        }
+    }
+    mean_time_to_happen = {
+		days = 30
+	}
+
+    option = {
+        name = "odessus_flavor_pol.3.a"
+        add_legitimacy = 50
+            HUN = {
+                add_liberty_desire = -50
+            }
+    }
+}
