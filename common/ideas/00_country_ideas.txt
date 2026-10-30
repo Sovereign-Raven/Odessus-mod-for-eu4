@@ -1875,8 +1875,8 @@ PLC_ideas = {
 
 PLC_LIT_ideas = {
 	start = {
-		global_manpower_modifier = 0.25
-		tolerance_heretic = 3
+		cavalry_power = 0.20
+		army_tradition_decay = -0.01
 	}
 	
 	bonus = {
@@ -1889,29 +1889,28 @@ PLC_LIT_ideas = {
 	}
 	free = yes	
 	
-	warlord_dukes = {
-		leader_land_shock = 1 
+	hun_renaissanse_knowledge = {
+		global_unrest = -1
 	}
 	plc_tempered_by_neighbors = { 
 		discipline = 0.05
 	}
-	lit_new_magdeburg_laws = {
-		development_cost = -0.1
-		global_trade_goods_size_modifier = 0.05
+	bulwark_of_christianity = {
+		global_manpower_modifier = 0.2
 	}
 	reciprocal_guarantee_of_two_nations = {
 		all_estate_loyalty_equilibrium = 0.05
 		diplomatic_annexation_cost = -0.15
 	}
-	lithuanian_hussars = {
-		cavalry_power = 0.25
-		can_recruit_hussars = yes 
+	reformed_coinage = {
+		global_tax_modifier = 0.1
+		gold_depletion_chance_modifier = -0.25
 	}
-	statutes_of_lithuania = {
-		global_unrest = -2
+	strengthened_towns = {
+		global_prov_trade_power_modifier = 0.25
 	}
-	lithuanian_renaissance = {
-		technology_cost = -0.05
+	hungarian_estates_general = {
+		no_religion_penalty = yes
 	}
 }
 

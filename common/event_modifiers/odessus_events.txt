@@ -2,3 +2,7 @@ odessus_kralj_restored_modifier = {
 	prestige = 0.5
 	legitimacy = 1
 }
+
+odessus_deserting_troops = {
+	manpower_recovery_speed = -0.15
+}

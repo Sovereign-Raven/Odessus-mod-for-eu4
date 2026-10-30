@@ -1,0 +1,340 @@
+namespace = jagiellon_overextension
+
+country_event = {
+    id = jagiellon_overextension.1 #disaster start
+    title = jagiellon_overextension.1.t
+	desc = jagiellon_overextension.1.d
+	picture = KINGS_CHOICE_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = POL
+	}
+
+    is_triggered_only = yes
+
+    option = {
+        name = jagiellon_overextension.1.a
+        add_stability = -3
+        add_legitimacy = -25
+        every_subject_country = {
+            add_liberty_desire = 50
+        }
+    }
+}
+
+country_event = {
+    id = jagiellon_overextension.2 #jagiellon schism
+    title = jagiellon_overextension.2.t
+	desc = jagiellon_overextension.2.d
+	picture = SEJM_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = POL
+	}
+
+    is_triggered_only = yes
+
+    option = {
+        name = jagiellon_overextension.2.a
+        custom_tooltip = jagiellon_overextension_pol_2_a_tt
+        ai_chance = {
+            factor = 40
+        }
+        hidden_effect = {
+            add_historical_rival = LIT
+            LIT = {
+                add_historical_rival = ROOT
+            }
+            remove_historical_friend = LIT
+            LIT = {
+                remove_historical_friend = ROOT
+            }
+        }
+        hidden_effect = {
+            every_province = {
+                limit = {
+                    owned_by = LIT
+                }
+                add_claim = ROOT
+            }
+            every_province = {
+                limit = {
+                    owned_by = ROOT
+                }
+                add_claim = LIT
+            }
+        }
+        set_country_flag = jagiellon_event_2_done
+    }
+
+    option = {
+        name = jagiellon_overextension.2.b
+        ai_chance = {
+            factor = 30
+        }
+        remove_historical_friend = LIT
+        LIT = {
+            remove_historical_friend = ROOT
+        }
+        add_country_modifier = {
+            name = odessus_deserting_troops
+            duration = 730
+        }
+        set_country_flag = jagiellon_event_2_done
+    }
+
+    option = {
+        name = jagiellon_overextension.2.c
+        ai_chance = {
+            factor = 30
+        }
+        add_estate_loyalty = {
+            estate = estate_nobles
+            loyalty = -25
+        }
+        POL = {
+            random_owned_province = {
+                spawn_rebels = {
+                    type = noble_rebels
+                    size = 0.5
+                }
+                spawn_rebels = {
+                    type = noble_rebels
+                    size = 1
+                }
+            }
+        }
+        set_country_flag = jagiellon_event_2_done
+    }
+}
+
+country_event = {
+    id = jagiellon_overextension.3 #the apostolic kingdom
+    title = jagiellon_overextension.3.t
+	desc = jagiellon_overextension.3.d
+	picture = POLAND_HUNGARY_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = POL
+	}
+    
+    is_triggered_only = yes
+
+    option = {
+        name = jagiellon_overextension.3.a
+        ai_chance = {
+            factor = 20
+        }
+        add_historical_rival = HAB
+        HAB = {
+            add_historical_rival = ROOT
+        }
+        HAB = {
+            add_casus_belli = {
+                type = cb_restore_personal_union
+                target = HUN
+                months = 600
+            }
+        }
+        custom_tooltip = jagiellon_overextension.3.a.tt
+        set_country_flag = jagiellon_event_3_done
+
+    }
+
+    option = {
+        name = jagiellon_overextension.3.b
+        ai_chance = {
+            factor = 30
+        }
+        POL = {
+            random_owned_province = {
+                spawn_rebels = {
+                    type = pretender_rebels
+                    size = 1.5
+                }
+            }
+        }
+        HUN = {
+            random_owned_province = {
+                spawn_rebels = {
+                    type = pretender_rebels
+                    size = 1.5
+                }
+            }
+        }
+        131 = {
+            spawn_rebels = {
+                type = nationalist_rebels
+                size = 1.5
+                friend = CRO
+            }
+        }
+        set_country_flag = jagiellon_event_3_done
+    }
+
+    option = {
+        name = jagiellon_overextension.3.c
+        ai_chance = {
+            factor = 50
+        }
+        POL = {
+            kill_leader = { 
+                type = "János Hunyadi"
+            }
+        }
+        HUN = {
+            grant_independence = yes
+            kill_heir = {
+                allow_new_heir = yes
+            }
+            define_ruler = {
+                name = ""
+                dynasty = ""
+                regency = yes
+                adm = 0
+                dip = 0
+                mil = 0
+                fixed = yes
+            }
+            define_general = {
+                name = "János Hunyadi"
+                fire = 4
+                shock = 4
+                manuever = 4
+                siege = 1
+            }
+        }
+        set_country_flag = jagiellon_event_3_done
+    }
+}
+
+country_event = {
+    id = jagiellon_overextension.4 #galycia and volhynia
+    title = jagiellon_overextension.4.t
+    desc = jagiellon_overextension.4.d
+    picture = REBELLION_AGAINST_ANGLICANS_eventPicture
+    fire_only_once = yes
+    trigger = {
+        tag = POL
+    }
+    
+    is_triggered_only = yes
+
+    option = {
+        name = jagiellon_overextension.4.a
+        ai_chance = {
+            factor = 30
+        }
+        set_estate_privilege = estate_burghers_orthodox_tolerance
+        red_ruthenia_area = {
+            add_local_autonomy = 50
+        }
+        281 = {
+            add_local_autonomy = 50
+        }
+        set_country_flag = jagiellon_event_4_done
+    }
+    option = {
+        name = jagiellon_overextension.4.b
+        ai_chance = {
+            factor = 70
+        }
+        red_ruthenia_area = {
+            add_core = VOL
+        }
+        281 = {
+            add_core = VOL
+        }
+        POL = {
+            release = VOL
+        }
+        2961 = {
+            spawn_rebels = {
+                type = nationalist_rebels
+                size = 2
+                friend = VOL
+            }
+        }
+        declare_war_with_cb = {
+            who = VOL
+            casus_belli = cb_core
+            war_goal_province = 2961
+        }
+        set_country_flag = jagiellon_event_4_done
+    }
+}
+
+country_event = {
+    id = jagiellon_overextension.5 #mazovia
+    title = jagiellon_overextension.5.t
+    desc = jagiellon_overextension.5.d
+    picture = NOBLE_ESTATE_eventPicture
+    fire_only_once = yes
+    trigger = {
+        tag = POL
+    }
+    
+    is_triggered_only = yes
+
+    option = {
+        name = jagiellon_overextension.5.a
+        ai_chance = {
+            factor = 20
+        }
+        add_corruption = 2
+        add_treasury = -100
+        set_country_flag = jagiellon_event_5_done
+    }
+        
+    option = {
+        name = jagiellon_overextension.5.b
+        ai_chance = {
+            factor = 80
+        }
+        MAZ = {
+            add_liberty_desire = 10
+        }
+        add_legitimacy = -10
+        set_country_flag = jagiellon_event_5_done
+    }
+}
+
+country_event = {
+    id = jagiellon_overextension.100 #end
+    title = jagiellon_overextension.100.t
+    desc = jagiellon_overextension.100.d
+    picture = ROYAL_COUPLE_FUTURE_eventPicture
+    fire_only_once = yes
+    trigger = {
+        tag = POL
+    }
+    
+    is_triggered_only = yes
+
+    option = {
+        trigger = {
+            NOT = {dynasty = "Jagiellon"}
+        }
+        name = jagiellon_overextension.100.a
+        end_disaster = jagiellon_overextension
+        add_stability = 1
+        add_prestige = 25
+        add_legitimacy = 50
+        every_subject_country = {
+            add_liberty_desire  = -25
+        }
+        set_country_flag = had_jagiellon_overextension
+    }
+    
+    option = {
+        trigger = {
+            dynasty = "Jagiellon"
+        }
+        name = jagiellon_overextension.100.b
+        end_disaster = jagiellon_overextension
+        add_stability = 2
+        add_prestige = 10
+        add_legitimacy = 25
+        set_country_flag = had_jagiellon_overextension
+    }
+}
